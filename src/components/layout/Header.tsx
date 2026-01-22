@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import palantirLogo from "@/assets/palantir-logo-square.png";
+import palantirBrand from "@/assets/palantir-brand.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,13 +23,17 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-3">
           <img 
             src={palantirLogo} 
             alt="PALANTIR-CODE Logo" 
             className="h-10 w-10 object-contain"
           />
-          <span className="text-xl font-bold text-foreground">{COMPANY.name}</span>
+          <img 
+            src={palantirBrand} 
+            alt="PALANTIR-CODE" 
+            className="h-6 object-contain hidden sm:block"
+          />
         </Link>
 
         {/* Desktop Navigation */}
