@@ -35,29 +35,6 @@ const Header = () => {
         <nav className="hidden lg:flex lg:items-center lg:gap-1">
           <NavigationMenu>
             <NavigationMenuList>
-              {/* Solutions Dropdown */}
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Solutions</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[500px] gap-2 p-4 md:grid-cols-2">
-                    {NAVIGATION.solutions.map((item) => (
-                      <li key={item.name}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to={item.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">{item.name}</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              {item.description}
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
 
               {/* Services Dropdown */}
               <NavigationMenuItem>
@@ -145,25 +122,6 @@ const Header = () => {
               Official Plane Partner - Spain's First
             </div>
 
-            {/* Solutions */}
-            <div className="py-2">
-              <div className="flex items-center justify-between px-3 py-2 text-sm font-medium text-muted-foreground">
-                Solutions
-                <ChevronDown className="h-4 w-4" />
-              </div>
-              <div className="pl-4 space-y-1">
-                {NAVIGATION.solutions.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className="block rounded-md px-3 py-2 text-sm hover:bg-accent"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
 
             {/* Services */}
             <div className="py-2">
