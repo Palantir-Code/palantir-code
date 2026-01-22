@@ -1,6 +1,6 @@
 import { Layout, FileText, Sparkles, Cloud } from "lucide-react";
 import { WHY_PLANE } from "@/lib/constants";
-import planeLogo from "@/assets/plane-logo.svg";
+import planeLogo from "@/assets/plane-logo-transparent.png";
 
 const iconMap: Record<string, React.ReactNode> = {
   Layout: <Layout className="h-6 w-6" />,

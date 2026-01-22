@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/lib/constants";
-import planeLogo from "@/assets/plane-logo.svg";
+import planeLogo from "@/assets/plane-logo-transparent.png";
 
 const Hero = () => {
   return (

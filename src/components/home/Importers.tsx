@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import jiraVsPlane from "@/assets/jira-vs-plane.png";
+import jiraVsPlane from "@/assets/jira-vs-plane-original.png";
 
 const Importers = () => {
   return (
