@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Twitter, Github, Mail, MapPin, Phone } from "lucide-react";
 import { COMPANY, NAVIGATION } from "@/lib/constants";
+import palantirLogo from "@/assets/palantir-logo-square.png";
 
 const Footer = () => {
   return (
@@ -10,9 +11,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <span className="text-xl font-bold text-primary-foreground">P</span>
-              </div>
+              <img 
+                src={palantirLogo} 
+                alt="PALANTIR-CODE Logo" 
+                className="h-10 w-10 object-contain"
+              />
               <span className="text-xl font-bold text-foreground">{COMPANY.name}</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">

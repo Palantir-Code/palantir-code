@@ -12,6 +12,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import palantirLogo from "@/assets/palantir-logo-square.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,9 +23,11 @@ const Header = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-            <span className="text-xl font-bold text-primary-foreground">P</span>
-          </div>
+          <img 
+            src={palantirLogo} 
+            alt="PALANTIR-CODE Logo" 
+            className="h-10 w-10 object-contain"
+          />
           <span className="text-xl font-bold text-foreground">{COMPANY.name}</span>
         </Link>
 
