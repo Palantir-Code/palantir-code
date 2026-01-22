@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/lib/constants";
+import planeLogo from "@/assets/plane-logo.svg";
 
 const Hero = () => {
   return (
@@ -15,12 +16,13 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20 lg:px-8 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
           {/* Partner Badge */}
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+          <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
-            Official Plane Partner - Spain's First
+            <span>Official Partner</span>
+            <img src={planeLogo} alt="Plane" className="h-5 w-auto" />
           </div>
 
           {/* Headline */}

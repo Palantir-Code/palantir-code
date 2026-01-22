@@ -1,5 +1,6 @@
 import { Layout, FileText, Sparkles, Cloud } from "lucide-react";
 import { WHY_PLANE } from "@/lib/constants";
+import planeLogo from "@/assets/plane-logo.svg";
 
 const iconMap: Record<string, React.ReactNode> = {
   Layout: <Layout className="h-6 w-6" />,
@@ -14,6 +15,9 @@ const WhyPlane = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
+          <div className="mb-4 flex items-center justify-center gap-3">
+            <img src={planeLogo} alt="Plane" className="h-10 w-auto" />
+          </div>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Why Teams Choose{" "}
             <span className="text-gradient">Plane</span>
@@ -52,16 +56,9 @@ const WhyPlane = () => {
             href="https://plane.so"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-6 py-3 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+            className="inline-flex items-center gap-3 rounded-full border border-border bg-muted/50 px-6 py-3 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
           >
-            <img
-              src="/plane-logo.svg"
-              alt="Plane"
-              className="h-5 w-5"
-              onError={(e) => {
-                e.currentTarget.style.display = 'none';
-              }}
-            />
+            <img src={planeLogo} alt="Plane" className="h-5 w-auto" />
             Powered by Plane
           </a>
         </div>
