@@ -5,7 +5,7 @@ import jiraVsPlane from "@/assets/jira-vs-plane-original.png";
 
 const Importers = () => {
   return (
-    <section className="py-20 lg:py-28 bg-muted/30">
+    <section className="py-12 lg:py-16 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Content */}

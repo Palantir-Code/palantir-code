@@ -36,7 +36,7 @@ const Hero = () => {
         <img src={planeLogo} alt="" className="w-[600px] h-auto opacity-[0.04] select-none" aria-hidden="true" />
       </div>
 
-      <div className="container mx-auto px-4 py-20 lg:px-8 lg:py-32">
+      <div className="container mx-auto px-4 py-12 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-4xl text-center">
           {/* Partner Badge */}
           <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
