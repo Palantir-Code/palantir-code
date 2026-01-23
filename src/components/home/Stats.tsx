@@ -2,7 +2,7 @@ import { STATS } from "@/lib/constants";
 
 const Stats = () => {
   return (
-    <section className="border-y border-border bg-muted/30 py-12">
+    <section className="border-y border-border bg-muted/30 py-8">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {STATS.map((stat, index) => (
