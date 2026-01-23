@@ -12,6 +12,16 @@ const Hero = () => {
         <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-primary/5 blur-3xl" />
       </div>
+      
+      {/* Plane logo watermark */}
+      <div className="absolute inset-0 -z-5 flex items-center justify-center overflow-hidden pointer-events-none">
+        <img 
+          src={planeLogo} 
+          alt="" 
+          className="w-[600px] h-auto opacity-[0.04] select-none"
+          aria-hidden="true"
+        />
+      </div>
 
       <div className="container mx-auto px-4 py-20 lg:px-8 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
