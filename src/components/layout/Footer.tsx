@@ -20,7 +20,7 @@ const Footer = () => {
               <img 
                 src={palantirBrand} 
                 alt="PALANTIR-CODE" 
-                className="h-5 object-contain"
+                className="h-9 object-contain"
               />
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
