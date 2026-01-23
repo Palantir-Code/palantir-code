@@ -32,7 +32,7 @@ const Header = () => {
           <img 
             src={palantirBrand} 
             alt="PALANTIR-CODE" 
-            className="h-6 object-contain hidden sm:block"
+            className="h-9 object-contain hidden sm:block"
           />
         </Link>
 
