@@ -3,10 +3,8 @@ import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/lib/constants";
 import planeLogo from "@/assets/plane-logo-transparent.png";
-
 const Hero = () => {
-  return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
+  return <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/10 blur-3xl" />
@@ -15,12 +13,7 @@ const Hero = () => {
       
       {/* Plane logo watermark */}
       <div className="absolute inset-0 -z-5 flex items-center justify-center overflow-hidden pointer-events-none">
-        <img 
-          src={planeLogo} 
-          alt="" 
-          className="w-[600px] h-auto opacity-[0.04] select-none"
-          aria-hidden="true"
-        />
+        <img src={planeLogo} alt="" className="w-[600px] h-auto opacity-[0.04] select-none" aria-hidden="true" />
       </div>
 
       <div className="container mx-auto px-4 py-20 lg:px-8 lg:py-32">
@@ -31,7 +24,7 @@ const Hero = () => {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
-            <span>Official Partner</span>
+            <span>Official Plane Partner</span>
             <img src={planeLogo} alt="Plane" className="h-5 w-auto" />
           </div>
 
@@ -75,8 +68,7 @@ const Hero = () => {
               </svg>
               Enterprise Ready
             </div>
-            <div className="flex items-center gap-2">
-              <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex items-center gap-2">SOC 2 & GDPR Compliant<svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               SOC 2 & GDPR Compliant
@@ -90,8 +82,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
