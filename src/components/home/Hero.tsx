@@ -11,8 +11,28 @@ const Hero = () => {
         <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-primary/5 blur-3xl" />
       </div>
       
-      {/* Plane logo watermark */}
+      {/* Plane logo watermark with Matrix effect */}
       <div className="absolute inset-0 -z-5 flex items-center justify-center overflow-hidden pointer-events-none">
+        {/* Matrix rain effect */}
+        <div className="absolute inset-0 opacity-[0.08]">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute top-0 text-primary font-mono text-xs animate-matrix-rain"
+              style={{
+                left: `${5 + i * 5}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${3 + Math.random() * 4}s`,
+              }}
+            >
+              {[...Array(15)].map((_, j) => (
+                <div key={j} className="opacity-70" style={{ animationDelay: `${j * 0.1}s` }}>
+                  {String.fromCharCode(0x30A0 + Math.random() * 96)}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
         <img src={planeLogo} alt="" className="w-[600px] h-auto opacity-[0.04] select-none" aria-hidden="true" />
       </div>
 
