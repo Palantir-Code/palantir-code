@@ -1,15 +1,26 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/lib/constants";
 import planeLogo from "@/assets/plane-logo-transparent.png";
+import FloatingPlanes from "@/components/animations/FloatingPlanes";
+import FloatingClouds from "@/components/animations/FloatingClouds";
+import FlightPath from "@/components/animations/FlightPath";
+
 const Hero = () => {
-  return <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-primary/5 blur-3xl" />
       </div>
+
+      {/* Animated plane elements */}
+      <FloatingPlanes count={6} className="z-0 opacity-60" />
+      <FloatingClouds count={4} className="z-0" />
+      <FlightPath className="z-0 opacity-40" />
       
       {/* Plane logo watermark with Matrix effect */}
       <div className="absolute inset-0 -z-5 flex items-center justify-center overflow-hidden pointer-events-none">
@@ -33,34 +44,62 @@ const Hero = () => {
             </div>
           ))}
         </div>
-        <img src={planeLogo} alt="" className="w-[600px] h-auto opacity-[0.04] select-none" aria-hidden="true" />
+        <motion.img 
+          src={planeLogo} 
+          alt="" 
+          className="w-[600px] h-auto opacity-[0.04] select-none" 
+          aria-hidden="true"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.04 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        />
       </div>
 
-      <div className="container mx-auto px-4 py-12 lg:px-8 lg:py-20">
+      <div className="container mx-auto px-4 py-12 lg:px-8 lg:py-20 relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           {/* Partner Badge */}
-          <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+          <motion.div 
+            className="mb-8 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             <span>Official Plane Partner</span>
             <img src={planeLogo} alt="Plane" className="h-5 w-auto" />
-          </div>
+          </motion.div>
 
           {/* Headline */}
-          <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <motion.h1 
+            className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
             Accelerate Your Projects with{" "}
             <span className="text-gradient">Plane</span>
-          </h1>
+          </motion.h1>
 
           {/* Subheadline */}
-          <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl">
+          <motion.p 
+            className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+          >
             {COMPANY.name} is Spain's first certified Plane partner. We help teams ship faster with expert implementation, migration, and custom solutions for Plane's unified workspace.
-          </p>
+          </motion.p>
 
           {/* CTAs */}
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <motion.div 
+            className="flex flex-col items-center justify-center gap-4 sm:flex-row"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+          >
             <Button asChild size="lg" className="group min-w-[180px]">
               <Link to="/solutions">
                 Explore Solutions
@@ -78,17 +117,23 @@ const Hero = () => {
                 Talk to an Expert
               </Link>
             </Button>
-          </div>
+          </motion.div>
 
           {/* Trust indicators */}
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
+          <motion.div 
+            className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
             <div className="flex items-center gap-2">
               <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               Enterprise Ready
             </div>
-            <div className="flex items-center gap-2">SOC 2 & GDPR Compliant<svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex items-center gap-2">
+              <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               SOC 2 & GDPR Compliant
@@ -99,9 +144,11 @@ const Hero = () => {
               </svg>
               24/7 Support
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
