@@ -6,7 +6,7 @@ import Importers from "@/components/home/Importers";
 import Integrations from "@/components/home/Integrations";
 import Services from "@/components/home/Services";
 import WhyUs from "@/components/home/WhyUs";
-import TrustedBy from "@/components/home/TrustedBy";
+// import TrustedBy from "@/components/home/TrustedBy";
 import CTASection from "@/components/home/CTASection";
 
 const Index = () => {
@@ -19,7 +19,7 @@ const Index = () => {
       <Integrations />
       <Services />
       <WhyUs />
-      <TrustedBy />
+      {/* <TrustedBy /> */}
       <CTASection />
     </Layout>
   );
