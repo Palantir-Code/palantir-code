@@ -144,26 +144,146 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right side - Video */}
+          {/* Right side - Video with animated frame */}
           <motion.div 
             className="relative"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-card">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/rzpc1UVW1Xw?autoplay=1&mute=1&loop=1&playlist=rzpc1UVW1Xw&controls=0&showinfo=0&rel=0&modestbranding=1"
-                  title="Plane Demo Video"
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+            {/* Animated frame container */}
+            <div className="relative p-1 rounded-2xl bg-gradient-to-br from-primary via-primary/50 to-primary/20">
+              {/* Animated border glow */}
+              <motion.div
+                className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary via-blue-400 to-primary opacity-75 blur-sm"
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                style={{ backgroundSize: "200% 200%" }}
+              />
+              
+              {/* Corner accents */}
+              <motion.div
+                className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-primary rounded-tl-lg"
+                animate={{ opacity: [0.5, 1, 0.5] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+              <motion.div
+                className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-primary rounded-tr-lg"
+                animate={{ opacity: [0.5, 1, 0.5] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+              />
+              <motion.div
+                className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-primary rounded-bl-lg"
+                animate={{ opacity: [0.5, 1, 0.5] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+              />
+              <motion.div
+                className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-primary rounded-br-lg"
+                animate={{ opacity: [0.5, 1, 0.5] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
+              />
+
+              {/* Title header bar */}
+              <div className="relative bg-card rounded-t-xl border-b border-border/50">
+                <div className="flex items-center gap-3 px-4 py-3">
+                  {/* Window controls */}
+                  <div className="flex gap-1.5">
+                    <motion.div 
+                      className="w-3 h-3 rounded-full bg-red-500"
+                      whileHover={{ scale: 1.2 }}
+                    />
+                    <motion.div 
+                      className="w-3 h-3 rounded-full bg-yellow-500"
+                      whileHover={{ scale: 1.2 }}
+                    />
+                    <motion.div 
+                      className="w-3 h-3 rounded-full bg-green-500"
+                      whileHover={{ scale: 1.2 }}
+                    />
+                  </div>
+                  
+                  {/* Title with typing animation */}
+                  <motion.div 
+                    className="flex-1 text-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.8 }}
+                  >
+                    <motion.span 
+                      className="text-sm font-medium text-foreground"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 1, duration: 0.5 }}
+                    >
+                      <span className="text-primary font-semibold">Plane Compose</span>
+                      <span className="text-muted-foreground hidden sm:inline">, the implementation layer of </span>
+                      <span className="text-primary font-mono hidden sm:inline">Projects-as-Code</span>
+                    </motion.span>
+                  </motion.div>
+                  
+                  {/* Live indicator */}
+                  <motion.div 
+                    className="flex items-center gap-1.5"
+                    animate={{ opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    <span className="w-2 h-2 rounded-full bg-green-500" />
+                    <span className="text-xs text-muted-foreground hidden sm:inline">LIVE</span>
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* Video container */}
+              <div className="relative bg-card rounded-b-xl overflow-hidden">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/rzpc1UVW1Xw?autoplay=1&mute=1&loop=1&playlist=rzpc1UVW1Xw&controls=0&showinfo=0&rel=0&modestbranding=1"
+                    title="Plane Demo Video"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                
+                {/* Scan line effect */}
+                <motion.div
+                  className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-primary/5 to-transparent"
+                  animate={{ y: ["-100%", "100%"] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                  style={{ height: "50%" }}
                 />
               </div>
             </div>
+            
             {/* Decorative glow */}
-            <div className="absolute -inset-4 -z-10 bg-primary/20 blur-3xl rounded-full opacity-50" />
+            <div className="absolute -inset-8 -z-10 bg-primary/20 blur-3xl rounded-full opacity-40" />
+            
+            {/* Floating particles around frame */}
+            {[...Array(6)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-1.5 h-1.5 bg-primary rounded-full"
+                style={{
+                  top: `${20 + Math.random() * 60}%`,
+                  left: i < 3 ? "-8px" : "calc(100% + 4px)",
+                }}
+                animate={{
+                  y: [0, -10, 0],
+                  opacity: [0.3, 1, 0.3],
+                }}
+                transition={{
+                  duration: 2 + Math.random(),
+                  repeat: Infinity,
+                  delay: i * 0.3,
+                }}
+              />
+            ))}
           </motion.div>
         </div>
       </div>
