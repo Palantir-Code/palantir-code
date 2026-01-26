@@ -58,89 +58,214 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-12 lg:px-8 lg:py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
-          <div className="text-center lg:text-left">
-            {/* Partner Badge */}
+          <div className="text-center lg:text-left relative">
+            {/* Animated dark gradient background for text area */}
+            <motion.div
+              className="absolute -inset-8 -z-10 rounded-3xl opacity-30"
+              style={{
+                background: "linear-gradient(135deg, hsl(var(--primary)/0.2), hsl(220 30% 10%), hsl(var(--primary)/0.1), hsl(240 20% 5%))",
+                backgroundSize: "400% 400%",
+              }}
+              animate={{
+                backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+
+            {/* Partner Badge with shimmer */}
             <motion.div 
-              className="mb-8 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-8 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary relative overflow-hidden"
+              initial={{ opacity: 0, y: 20, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
+              whileHover={{ scale: 1.05 }}
             >
+              {/* Shimmer effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
+                animate={{ x: ["-200%", "200%"] }}
+                transition={{ duration: 3, repeat: Infinity, repeatDelay: 2 }}
+              />
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
               </span>
-              <span>Official Plane Partner</span>
+              <motion.span
+                animate={{ opacity: [0.8, 1, 0.8] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                Official Plane Partner
+              </motion.span>
               <img src={planeLogo} alt="Plane" className="h-5 w-auto" />
             </motion.div>
 
-            {/* Headline */}
+            {/* Headline with animated gradient text */}
             <motion.h1 
-              className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-5xl"
+              className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-5xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
             >
-              Accelerate Your Projects with{" "}
-              <span className="text-gradient">Plane</span>
+              <motion.span 
+                className="inline-block"
+                style={{
+                  background: "linear-gradient(90deg, hsl(var(--foreground)), hsl(var(--muted-foreground)), hsl(var(--foreground)))",
+                  backgroundSize: "200% 100%",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                Accelerate Your Projects with
+              </motion.span>{" "}
+              <motion.span 
+                className="inline-block"
+                style={{
+                  background: "linear-gradient(90deg, hsl(var(--primary)), hsl(210 100% 60%), hsl(200 100% 50%), hsl(var(--primary)))",
+                  backgroundSize: "300% 100%",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
+                Plane
+              </motion.span>
             </motion.h1>
 
-            {/* Subheadline */}
+            {/* Subheadline with fade-in words */}
             <motion.p 
-              className="mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl lg:mx-0 mx-auto"
+              className="mb-10 max-w-2xl text-lg sm:text-xl lg:mx-0 mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              {COMPANY.name} is Spain's first certified Plane partner. We help teams ship faster with expert implementation, migration, and custom solutions for Plane's unified workspace.
+              <motion.span
+                style={{
+                  background: "linear-gradient(90deg, hsl(var(--muted-foreground)), hsl(var(--foreground)/0.7), hsl(var(--muted-foreground)))",
+                  backgroundSize: "200% 100%",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              >
+                {COMPANY.name} is Spain's first certified Plane partner. We help teams ship faster with expert implementation, migration, and custom solutions for Plane's unified workspace.
+              </motion.span>
             </motion.p>
 
-            {/* CTAs */}
+            {/* CTAs with hover glow */}
             <motion.div 
               className="flex flex-col items-center lg:items-start justify-center lg:justify-start gap-4 sm:flex-row"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5 }}
             >
-              <Button asChild size="lg" className="group min-w-[180px]">
-                <Link to="/solutions">
-                  Explore Solutions
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="min-w-[180px]">
-                <Link to="/contact">
-                  <Play className="mr-2 h-4 w-4" />
-                  Schedule a Demo
-                </Link>
-              </Button>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                className="relative group"
+              >
+                {/* Button glow */}
+                <motion.div
+                  className="absolute -inset-1 bg-gradient-to-r from-primary via-blue-400 to-primary rounded-lg opacity-0 group-hover:opacity-70 blur-md transition-opacity"
+                  animate={{
+                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                  }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  style={{ backgroundSize: "200% 200%" }}
+                />
+                <Button asChild size="lg" className="relative min-w-[180px]">
+                  <Link to="/solutions">
+                    Explore Solutions
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
+              </motion.div>
+              
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Button asChild variant="outline" size="lg" className="min-w-[180px] relative overflow-hidden group">
+                  <Link to="/contact">
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10"
+                      animate={{
+                        x: ["-100%", "100%"],
+                      }}
+                      transition={{ duration: 3, repeat: Infinity, repeatDelay: 1 }}
+                    />
+                    <Play className="mr-2 h-4 w-4 relative z-10" />
+                    <span className="relative z-10">Schedule a Demo</span>
+                  </Link>
+                </Button>
+              </motion.div>
             </motion.div>
 
-            {/* Trust indicators */}
+            {/* Trust indicators with stagger animation */}
             <motion.div 
-              className="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-muted-foreground"
+              className="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
-              <div className="flex items-center gap-2">
-                <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Enterprise Ready
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                SOC 2 & GDPR
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                24/7 Support
-              </div>
+              {[
+                { icon: "✓", text: "Enterprise Ready" },
+                { icon: "✓", text: "SOC 2 & GDPR" },
+                { icon: "✓", text: "24/7 Support" },
+              ].map((item, index) => (
+                <motion.div
+                  key={item.text}
+                  className="flex items-center gap-2 relative"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.8 + index * 0.15 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <motion.svg 
+                    className="h-5 w-5 text-primary" 
+                    fill="currentColor" 
+                    viewBox="0 0 20 20"
+                    animate={{ 
+                      filter: ["drop-shadow(0 0 0px hsl(var(--primary)))", "drop-shadow(0 0 6px hsl(var(--primary)))", "drop-shadow(0 0 0px hsl(var(--primary)))"]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
+                  >
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </motion.svg>
+                  <motion.span
+                    className="text-muted-foreground"
+                    style={{
+                      background: "linear-gradient(90deg, hsl(var(--muted-foreground)), hsl(var(--foreground)/0.8), hsl(var(--muted-foreground)))",
+                      backgroundSize: "200% 100%",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}
+                    animate={{
+                      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                    }}
+                    transition={{ duration: 4, repeat: Infinity, delay: index * 0.5 }}
+                  >
+                    {item.text}
+                  </motion.span>
+                </motion.div>
+              ))}
             </motion.div>
           </div>
 
