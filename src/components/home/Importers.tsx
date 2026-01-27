@@ -78,11 +78,51 @@ const Importers = () => {
               whileHover={{ scale: 1.02, rotateY: 5 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <img 
-                src={jiraVsPlane} 
-                alt="Migrate from Jira to Plane" 
-                className="w-full max-w-md rounded-xl"
-              />
+              {/* Image container with TV effects */}
+              <div className="relative rounded-xl overflow-hidden">
+                <img 
+                  src={jiraVsPlane} 
+                  alt="Migrate from Jira to Plane" 
+                  className="w-full max-w-md terminal-logo"
+                />
+                
+                {/* Scanlines overlay */}
+                <div 
+                  className="absolute inset-0 pointer-events-none opacity-30"
+                  style={{
+                    background: 'repeating-linear-gradient(0deg, transparent, transparent 2px, hsl(var(--primary) / 0.1) 2px, hsl(var(--primary) / 0.1) 4px)'
+                  }}
+                />
+                
+                {/* Horizontal scan line */}
+                <motion.div
+                  className="absolute inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-primary/60 to-transparent pointer-events-none"
+                  animate={{ top: ["0%", "100%"] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+                />
+                
+                {/* CRT vignette */}
+                <div 
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background: 'radial-gradient(ellipse at center, transparent 50%, hsl(var(--background)) 150%)'
+                  }}
+                />
+                
+                {/* Flicker effect */}
+                <motion.div
+                  className="absolute inset-0 bg-primary/5 pointer-events-none"
+                  animate={{ opacity: [0, 0, 0.1, 0, 0] }}
+                  transition={{ duration: 0.15, repeat: Infinity, repeatDelay: 3 }}
+                />
+                
+                {/* Corner brackets - TV frame style */}
+                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-primary/60" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-primary/60" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-primary/60" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-primary/60" />
+              </div>
+              
               <motion.div 
                 className="absolute bottom-6 left-1/2 -translate-x-1/2"
                 initial={{ y: 20, opacity: 0 }}
@@ -91,7 +131,7 @@ const Importers = () => {
                 transition={{ delay: 0.5 }}
               >
                 <motion.span 
-                  className="inline-block rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-lg"
+                  className="inline-block rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-lg terminal-box-glow"
                   animate={{ y: [0, -5, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
