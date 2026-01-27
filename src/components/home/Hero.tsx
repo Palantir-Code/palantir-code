@@ -47,10 +47,10 @@ const Hero = () => {
         <motion.img 
           src={planeLogo} 
           alt="" 
-          className="w-[600px] h-auto opacity-[0.04] select-none" 
+          className="w-[600px] h-auto opacity-[0.06] select-none terminal-logo" 
           aria-hidden="true"
           initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.04 }}
+          animate={{ scale: 1, opacity: 0.06 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         />
       </div>
@@ -71,7 +71,7 @@ const Hero = () => {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
               </span>
               <span>Official Plane Partner</span>
-              <img src={planeLogo} alt="Plane" className="h-5 w-auto" />
+              <img src={planeLogo} alt="Plane" className="h-5 w-auto terminal-logo" />
             </motion.div>
 
             {/* Headline */}

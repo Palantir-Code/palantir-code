@@ -15,12 +15,12 @@ const Footer = () => {
               <img 
                 src={palantirLogo} 
                 alt="PALANTIR-CODE Logo" 
-                className="h-10 w-10 object-contain"
+                className="h-10 w-10 object-contain terminal-logo"
               />
               <img 
                 src={palantirBrand} 
                 alt="PALANTIR-CODE" 
-                className="h-9 object-contain"
+                className="h-9 object-contain terminal-logo"
               />
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
