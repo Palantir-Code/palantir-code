@@ -27,12 +27,12 @@ const Header = () => {
           <img 
             src={palantirLogo} 
             alt="PALANTIR-CODE Logo" 
-            className="h-10 w-10 object-contain"
+            className="h-10 w-10 object-contain terminal-logo"
           />
           <img 
             src={palantirBrand} 
             alt="PALANTIR-CODE" 
-            className="h-7 sm:h-9 object-contain"
+            className="h-7 sm:h-9 object-contain terminal-logo"
           />
         </Link>
 

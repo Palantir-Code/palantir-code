@@ -25,7 +25,7 @@ const WhyPlane = () => {
             <motion.img 
               src={planeLogo} 
               alt="Plane" 
-              className="h-10 w-auto"
+              className="h-10 w-auto terminal-logo"
               whileHover={{ rotate: [0, -10, 10, 0] }}
               transition={{ duration: 0.5 }}
             />
@@ -79,7 +79,7 @@ const WhyPlane = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
-            <img src={planeLogo} alt="Plane" className="h-5 w-auto" />
+            <img src={planeLogo} alt="Plane" className="h-5 w-auto terminal-logo" />
             Powered by Plane
           </motion.a>
         </ScrollReveal>
