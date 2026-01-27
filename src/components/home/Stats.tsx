@@ -128,22 +128,6 @@ const Stats = () => {
                   {stat.label}
                 </motion.div>
 
-                {/* Pulse effect on node */}
-                <motion.div
-                  className="absolute w-3 h-3 bg-primary rounded-full"
-                  style={{ top: "50%", left: "50%", x: "-50%", y: "-150%" }}
-                  animate={{
-                    boxShadow: [
-                      "0 0 0 0 hsl(var(--primary) / 0.4)",
-                      "0 0 0 10px hsl(var(--primary) / 0)",
-                    ],
-                  }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    delay: index * 0.4,
-                  }}
-                />
               </motion.div>
             ))}
           </div>
