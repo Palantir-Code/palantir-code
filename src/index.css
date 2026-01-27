@@ -3,102 +3,108 @@
 @tailwind utilities;
 
 /* PALANTIR-CODE Design System
-   Primary Blue: #0066B3 (HSL: 204 100% 35%)
+   Terminal Dark Mode - Matrix Green Theme
+   Primary Green: #00FF41 (HSL: 130 100% 50%)
    All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 25% 15%;
+    /* Dark terminal theme by default */
+    --background: 120 10% 4%;
+    --foreground: 120 100% 80%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 25% 15%;
+    --card: 120 10% 6%;
+    --card-foreground: 120 100% 80%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 25% 15%;
+    --popover: 120 10% 6%;
+    --popover-foreground: 120 100% 80%;
 
-    /* PALANTIR-CODE Primary Blue */
-    --primary: 204 100% 35%;
-    --primary-foreground: 0 0% 100%;
+    /* Terminal Green */
+    --primary: 120 100% 50%;
+    --primary-foreground: 120 10% 4%;
 
-    /* Light blue accent */
-    --secondary: 204 60% 95%;
-    --secondary-foreground: 204 100% 25%;
+    /* Darker green accent */
+    --secondary: 120 50% 12%;
+    --secondary-foreground: 120 100% 70%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 15% 45%;
+    --muted: 120 10% 12%;
+    --muted-foreground: 120 40% 50%;
 
-    --accent: 204 80% 92%;
-    --accent-foreground: 204 100% 30%;
+    --accent: 120 60% 15%;
+    --accent-foreground: 120 100% 70%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 204 100% 35%;
+    --border: 120 30% 20%;
+    --input: 120 30% 15%;
+    --ring: 120 100% 50%;
 
     --radius: 0.5rem;
 
     /* Sidebar */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 210 25% 25%;
-    --sidebar-primary: 204 100% 35%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 204 60% 95%;
-    --sidebar-accent-foreground: 204 100% 30%;
-    --sidebar-border: 210 20% 90%;
-    --sidebar-ring: 204 100% 35%;
+    --sidebar-background: 120 10% 5%;
+    --sidebar-foreground: 120 100% 75%;
+    --sidebar-primary: 120 100% 50%;
+    --sidebar-primary-foreground: 120 10% 4%;
+    --sidebar-accent: 120 50% 12%;
+    --sidebar-accent-foreground: 120 100% 70%;
+    --sidebar-border: 120 30% 15%;
+    --sidebar-ring: 120 100% 50%;
 
-    /* Custom brand tokens */
-    --brand-blue: 204 100% 35%;
-    --brand-blue-light: 204 80% 50%;
-    --brand-blue-dark: 204 100% 25%;
-    --brand-gradient: linear-gradient(135deg, hsl(204 100% 35%), hsl(204 80% 50%));
+    /* Custom terminal tokens */
+    --terminal-green: 120 100% 50%;
+    --terminal-green-dim: 120 80% 35%;
+    --terminal-green-glow: 120 100% 60%;
+    --terminal-bg: 120 10% 4%;
+    --terminal-bg-light: 120 10% 8%;
+    --brand-gradient: linear-gradient(135deg, hsl(120 100% 40%), hsl(120 100% 60%));
   }
 
   .dark {
-    --background: 210 25% 8%;
-    --foreground: 210 20% 95%;
+    --background: 120 10% 4%;
+    --foreground: 120 100% 80%;
 
-    --card: 210 25% 10%;
-    --card-foreground: 210 20% 95%;
+    --card: 120 10% 6%;
+    --card-foreground: 120 100% 80%;
 
-    --popover: 210 25% 10%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 120 10% 6%;
+    --popover-foreground: 120 100% 80%;
 
-    --primary: 204 100% 50%;
-    --primary-foreground: 210 25% 8%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 120 10% 4%;
 
-    --secondary: 204 40% 20%;
-    --secondary-foreground: 204 80% 90%;
+    --secondary: 120 50% 12%;
+    --secondary-foreground: 120 100% 70%;
 
-    --muted: 210 25% 18%;
-    --muted-foreground: 210 15% 65%;
+    --muted: 120 10% 12%;
+    --muted-foreground: 120 40% 50%;
 
-    --accent: 204 50% 25%;
-    --accent-foreground: 204 80% 90%;
+    --accent: 120 60% 15%;
+    --accent-foreground: 120 100% 70%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 25% 20%;
-    --input: 210 25% 20%;
-    --ring: 204 100% 50%;
+    --border: 120 30% 20%;
+    --input: 120 30% 15%;
+    --ring: 120 100% 50%;
 
-    --sidebar-background: 210 25% 10%;
-    --sidebar-foreground: 210 20% 90%;
-    --sidebar-primary: 204 100% 50%;
-    --sidebar-primary-foreground: 210 25% 8%;
-    --sidebar-accent: 204 40% 20%;
-    --sidebar-accent-foreground: 204 80% 90%;
-    --sidebar-border: 210 25% 20%;
-    --sidebar-ring: 204 100% 50%;
+    --sidebar-background: 120 10% 5%;
+    --sidebar-foreground: 120 100% 75%;
+    --sidebar-primary: 120 100% 50%;
+    --sidebar-primary-foreground: 120 10% 4%;
+    --sidebar-accent: 120 50% 12%;
+    --sidebar-accent-foreground: 120 100% 70%;
+    --sidebar-border: 120 30% 15%;
+    --sidebar-ring: 120 100% 50%;
 
-    --brand-blue: 204 100% 50%;
-    --brand-blue-light: 204 80% 60%;
-    --brand-blue-dark: 204 100% 40%;
+    --terminal-green: 120 100% 50%;
+    --terminal-green-dim: 120 80% 35%;
+    --terminal-green-glow: 120 100% 60%;
+    --terminal-bg: 120 10% 4%;
+    --terminal-bg-light: 120 10% 8%;
   }
 }
 
@@ -130,29 +136,81 @@
     @apply transition-transform duration-300 hover:-translate-y-1;
   }
 
-.hover-scale {
-  @apply transition-transform duration-200 hover:scale-105;
-}
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
 
-/* Matrix rain animation */
-@keyframes matrix-rain {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
+  /* Terminal text glow effect */
+  .terminal-glow {
+    text-shadow: 0 0 5px hsl(120 100% 50% / 0.5), 
+                 0 0 10px hsl(120 100% 50% / 0.3),
+                 0 0 20px hsl(120 100% 50% / 0.2);
   }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-}
 
-.animate-matrix-rain {
-  animation: matrix-rain linear infinite;
-}
+  .terminal-box-glow {
+    box-shadow: 0 0 10px hsl(120 100% 50% / 0.3),
+                0 0 20px hsl(120 100% 50% / 0.2),
+                0 0 40px hsl(120 100% 50% / 0.1),
+                inset 0 0 20px hsl(120 100% 50% / 0.05);
+  }
+
+  /* Scanline effect */
+  .scanlines::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(120 100% 50% / 0.03) 2px,
+      hsl(120 100% 50% / 0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* CRT flicker */
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    92% { opacity: 1; }
+    93% { opacity: 0.8; }
+    94% { opacity: 1; }
+  }
+
+  .crt-flicker {
+    animation: flicker 4s infinite;
+  }
+
+  /* Matrix rain animation */
+  @keyframes matrix-rain {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+
+  .animate-matrix-rain {
+    animation: matrix-rain linear infinite;
+  }
+
+  /* Terminal cursor blink */
+  @keyframes cursor-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  .cursor-blink {
+    animation: cursor-blink 1s step-end infinite;
+  }
 }
