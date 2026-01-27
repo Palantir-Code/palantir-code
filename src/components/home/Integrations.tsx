@@ -1,17 +1,33 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, MessageSquare, Plane } from "lucide-react";
+import { ArrowRight, Github, MessageSquare, Plane, Code, Bug, PenTool, Sparkles, Terminal, FileText, Layers, CheckSquare, ListTodo, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import FloatingPlanes from "@/components/animations/FloatingPlanes";
 
+// All integrations from Plane Marketplace
 const integrations = [
+  // Communication
   { name: "Slack", icon: MessageSquare, color: "#4A154B" },
+  // Engineering & DevOps
   { name: "GitHub", icon: Github, color: "#24292F" },
-  { name: "GitLab", icon: null, color: "#FC6D26" },
-  { name: "Discord", icon: null, color: "#5865F2" },
-  { name: "Figma", icon: null, color: "#F24E1E" },
-  { name: "Notion", icon: null, color: "#000000" },
+  { name: "GitLab", abbr: "GL", color: "#FC6D26" },
+  { name: "Sentry", icon: Bug, color: "#362D59" },
+  { name: "VS Code", icon: Code, color: "#007ACC" },
+  // Documentation & Design
+  { name: "Draw.io", icon: PenTool, color: "#F08705" },
+  // AI & Agents
+  { name: "Claude", icon: Sparkles, color: "#D97757" },
+  // Utility
+  { name: "Raycast", icon: Terminal, color: "#FF6363" },
+  // Importers
+  { name: "Jira", abbr: "JI", color: "#0052CC" },
+  { name: "Linear", abbr: "LN", color: "#5E6AD2" },
+  { name: "Asana", abbr: "AS", color: "#F06A6A" },
+  { name: "ClickUp", abbr: "CU", color: "#7B68EE" },
+  { name: "Notion", icon: FileText, color: "#000000" },
+  { name: "Confluence", icon: BookOpen, color: "#1868DB" },
+  { name: "CSV", icon: Layers, color: "#10B981" },
 ];
 
 const Integrations = () => {
@@ -23,36 +39,36 @@ const Integrations = () => {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Visual */}
           <ScrollReveal direction="left" className="flex justify-center">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-5 gap-3">
               {integrations.map((integration, index) => (
                 <motion.div
                   key={index}
-                  className="group flex h-20 w-20 items-center justify-center rounded-2xl bg-card border-2 border-border shadow-lg"
+                  className="group flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-card border-2 border-border shadow-lg terminal-box-glow"
                   initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
                   whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                   viewport={{ once: true }}
                   transition={{ 
-                    delay: index * 0.1, 
+                    delay: index * 0.05, 
                     type: "spring",
                     stiffness: 200
                   }}
                   whileHover={{ 
                     scale: 1.15, 
                     y: -8,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.15)",
+                    boxShadow: "0 0 20px hsl(var(--primary) / 0.5)",
                     borderColor: "hsl(var(--primary))"
                   }}
+                  title={integration.name}
                 >
                   {integration.icon ? (
-                    <integration.icon className="h-8 w-8 transition-transform group-hover:scale-110" style={{ color: integration.color }} />
+                    <integration.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary transition-transform group-hover:scale-110" />
                   ) : (
                     <motion.div 
-                      className="flex h-10 w-10 items-center justify-center rounded-lg text-white text-xs font-bold"
-                      style={{ backgroundColor: integration.color }}
+                      className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-primary/20 text-primary text-xs font-bold font-mono"
                       whileHover={{ rotate: [0, -5, 5, 0] }}
                       transition={{ duration: 0.3 }}
                     >
-                      {integration.name.slice(0, 2).toUpperCase()}
+                      {integration.abbr || integration.name.slice(0, 2).toUpperCase()}
                     </motion.div>
                   )}
                 </motion.div>
