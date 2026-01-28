@@ -77,7 +77,7 @@ const CTASection = () => {
                 asChild
                 size="lg"
                 variant="secondary"
-                className="min-w-[200px] bg-white text-primary hover:bg-white/90"
+                className="min-w-[200px] bg-white text-black hover:bg-white/90"
               >
                 <Link to="/contact">
                   <Calendar className="mr-2 h-4 w-4" />
