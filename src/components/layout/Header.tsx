@@ -23,16 +23,16 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-1">
           <img 
             src={palantirLogo} 
             alt="PALANTIR-CODE Logo" 
-            className="h-10 w-10 object-contain terminal-logo"
+            className="h-10 w-10 object-contain terminal-logo-bright"
           />
           <img 
             src={palantirBrand} 
             alt="PALANTIR-CODE" 
-            className="h-7 sm:h-9 object-contain terminal-logo"
+            className="h-7 sm:h-9 object-contain terminal-logo-bright"
           />
         </Link>
 

@@ -11,16 +11,16 @@ const Footer = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-1">
               <img 
                 src={palantirLogo} 
                 alt="PALANTIR-CODE Logo" 
-                className="h-10 w-10 object-contain terminal-logo"
+                className="h-10 w-10 object-contain terminal-logo-bright"
               />
               <img 
                 src={palantirBrand} 
                 alt="PALANTIR-CODE" 
-                className="h-9 object-contain terminal-logo"
+                className="h-9 object-contain terminal-logo-bright"
               />
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">

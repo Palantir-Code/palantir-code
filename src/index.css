@@ -107,12 +107,15 @@
     --terminal-bg-light: 120 10% 8%;
 }
 
-@layer base {
   /* Terminal green filter for logos */
   .terminal-logo {
     filter: grayscale(100%) brightness(0.8) sepia(100%) hue-rotate(70deg) saturate(500%) brightness(1.2);
   }
-}
+
+  /* Brighter fluorescent green filter for logos */
+  .terminal-logo-bright {
+    filter: grayscale(100%) brightness(1) sepia(100%) hue-rotate(70deg) saturate(600%) brightness(1.5) contrast(1.1);
+  }
 }
 
 @layer base {
