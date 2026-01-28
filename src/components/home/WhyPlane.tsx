@@ -21,11 +21,11 @@ const WhyPlane = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Header */}
         <ScrollReveal className="mx-auto max-w-2xl text-center">
-          <div className="mb-4 flex items-center justify-center gap-3">
+          <div className="mb-6 flex items-center justify-center gap-3">
             <motion.img 
               src={planeLogo} 
               alt="Plane" 
-              className="h-10 w-auto terminal-logo-bright"
+              className="h-16 w-auto terminal-logo-bright"
               whileHover={{ rotate: [0, -10, 10, 0] }}
               transition={{ duration: 0.5 }}
             />
