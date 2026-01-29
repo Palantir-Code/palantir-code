@@ -59,7 +59,7 @@ const WhyPlane = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
-    }, 1000);
+    }, 3500);
     return () => clearInterval(interval);
   }, []);
 
