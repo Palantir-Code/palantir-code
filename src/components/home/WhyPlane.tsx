@@ -1,10 +1,20 @@
 import { Layout, FileText, Sparkles, Cloud } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import { WHY_PLANE } from "@/lib/constants";
 import planeLogo from "@/assets/plane-logo-transparent.png";
+import aiHero from "@/assets/ai-hero.avif";
+import wikiHero from "@/assets/wiki-hero.avif";
+import projectsHero from "@/assets/projects-hero.avif";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
 import FloatingPlanes from "@/components/animations/FloatingPlanes";
+
+const carouselImages = [
+  { src: aiHero, alt: "AI Features" },
+  { src: wikiHero, alt: "Wiki Features" },
+  { src: projectsHero, alt: "Projects Features" },
+];
 
 const iconMap: Record<string, React.ReactNode> = {
   Layout: <Layout className="h-6 w-6" />,
@@ -44,6 +54,15 @@ const MatrixStream = ({ delay = 0, left = "50%" }: { delay?: number; left?: stri
 };
 
 const WhyPlane = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-12 lg:py-16 relative overflow-hidden">
       <FloatingPlanes count={3} className="opacity-30" />
@@ -68,6 +87,44 @@ const WhyPlane = () => {
             Plane is the open-source project management platform that gives you everything you need to plan, track, and ship.
           </p>
         </ScrollReveal>
+
+        {/* Image Carousel */}
+        <div className="mt-12 relative mx-auto max-w-4xl">
+          <div className="relative aspect-video overflow-hidden rounded-xl border border-primary/30 shadow-[0_0_30px_rgba(0,255,0,0.15)]">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentIndex}
+                src={carouselImages[currentIndex].src}
+                alt={carouselImages[currentIndex].alt}
+                className="absolute inset-0 w-full h-full object-cover"
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.5 }}
+              />
+            </AnimatePresence>
+            {/* Terminal overlay effect */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 scanlines pointer-events-none opacity-30" />
+          </div>
+          
+          {/* Carousel indicators */}
+          <div className="flex justify-center gap-2 mt-4">
+            {carouselImages.map((_, index) => (
+              <motion.button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === currentIndex 
+                    ? "bg-primary w-6 terminal-glow" 
+                    : "bg-primary/30 hover:bg-primary/50"
+                }`}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+              />
+            ))}
+          </div>
+        </div>
 
         {/* Features Grid with Matrix connections */}
         <div className="mt-16 relative">
