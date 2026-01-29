@@ -1,17 +1,33 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, MessageSquare, Plane } from "lucide-react";
+import { ArrowRight, Plane } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import FloatingPlanes from "@/components/animations/FloatingPlanes";
 
+// Import integration images
+import integration1 from "@/assets/integrations/integration-1.avif";
+import integration2 from "@/assets/integrations/integration-2.avif";
+import integration3 from "@/assets/integrations/integration-3.avif";
+import integration5 from "@/assets/integrations/integration-5.avif";
+import integration6 from "@/assets/integrations/integration-6.avif";
+import integration7 from "@/assets/integrations/integration-7.avif";
+import integration72 from "@/assets/integrations/integration-7-2.avif";
+import integration8 from "@/assets/integrations/integration-8.avif";
+import integration9 from "@/assets/integrations/integration-9.avif";
+import integration10 from "@/assets/integrations/integration-10.avif";
+
 const integrations = [
-  { name: "Slack", icon: MessageSquare, color: "#4A154B" },
-  { name: "GitHub", icon: Github, color: "#24292F" },
-  { name: "GitLab", icon: null, color: "#FC6D26" },
-  { name: "Discord", icon: null, color: "#5865F2" },
-  { name: "Figma", icon: null, color: "#F24E1E" },
-  { name: "Notion", icon: null, color: "#000000" },
+  { name: "Integration 1", image: integration1 },
+  { name: "Integration 2", image: integration2 },
+  { name: "Integration 3", image: integration3 },
+  { name: "Integration 5", image: integration5 },
+  { name: "Integration 6", image: integration6 },
+  { name: "Integration 7", image: integration7 },
+  { name: "Integration 7-2", image: integration72 },
+  { name: "Integration 8", image: integration8 },
+  { name: "Integration 9", image: integration9 },
+  { name: "Integration 10", image: integration10 },
 ];
 
 const Integrations = () => {
@@ -23,38 +39,31 @@ const Integrations = () => {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Visual */}
           <ScrollReveal direction="left" className="flex justify-center">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-5 gap-3">
               {integrations.map((integration, index) => (
                 <motion.div
                   key={index}
-                  className="group flex h-20 w-20 items-center justify-center rounded-2xl bg-card border-2 border-border shadow-lg"
+                  className="group flex h-16 w-16 items-center justify-center rounded-xl bg-card border-2 border-border shadow-lg overflow-hidden"
                   initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
                   whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                   viewport={{ once: true }}
                   transition={{ 
-                    delay: index * 0.1, 
+                    delay: index * 0.05, 
                     type: "spring",
                     stiffness: 200
                   }}
                   whileHover={{ 
                     scale: 1.15, 
                     y: -8,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.15)",
+                    boxShadow: "0 20px 40px rgba(0,255,0,0.15)",
                     borderColor: "hsl(var(--primary))"
                   }}
                 >
-                  {integration.icon ? (
-                    <integration.icon className="h-8 w-8 transition-transform group-hover:scale-110" style={{ color: integration.color }} />
-                  ) : (
-                    <motion.div 
-                      className="flex h-10 w-10 items-center justify-center rounded-lg text-white text-xs font-bold"
-                      style={{ backgroundColor: integration.color }}
-                      whileHover={{ rotate: [0, -5, 5, 0] }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {integration.name.slice(0, 2).toUpperCase()}
-                    </motion.div>
-                  )}
+                  <img 
+                    src={integration.image} 
+                    alt={integration.name}
+                    className="h-10 w-10 object-contain transition-transform group-hover:scale-110"
+                  />
                 </motion.div>
               ))}
             </div>
