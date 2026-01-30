@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/home/Hero";
 import Stats from "@/components/home/Stats";
+import PlaneCompose from "@/components/home/PlaneCompose";
 import WhyPlane from "@/components/home/WhyPlane";
 import Testimonials from "@/components/home/Testimonials";
 import Importers from "@/components/home/Importers";
@@ -15,6 +16,7 @@ const Index = () => {
     <Layout>
       <Hero />
       <Stats />
+      <PlaneCompose />
       <WhyPlane />
       <Testimonials />
       <Importers />
