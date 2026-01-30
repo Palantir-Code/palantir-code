@@ -3,118 +3,114 @@
 @tailwind utilities;
 
 /* PALANTIR-CODE Design System
-   Terminal Dark Mode - Matrix Green Theme
-   Primary Green: #00FF41 (HSL: 130 100% 50%)
+   Elegant White & Lilac Theme
+   Primary Lilac: HSL 270 60% 60%
    All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Dark terminal theme by default */
-    --background: 120 10% 4%;
-    --foreground: 120 100% 80%;
+    /* Light elegant theme */
+    --background: 0 0% 100%;
+    --foreground: 270 20% 15%;
 
-    --card: 120 10% 6%;
-    --card-foreground: 120 100% 80%;
+    --card: 270 30% 98%;
+    --card-foreground: 270 20% 15%;
 
-    --popover: 120 10% 6%;
-    --popover-foreground: 120 100% 80%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 20% 15%;
 
-    /* Terminal Green */
-    --primary: 120 100% 50%;
-    --primary-foreground: 120 10% 4%;
+    /* Lilac Purple */
+    --primary: 270 60% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Darker green accent */
-    --secondary: 120 50% 12%;
-    --secondary-foreground: 120 100% 70%;
+    /* Soft lilac accent */
+    --secondary: 270 40% 95%;
+    --secondary-foreground: 270 50% 40%;
 
-    --muted: 120 10% 12%;
-    --muted-foreground: 120 40% 50%;
+    --muted: 270 20% 96%;
+    --muted-foreground: 270 15% 45%;
 
-    --accent: 120 60% 15%;
-    --accent-foreground: 120 100% 70%;
+    --accent: 270 50% 92%;
+    --accent-foreground: 270 60% 50%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 120 30% 20%;
-    --input: 120 30% 15%;
-    --ring: 120 100% 50%;
+    --border: 270 20% 90%;
+    --input: 270 20% 92%;
+    --ring: 270 60% 60%;
 
     --radius: 0.5rem;
 
     /* Sidebar */
-    --sidebar-background: 120 10% 5%;
-    --sidebar-foreground: 120 100% 75%;
-    --sidebar-primary: 120 100% 50%;
-    --sidebar-primary-foreground: 120 10% 4%;
-    --sidebar-accent: 120 50% 12%;
-    --sidebar-accent-foreground: 120 100% 70%;
-    --sidebar-border: 120 30% 15%;
-    --sidebar-ring: 120 100% 50%;
+    --sidebar-background: 270 30% 98%;
+    --sidebar-foreground: 270 20% 25%;
+    --sidebar-primary: 270 60% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 40% 94%;
+    --sidebar-accent-foreground: 270 50% 45%;
+    --sidebar-border: 270 20% 90%;
+    --sidebar-ring: 270 60% 60%;
 
-    /* Custom terminal tokens */
-    --terminal-green: 120 100% 50%;
-    --terminal-green-dim: 120 80% 35%;
-    --terminal-green-glow: 120 100% 60%;
-    --terminal-bg: 120 10% 4%;
-    --terminal-bg-light: 120 10% 8%;
-    --brand-gradient: linear-gradient(135deg, hsl(120 100% 40%), hsl(120 100% 60%));
+    /* Custom lilac tokens */
+    --lilac: 270 60% 60%;
+    --lilac-light: 270 50% 75%;
+    --lilac-dark: 270 60% 45%;
+    --brand-gradient: linear-gradient(135deg, hsl(270 60% 55%), hsl(290 60% 65%));
   }
 
   .dark {
-    --background: 120 10% 4%;
-    --foreground: 120 100% 80%;
+    --background: 270 20% 8%;
+    --foreground: 270 20% 95%;
 
-    --card: 120 10% 6%;
-    --card-foreground: 120 100% 80%;
+    --card: 270 20% 10%;
+    --card-foreground: 270 20% 95%;
 
-    --popover: 120 10% 6%;
-    --popover-foreground: 120 100% 80%;
+    --popover: 270 20% 10%;
+    --popover-foreground: 270 20% 95%;
 
-    --primary: 120 100% 50%;
-    --primary-foreground: 120 10% 4%;
+    --primary: 270 60% 65%;
+    --primary-foreground: 270 20% 8%;
 
-    --secondary: 120 50% 12%;
-    --secondary-foreground: 120 100% 70%;
+    --secondary: 270 30% 18%;
+    --secondary-foreground: 270 40% 80%;
 
-    --muted: 120 10% 12%;
-    --muted-foreground: 120 40% 50%;
+    --muted: 270 15% 15%;
+    --muted-foreground: 270 20% 55%;
 
-    --accent: 120 60% 15%;
-    --accent-foreground: 120 100% 70%;
+    --accent: 270 40% 20%;
+    --accent-foreground: 270 50% 80%;
 
-    --destructive: 0 62% 30%;
+    --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 120 30% 20%;
-    --input: 120 30% 15%;
-    --ring: 120 100% 50%;
+    --border: 270 20% 20%;
+    --input: 270 20% 18%;
+    --ring: 270 60% 65%;
 
-    --sidebar-background: 120 10% 5%;
-    --sidebar-foreground: 120 100% 75%;
-    --sidebar-primary: 120 100% 50%;
-    --sidebar-primary-foreground: 120 10% 4%;
-    --sidebar-accent: 120 50% 12%;
-    --sidebar-accent-foreground: 120 100% 70%;
-    --sidebar-border: 120 30% 15%;
-    --sidebar-ring: 120 100% 50%;
+    --sidebar-background: 270 20% 9%;
+    --sidebar-foreground: 270 20% 90%;
+    --sidebar-primary: 270 60% 65%;
+    --sidebar-primary-foreground: 270 20% 8%;
+    --sidebar-accent: 270 30% 18%;
+    --sidebar-accent-foreground: 270 40% 80%;
+    --sidebar-border: 270 20% 18%;
+    --sidebar-ring: 270 60% 65%;
 
-    --terminal-green: 120 100% 50%;
-    --terminal-green-dim: 120 80% 35%;
-    --terminal-green-glow: 120 100% 60%;
-    --terminal-bg: 120 10% 4%;
-    --terminal-bg-light: 120 10% 8%;
-}
-
-  /* Terminal green filter for logos */
-  .terminal-logo {
-    filter: grayscale(100%) brightness(0.8) sepia(100%) hue-rotate(70deg) saturate(500%) brightness(1.2);
+    --lilac: 270 60% 65%;
+    --lilac-light: 270 50% 75%;
+    --lilac-dark: 270 60% 50%;
   }
 
-  /* Brighter fluorescent green filter for logos */
+  /* Lilac filter for logos */
+  .terminal-logo {
+    filter: grayscale(100%) brightness(0.6) sepia(100%) hue-rotate(220deg) saturate(300%) brightness(1.1);
+  }
+
+  /* Brighter lilac filter for logos */
   .terminal-logo-bright {
-    filter: grayscale(100%) brightness(1) sepia(100%) hue-rotate(70deg) saturate(600%) brightness(1.5) contrast(1.1);
+    filter: grayscale(100%) brightness(0.7) sepia(100%) hue-rotate(220deg) saturate(400%) brightness(1.2);
   }
 }
 
@@ -150,77 +146,67 @@
     @apply transition-transform duration-200 hover:scale-105;
   }
 
-  /* Terminal text glow effect */
+  /* Soft glow effect */
   .terminal-glow {
-    text-shadow: 0 0 5px hsl(120 100% 50% / 0.5), 
-                 0 0 10px hsl(120 100% 50% / 0.3),
-                 0 0 20px hsl(120 100% 50% / 0.2);
+    text-shadow: 0 0 10px hsl(270 60% 60% / 0.4), 
+                 0 0 20px hsl(270 60% 60% / 0.2);
   }
 
   .terminal-box-glow {
-    box-shadow: 0 0 10px hsl(120 100% 50% / 0.3),
-                0 0 20px hsl(120 100% 50% / 0.2),
-                0 0 40px hsl(120 100% 50% / 0.1),
-                inset 0 0 20px hsl(120 100% 50% / 0.05);
+    box-shadow: 0 0 15px hsl(270 60% 60% / 0.2),
+                0 0 30px hsl(270 60% 60% / 0.1);
   }
 
-  /* Scanline effect */
+  /* Subtle gradient overlay */
   .scanlines::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      hsl(120 100% 50% / 0.03) 2px,
-      hsl(120 100% 50% / 0.03) 4px
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      hsl(270 60% 60% / 0.02) 50%,
+      transparent 100%
     );
     pointer-events: none;
     z-index: 10;
   }
 
-  /* CRT flicker */
+  /* Subtle pulse animation */
   @keyframes flicker {
     0%, 100% { opacity: 1; }
-    92% { opacity: 1; }
-    93% { opacity: 0.8; }
-    94% { opacity: 1; }
+    50% { opacity: 0.95; }
   }
 
   .crt-flicker {
-    animation: flicker 4s infinite;
+    animation: flicker 3s ease-in-out infinite;
   }
 
-  /* Matrix rain animation */
-  @keyframes matrix-rain {
-    0% {
-      transform: translateY(-100%);
-      opacity: 0;
+  /* Float animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
     }
-    10% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh);
-      opacity: 0;
+    50% {
+      transform: translateY(-10px);
     }
   }
 
-  .animate-matrix-rain {
-    animation: matrix-rain linear infinite;
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
   }
 
-  /* Terminal cursor blink */
-  @keyframes cursor-blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+  /* Pulse glow */
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(270 60% 60% / 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(270 60% 60% / 0.5);
+    }
   }
 
-  .cursor-blink {
-    animation: cursor-blink 1s step-end infinite;
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
   }
 }
