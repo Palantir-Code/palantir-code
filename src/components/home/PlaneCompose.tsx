@@ -61,12 +61,11 @@ const PlaneCompose = () => {
           </div>
         </ScrollReveal>
 
-        {/* Two Videos Layout */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Left Video - Plane Compose */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Video Side */}
           <ScrollReveal delay={0.2}>
             <motion.div 
-              className="relative"
+              className="relative order-2 lg:order-1"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
@@ -174,159 +173,50 @@ const PlaneCompose = () => {
             </motion.div>
           </ScrollReveal>
 
-          {/* Right Video - Second Demo */}
-          <ScrollReveal delay={0.3}>
-            <motion.div 
-              className="relative"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              {/* Animated frame container */}
-              <div className="relative p-1 rounded-2xl bg-gradient-to-br from-primary via-primary/50 to-primary/20">
-                {/* Animated border glow */}
-                <motion.div
-                  className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-400 via-primary to-purple-400 opacity-75 blur-sm"
-                  animate={{
-                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "linear",
-                    delay: 1.5,
-                  }}
-                  style={{ backgroundSize: "200% 200%" }}
-                />
-                
-                {/* Corner accents */}
-                <motion.div
-                  className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-primary rounded-tl-lg"
-                  animate={{ opacity: [0.5, 1, 0.5] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 0.25 }}
-                />
-                <motion.div
-                  className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-primary rounded-tr-lg"
-                  animate={{ opacity: [0.5, 1, 0.5] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 0.75 }}
-                />
-                <motion.div
-                  className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-primary rounded-bl-lg"
-                  animate={{ opacity: [0.5, 1, 0.5] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 1.25 }}
-                />
-                <motion.div
-                  className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-primary rounded-br-lg"
-                  animate={{ opacity: [0.5, 1, 0.5] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 1.75 }}
-                />
+          {/* Features Side */}
+          <div className="order-1 lg:order-2">
+            <ScrollReveal delay={0.3}>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Bring Git-style discipline to project management
+              </h3>
+              <p className="text-muted-foreground mb-8">
+                Version your project configuration, review changes through PRs, and standardize structures across your organization.
+              </p>
+            </ScrollReveal>
 
-                {/* Title header bar */}
-                <div className="relative bg-card rounded-t-xl border-b border-border/50">
-                  <div className="flex items-center gap-3 px-4 py-3">
-                    {/* Window controls */}
-                    <div className="flex gap-1.5">
-                      <motion.div 
-                        className="w-3 h-3 rounded-full bg-red-500"
-                        whileHover={{ scale: 1.2 }}
-                      />
-                      <motion.div 
-                        className="w-3 h-3 rounded-full bg-yellow-500"
-                        whileHover={{ scale: 1.2 }}
-                      />
-                      <motion.div 
-                        className="w-3 h-3 rounded-full bg-green-500"
-                        whileHover={{ scale: 1.2 }}
-                      />
-                    </div>
-                    
-                    {/* Title */}
-                    <div className="flex-1 text-center">
-                      <span className="text-sm font-medium text-foreground">
-                        <span className="text-primary font-semibold">Plane in Action</span>
-                        <span className="text-muted-foreground hidden sm:inline"> — Workflow</span>
-                      </span>
-                    </div>
-                    
-                    {/* Live indicator */}
-                    <motion.div 
-                      className="flex items-center gap-1.5"
-                      animate={{ opacity: [0.5, 1, 0.5] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                    >
-                      <span className="w-2 h-2 rounded-full bg-green-500" />
-                      <span className="text-xs text-muted-foreground hidden sm:inline">LIVE</span>
-                    </motion.div>
+            <StaggerContainer className="space-y-4" staggerDelay={0.1}>
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="group flex items-start gap-4 p-4 rounded-xl border border-border/50 bg-card/50 hover:bg-card hover:border-primary/30 transition-all duration-300"
+                  whileHover={{ x: 8 }}
+                >
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <feature.icon className="h-5 w-5" />
                   </div>
-                </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground font-mono text-sm mb-1">
+                      {feature.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {feature.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </StaggerContainer>
 
-                {/* Video container */}
-                <div className="relative bg-card rounded-b-xl overflow-hidden">
-                  <div className="aspect-video">
-                    <iframe
-                      src="https://www.youtube.com/embed/_NcfSOfL16I?autoplay=1&mute=1&loop=1&playlist=_NcfSOfL16I&controls=0&showinfo=0&rel=0&modestbranding=1"
-                      title="Plane Workflow Demo"
-                      className="w-full h-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                  
-                  {/* Scan line effect */}
-                  <motion.div
-                    className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-primary/5 to-transparent"
-                    animate={{ y: ["-100%", "100%"] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 1 }}
-                    style={{ height: "50%" }}
-                  />
-                </div>
+            <ScrollReveal delay={0.5}>
+              <div className="mt-8">
+                <Button asChild size="lg" className="group">
+                  <a href="https://plane.so/plane-compose" target="_blank" rel="noopener noreferrer">
+                    Learn about Plane Compose
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </Button>
               </div>
-              
-              {/* Decorative glow */}
-              <div className="absolute -inset-8 -z-10 bg-primary/20 blur-3xl rounded-full opacity-40" />
-            </motion.div>
-          </ScrollReveal>
-        </div>
-
-        {/* Features Grid Below */}
-        <div className="mt-16">
-          <ScrollReveal delay={0.4}>
-            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
-              Bring Git-style discipline to project management
-            </h3>
-          </ScrollReveal>
-
-          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" staggerDelay={0.1}>
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                className="group flex flex-col items-center text-center gap-3 p-6 rounded-xl border border-border/50 bg-card/50 hover:bg-card hover:border-primary/30 transition-all duration-300"
-                whileHover={{ y: -4 }}
-              >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  <feature.icon className="h-6 w-6" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground font-mono text-sm mb-1">
-                    {feature.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    {feature.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </StaggerContainer>
-
-          <ScrollReveal delay={0.5}>
-            <div className="mt-10 text-center">
-              <Button asChild size="lg" className="group">
-                <a href="https://plane.so/plane-compose" target="_blank" rel="noopener noreferrer">
-                  Learn about Plane Compose
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>
