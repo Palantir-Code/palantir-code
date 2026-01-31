@@ -29,11 +29,11 @@ const features = [
 
 const PlaneCompose = () => {
   return (
-    <section className="relative py-20 lg:py-28 bg-gradient-to-b from-background via-accent/30 to-background overflow-hidden">
+    <section className="relative py-20 lg:py-28 bg-background overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-0 h-[400px] w-[400px] rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute bottom-1/4 right-0 h-[300px] w-[300px] rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute top-1/4 left-0 h-[400px] w-[400px] rounded-full bg-primary/15 blur-3xl" />
+        <div className="absolute bottom-1/4 right-0 h-[300px] w-[300px] rounded-full bg-accent/10 blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8">
