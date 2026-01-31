@@ -4,9 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/lib/constants";
 import planeLogo from "@/assets/plane-logo-transparent.png";
-import FloatingPlanes from "@/components/animations/FloatingPlanes";
-import FloatingClouds from "@/components/animations/FloatingClouds";
-import FlightPath from "@/components/animations/FlightPath";
+import GridBackground from "@/components/animations/GridBackground";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
@@ -51,17 +49,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background min-h-[80vh] flex items-center">
-      {/* Background decoration */}
+    <section className="relative overflow-hidden bg-background min-h-[80vh] flex items-center">
+      {/* Grid background animation */}
+      <GridBackground className="-z-10" />
+      
+      {/* Background glow effects */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/15 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-accent/10 blur-3xl" />
       </div>
-
-      {/* Animated plane elements */}
-      <FloatingPlanes count={6} className="z-0 opacity-60" />
-      <FloatingClouds count={4} className="z-0" />
-      <FlightPath className="z-0 opacity-40" />
       
       {/* Plane logo watermark */}
       <div className="absolute inset-0 -z-5 flex items-center justify-center overflow-hidden pointer-events-none">
