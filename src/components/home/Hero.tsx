@@ -7,8 +7,49 @@ import planeLogo from "@/assets/plane-logo-transparent.png";
 import FloatingPlanes from "@/components/animations/FloatingPlanes";
 import FloatingClouds from "@/components/animations/FloatingClouds";
 import FlightPath from "@/components/animations/FlightPath";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const fullText = "Accelerate Your Projects with ";
+  const highlightText = "Plane";
+  const [displayedText, setDisplayedText] = useState("");
+  const [showHighlight, setShowHighlight] = useState(false);
+  const [highlightDisplayed, setHighlightDisplayed] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const typeInterval = setInterval(() => {
+      if (currentIndex < fullText.length) {
+        setDisplayedText(fullText.slice(0, currentIndex + 1));
+        currentIndex++;
+      } else {
+        clearInterval(typeInterval);
+        setShowHighlight(true);
+        // Start typing highlight text
+        let highlightIndex = 0;
+        const highlightInterval = setInterval(() => {
+          if (highlightIndex < highlightText.length) {
+            setHighlightDisplayed(highlightText.slice(0, highlightIndex + 1));
+            highlightIndex++;
+          } else {
+            clearInterval(highlightInterval);
+          }
+        }, 100);
+      }
+    }, 50);
+
+    return () => clearInterval(typeInterval);
+  }, []);
+
+  // Blinking cursor effect
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 530);
+    return () => clearInterval(cursorInterval);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background min-h-[80vh] flex items-center">
       {/* Background decoration */}
@@ -54,16 +95,19 @@ const Hero = () => {
               <img src={planeLogo} alt="Plane" className="h-5 w-auto terminal-logo-bright" />
             </motion.div>
 
-            {/* Headline */}
-            <motion.h1 
-              className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-            >
-              Accelerate Your Projects with{" "}
-              <span className="text-gradient">Plane</span>
-            </motion.h1>
+            {/* Headline with typewriter effect */}
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl min-h-[1.2em]">
+              {displayedText}
+              {showHighlight && (
+                <span className="text-gradient">{highlightDisplayed}</span>
+              )}
+              <span 
+                className={`inline-block w-[0.5em] h-[1em] ml-1 bg-primary align-middle transition-opacity duration-100 ${
+                  showCursor ? 'opacity-100' : 'opacity-0'
+                }`}
+                style={{ transform: 'translateY(-0.1em)' }}
+              />
+            </h1>
 
             {/* Subheadline */}
             <motion.p 
