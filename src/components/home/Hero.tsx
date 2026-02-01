@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const fullText = "Accelerate Your Projects with ";
-  const highlightText = "Plane\n& PALANTIR-CODE";
+  const highlightText = "Plane\n& 🔮PALANTIR-CODE";
   const [displayedText, setDisplayedText] = useState("");
   const [showHighlight, setShowHighlight] = useState(false);
   const [highlightDisplayed, setHighlightDisplayed] = useState("");
