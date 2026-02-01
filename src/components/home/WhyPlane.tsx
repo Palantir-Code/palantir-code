@@ -88,42 +88,40 @@ const WhyPlane = () => {
           </p>
         </ScrollReveal>
 
-        {/* Image Carousel */}
-        <div className="mt-12 relative mx-auto max-w-4xl">
-          <div className="relative aspect-video overflow-hidden rounded-xl border border-primary/30 shadow-[0_0_30px_rgba(0,255,0,0.15)]">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={currentIndex}
-                src={carouselImages[currentIndex].src}
-                alt={carouselImages[currentIndex].alt}
-                className="absolute inset-0 w-full h-full object-cover"
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.5 }}
-              />
-            </AnimatePresence>
-            {/* Terminal overlay effect */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute inset-0 scanlines pointer-events-none opacity-30" />
-          </div>
-          
-          {/* Carousel indicators */}
-          <div className="flex justify-center gap-2 mt-4">
-            {carouselImages.map((_, index) => (
-              <motion.button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentIndex 
-                    ? "bg-primary w-6 terminal-glow" 
-                    : "bg-primary/30 hover:bg-primary/50"
-                }`}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              />
-            ))}
-          </div>
+        {/* Three Separate Images */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {carouselImages.map((image, index) => (
+            <motion.div
+              key={index}
+              className="relative group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              whileHover={{ y: -8, scale: 1.03 }}
+            >
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-primary/30 shadow-lg group-hover:border-primary/60 transition-all">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover"
+                />
+                {/* Terminal overlay effect */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 scanlines pointer-events-none opacity-20 group-hover:opacity-40 transition-opacity" />
+                
+                {/* Label */}
+                <div className="absolute bottom-3 left-3 right-3">
+                  <span className="inline-block px-3 py-1 bg-card/80 backdrop-blur-sm rounded-full text-xs font-medium text-primary border border-primary/30">
+                    {image.alt}
+                  </span>
+                </div>
+              </div>
+              
+              {/* Glow effect on hover */}
+              <div className="absolute -inset-2 bg-primary/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
+            </motion.div>
+          ))}
         </div>
 
         {/* Features Grid with Matrix connections */}
