@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const fullText = "Accelerate Your Projects with ";
-  const highlightText = "Plane";
+  const highlightText = "Plane\n and PALANTIR-CODE";
   const [displayedText, setDisplayedText] = useState("");
   const [showHighlight, setShowHighlight] = useState(false);
   const [highlightDisplayed, setHighlightDisplayed] = useState("");
@@ -43,7 +43,7 @@ const Hero = () => {
   // Blinking cursor effect
   useEffect(() => {
     const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
+      setShowCursor((prev) => !prev);
     }, 530);
     return () => clearInterval(cursorInterval);
   }, []);
@@ -52,19 +52,19 @@ const Hero = () => {
     <section className="relative overflow-hidden bg-background min-h-[80vh] flex items-center">
       {/* Grid background animation */}
       <GridBackground className="z-0" />
-      
+
       {/* Background glow effects */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/20 blur-3xl" />
         <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-accent/15 blur-3xl" />
       </div>
-      
+
       {/* Plane logo watermark */}
       <div className="absolute inset-0 -z-5 flex items-center justify-center overflow-hidden pointer-events-none">
-        <motion.img 
-          src={planeLogo} 
-          alt="" 
-          className="w-[700px] h-auto opacity-[0.08] select-none terminal-logo-bright" 
+        <motion.img
+          src={planeLogo}
+          alt=""
+          className="w-[700px] h-auto opacity-[0.08] select-none terminal-logo-bright"
           aria-hidden="true"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.08 }}
@@ -77,7 +77,7 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             {/* Partner Badge */}
-            <motion.div 
+            <motion.div
               className="mb-8 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -94,29 +94,28 @@ const Hero = () => {
             {/* Headline with typewriter effect */}
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl min-h-[1.2em]">
               {displayedText}
-              {showHighlight && (
-                <span className="text-gradient">{highlightDisplayed}</span>
-              )}
-              <span 
+              {showHighlight && <span className="text-gradient">{highlightDisplayed}</span>}
+              <span
                 className={`inline-block w-[0.5em] h-[1em] ml-1 bg-primary align-middle transition-opacity duration-100 ${
-                  showCursor ? 'opacity-100' : 'opacity-0'
+                  showCursor ? "opacity-100" : "opacity-0"
                 }`}
-                style={{ transform: 'translateY(-0.1em)' }}
+                style={{ transform: "translateY(-0.1em)" }}
               />
             </h1>
 
             {/* Subheadline */}
-            <motion.p 
+            <motion.p
               className="mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              {COMPANY.name} is Spain's first certified Plane partner. We help teams ship faster with expert implementation, migration, and custom solutions for Plane's unified workspace.
+              {COMPANY.name} is Spain's first certified Plane partner. We help teams ship faster with expert
+              implementation, migration, and custom solutions for Plane's unified workspace.
             </motion.p>
 
             {/* CTAs */}
-            <motion.div 
+            <motion.div
               className="flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -137,7 +136,7 @@ const Hero = () => {
             </motion.div>
 
             {/* Trust indicators */}
-            <motion.div 
+            <motion.div
               className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground lg:justify-start"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -145,19 +144,31 @@ const Hero = () => {
             >
               <div className="flex items-center gap-2">
                 <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Enterprise Ready
               </div>
               <div className="flex items-center gap-2">
                 <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 SOC 2 & GDPR
               </div>
               <div className="flex items-center gap-2">
                 <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 24/7 Support
               </div>
@@ -165,7 +176,7 @@ const Hero = () => {
           </div>
 
           {/* Right Video */}
-          <motion.div 
+          <motion.div
             className="relative"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -186,7 +197,7 @@ const Hero = () => {
                 }}
                 style={{ backgroundSize: "200% 200%" }}
               />
-              
+
               {/* Corner accents */}
               <motion.div
                 className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-primary rounded-tl-lg"
@@ -214,20 +225,11 @@ const Hero = () => {
                 <div className="flex items-center gap-3 px-4 py-3">
                   {/* Window controls */}
                   <div className="flex gap-1.5">
-                    <motion.div 
-                      className="w-3 h-3 rounded-full bg-destructive"
-                      whileHover={{ scale: 1.2 }}
-                    />
-                    <motion.div 
-                      className="w-3 h-3 rounded-full bg-yellow-500"
-                      whileHover={{ scale: 1.2 }}
-                    />
-                    <motion.div 
-                      className="w-3 h-3 rounded-full bg-green-500"
-                      whileHover={{ scale: 1.2 }}
-                    />
+                    <motion.div className="w-3 h-3 rounded-full bg-destructive" whileHover={{ scale: 1.2 }} />
+                    <motion.div className="w-3 h-3 rounded-full bg-yellow-500" whileHover={{ scale: 1.2 }} />
+                    <motion.div className="w-3 h-3 rounded-full bg-green-500" whileHover={{ scale: 1.2 }} />
                   </div>
-                  
+
                   {/* Title */}
                   <div className="flex-1 text-center">
                     <span className="text-sm font-medium text-foreground">
@@ -235,9 +237,9 @@ const Hero = () => {
                       <span className="text-muted-foreground hidden sm:inline"> — Platform Demo</span>
                     </span>
                   </div>
-                  
+
                   {/* Live indicator */}
-                  <motion.div 
+                  <motion.div
                     className="flex items-center gap-1.5"
                     animate={{ opacity: [0.5, 1, 0.5] }}
                     transition={{ duration: 2, repeat: Infinity }}
@@ -259,7 +261,7 @@ const Hero = () => {
                     allowFullScreen
                   />
                 </div>
-                
+
                 {/* Scan line effect */}
                 <motion.div
                   className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-primary/5 to-transparent"
@@ -269,7 +271,7 @@ const Hero = () => {
                 />
               </div>
             </div>
-            
+
             {/* Decorative glow */}
             <div className="absolute -inset-8 -z-10 bg-gradient-to-r from-primary/20 to-accent/20 blur-3xl rounded-full opacity-40" />
           </motion.div>
