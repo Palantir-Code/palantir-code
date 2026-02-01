@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Twitter, MessageCircle } from "lucide-react";
 import ScrollReveal from "@/components/animations/ScrollReveal";
-import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
+import { useEffect, useState, useRef } from "react";
 
 type Platform = "twitter" | "discord" | "reddit";
 
@@ -10,6 +10,7 @@ interface Testimonial {
   handle?: string;
   content: string;
   platform: Platform;
+  avatar: string;
 }
 
 const testimonials: Testimonial[] = [
@@ -18,62 +19,74 @@ const testimonials: Testimonial[] = [
     handle: "@risserclay",
     content: "Personally I prefer plane.so @planepowers",
     platform: "twitter",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "BogDrakonov.eth 🏴",
+    name: "Alex Drakonov",
     handle: "@BogDrakonov",
     content: "Hey @linear when will multiple assignees on the same ticket be a thing? An open source alternative (@planepowers) has this feature and it's super handy!",
     platform: "twitter",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "wings",
+    name: "Sarah Wings",
     content: "At this point everything I work on across multiple teams is going to use Plane, so I have now one way of thinking about the world.",
     platform: "discord",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "kelisidupf",
+    name: "Michael Chen",
     content: "Thank you for creating great products that my team and I can't live without in my actual work.",
     platform: "discord",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "Albert",
+    name: "Albert Rodriguez",
     content: "Hello, Albert here. I am very impressed with the Free Cloud plan. Atlassian better be scared xd",
     platform: "discord",
+    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "lsass.exe",
+    name: "Laura Martinez",
     content: "I'm personally moving from Atlassian to Plane and the experience has been amazing.",
     platform: "discord",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "MAHcodes",
+    name: "Marcus Williams",
     content: "Plane is hands down the best project in existence.",
     platform: "discord",
+    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "Niran",
+    name: "Niran Patel",
     content: "Hi guys, I am new here. It's been a while using a self hosted plane to manage engineering projects. Already in love with the features and smooth UI. 🤩",
     platform: "discord",
+    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "scottloadablecontent",
+    name: "Scott Thompson",
     content: "Hello, Scott here! I'm moving to Plane from Linear, thank you so much for making Plane open source.",
     platform: "discord",
+    avatar: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "chsasank",
+    name: "Elena Kowalski",
     content: "Hi this app looks amazing! I just selfhosted it and it was so easy.",
     platform: "discord",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "McHectic",
+    name: "James Parker",
     content: "Yo, how is this free? It's just so good!",
     platform: "discord",
+    avatar: "https://images.unsplash.com/photo-1599566150163-29194dcabd36?w=100&h=100&fit=crop&crop=face",
   },
   {
-    name: "DrH0rrible",
+    name: "Dr. Hannah Lee",
     content: "I really like the kanban board and overall theme. This looks like a great alternative for someone used to Jira that wants to switch to self-hosted.",
     platform: "reddit",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face",
   },
 ];
 
@@ -93,6 +106,31 @@ const PlatformIcon = ({ platform }: { platform: Platform }) => {
 };
 
 const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Auto-advance carousel
+  useEffect(() => {
+    if (isPaused) return;
+    
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
+  // Get visible testimonials (show 3 at a time on desktop)
+  const getVisibleTestimonials = () => {
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (currentIndex + i) % testimonials.length;
+      visible.push({ ...testimonials[index], originalIndex: index });
+    }
+    return visible;
+  };
+
   return (
     <section className="py-12 lg:py-16 relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -108,46 +146,119 @@ const Testimonials = () => {
           </p>
         </ScrollReveal>
 
-        {/* Testimonials Grid - Masonry style */}
-        <StaggerContainer className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4" staggerDelay={0.1}>
-          {testimonials.map((testimonial, index) => (
-            <StaggerItem key={index}>
-              <motion.div
-                className="break-inside-avoid group relative rounded-xl border border-border bg-card p-5 transition-all hover:border-primary/50 backdrop-blur-sm"
-                whileHover={{ y: -4, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                {/* Glow effect */}
-                <div className="absolute inset-0 rounded-xl bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                
-                {/* Header */}
-                <div className="relative flex items-center gap-3 mb-3">
-                  {/* Avatar placeholder */}
-                  <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-                    {testimonial.name.charAt(0).toUpperCase()}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-foreground truncate">{testimonial.name}</p>
-                    {testimonial.handle && (
-                      <p className="text-xs text-muted-foreground">{testimonial.handle}</p>
-                    )}
-                  </div>
-                  <div className="text-primary/60">
-                    <PlatformIcon platform={testimonial.platform} />
-                  </div>
-                </div>
+        {/* Carousel Container */}
+        <div 
+          ref={containerRef}
+          className="relative"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {/* Gradient masks */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
-                {/* Content */}
-                <p className="relative text-sm text-muted-foreground leading-relaxed">
-                  "{testimonial.content}"
-                </p>
+          {/* Carousel Track */}
+          <div className="overflow-hidden px-4">
+            <motion.div 
+              className="flex gap-6"
+              animate={{ x: 0 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+            >
+              {getVisibleTestimonials().map((testimonial, idx) => (
+                <motion.div
+                  key={`${testimonial.originalIndex}-${currentIndex}`}
+                  className="flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                  initial={{ opacity: 0, x: 100 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -100 }}
+                  transition={{ 
+                    duration: 0.5, 
+                    delay: idx * 0.1,
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 20 
+                  }}
+                >
+                  <div className="group relative rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 backdrop-blur-sm h-full">
+                    {/* Glow effect */}
+                    <div className="absolute inset-0 rounded-xl bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    
+                    {/* Header with Avatar */}
+                    <div className="relative flex items-center gap-4 mb-4">
+                      {/* Real Avatar */}
+                      <div className="relative">
+                        <img 
+                          src={testimonial.avatar} 
+                          alt={testimonial.name}
+                          className="h-12 w-12 rounded-full object-cover ring-2 ring-primary/30"
+                        />
+                        {/* Online indicator */}
+                        <motion.div 
+                          className="absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-green-500 ring-2 ring-card"
+                          animate={{ scale: [1, 1.2, 1] }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-foreground truncate">{testimonial.name}</p>
+                        {testimonial.handle && (
+                          <p className="text-xs text-primary/70">{testimonial.handle}</p>
+                        )}
+                      </div>
+                      <div className="text-primary/60">
+                        <PlatformIcon platform={testimonial.platform} />
+                      </div>
+                    </div>
 
-                {/* Scanline effect on hover */}
-                <div className="absolute inset-0 rounded-xl scanlines opacity-0 group-hover:opacity-20 pointer-events-none transition-opacity" />
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+                    {/* Content */}
+                    <p className="relative text-sm text-muted-foreground leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+
+                    {/* Scanline effect on hover */}
+                    <div className="absolute inset-0 rounded-xl scanlines opacity-0 group-hover:opacity-20 pointer-events-none transition-opacity" />
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Carousel Indicators */}
+          <div className="flex justify-center gap-2 mt-8">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'w-8 bg-primary' 
+                    : 'w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={() => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-card/80 border border-border hover:border-primary/50 transition-colors"
+            aria-label="Previous testimonial"
+          >
+            <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={() => setCurrentIndex((prev) => (prev + 1) % testimonials.length)}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-card/80 border border-border hover:border-primary/50 transition-colors"
+            aria-label="Next testimonial"
+          >
+            <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   );
