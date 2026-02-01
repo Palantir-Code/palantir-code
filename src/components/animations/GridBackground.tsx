@@ -6,14 +6,14 @@ interface GridBackgroundProps {
 
 const GridBackground = ({ className = "" }: GridBackgroundProps) => {
   return (
-    <div className={`absolute inset-0 overflow-hidden ${className}`}>
+    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {/* Base grid pattern */}
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-40"
         style={{
           backgroundImage: `
-            linear-gradient(to right, hsl(280 70% 60% / 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, hsl(280 70% 60% / 0.1) 1px, transparent 1px)
+            linear-gradient(to right, hsl(280 70% 60% / 0.25) 1px, transparent 1px),
+            linear-gradient(to bottom, hsl(280 70% 60% / 0.25) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
         }}

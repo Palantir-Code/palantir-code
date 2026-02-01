@@ -51,12 +51,12 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-background min-h-[80vh] flex items-center">
       {/* Grid background animation */}
-      <GridBackground className="-z-10" />
+      <GridBackground className="z-0" />
       
       {/* Background glow effects */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/15 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-accent/10 blur-3xl" />
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/20 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-accent/15 blur-3xl" />
       </div>
       
       {/* Plane logo watermark */}
