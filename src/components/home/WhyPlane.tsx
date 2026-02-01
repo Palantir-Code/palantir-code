@@ -1,6 +1,6 @@
-import { Layout, FileText, Sparkles, Cloud } from "lucide-react";
+import { Layout, FileText, Sparkles, Cloud, X, ZoomIn } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { WHY_PLANE } from "@/lib/constants";
 import planeLogo from "@/assets/plane-logo-transparent.png";
 import aiHero from "@/assets/ai-hero.avif";
@@ -54,14 +54,7 @@ const MatrixStream = ({ delay = 0, left = "50%" }: { delay?: number; left?: stri
 };
 
 const WhyPlane = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
-    }, 3500);
-    return () => clearInterval(interval);
-  }, []);
+  const [zoomedImage, setZoomedImage] = useState<{ src: string; alt: string } | null>(null);
 
   return (
     <section className="py-12 lg:py-16 relative overflow-hidden">
@@ -93,12 +86,13 @@ const WhyPlane = () => {
           {carouselImages.map((image, index) => (
             <motion.div
               key={index}
-              className="relative group"
+              className="relative group cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ y: -8, scale: 1.03 }}
+              onClick={() => setZoomedImage(image)}
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-primary/30 shadow-lg group-hover:border-primary/60 transition-all">
                 <img
@@ -109,6 +103,13 @@ const WhyPlane = () => {
                 {/* Terminal overlay effect */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute inset-0 scanlines pointer-events-none opacity-20 group-hover:opacity-40 transition-opacity" />
+                
+                {/* Zoom indicator */}
+                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="p-2 bg-card/80 backdrop-blur-sm rounded-full border border-primary/30">
+                    <ZoomIn className="w-4 h-4 text-primary" />
+                  </div>
+                </div>
                 
                 {/* Label */}
                 <div className="absolute bottom-3 left-3 right-3">
@@ -123,6 +124,59 @@ const WhyPlane = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Lightbox/Zoom Modal */}
+        <AnimatePresence>
+          {zoomedImage && (
+            <motion.div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-background/90 backdrop-blur-md"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setZoomedImage(null)}
+            >
+              {/* Close button */}
+              <button
+                className="absolute top-6 right-6 p-3 rounded-full bg-card border border-border hover:border-primary/50 transition-colors z-10"
+                onClick={() => setZoomedImage(null)}
+              >
+                <X className="w-6 h-6 text-foreground" />
+              </button>
+
+              {/* Image container */}
+              <motion.div
+                className="relative max-w-[90vw] max-h-[85vh]"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="relative rounded-2xl overflow-hidden border border-primary/40 shadow-2xl">
+                  <img
+                    src={zoomedImage.src}
+                    alt={zoomedImage.alt}
+                    className="max-w-full max-h-[85vh] object-contain"
+                  />
+                  {/* Scanline effect */}
+                  <div className="absolute inset-0 scanlines pointer-events-none opacity-20" />
+                </div>
+                
+                {/* Label */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+                  <span className="px-4 py-2 bg-card/90 backdrop-blur-sm rounded-full text-sm font-medium text-primary border border-primary/30">
+                    {zoomedImage.alt}
+                  </span>
+                </div>
+              </motion.div>
+
+              {/* Instruction text */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-muted-foreground text-sm">
+                Click anywhere to close
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Features Grid with Matrix connections */}
         <div className="mt-16 relative">
