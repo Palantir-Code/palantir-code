@@ -53,54 +53,6 @@ const MatrixStream = ({ delay = 0, left = "50%" }: { delay?: number; left?: stri
   );
 };
 
-// Palantir Sphere component
-const PalantirSphere = () => (
-  <motion.div
-    className="absolute left-1/2 -translate-x-1/2 top-0 z-20"
-    initial={{ opacity: 0, scale: 0.8 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8, delay: 0.2 }}
-  >
-    <motion.div
-      className="relative w-20 h-20 md:w-28 md:h-28"
-      animate={{ 
-        y: [0, -8, 0],
-      }}
-      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-    >
-      {/* Outer glow */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 via-accent/30 to-primary/40 blur-xl animate-pulse" />
-      
-      {/* Sphere body */}
-      <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary/80 via-card to-primary/60 border border-primary/50 shadow-2xl overflow-hidden">
-        {/* Inner glow */}
-        <div className="absolute inset-2 rounded-full bg-gradient-to-br from-primary/30 via-transparent to-accent/20" />
-        
-        {/* Light reflection */}
-        <div className="absolute top-2 left-3 w-4 h-4 md:w-6 md:h-6 rounded-full bg-gradient-to-br from-white/40 to-transparent blur-sm" />
-        
-        {/* Inner swirl effect */}
-        <motion.div
-          className="absolute inset-4 rounded-full bg-gradient-to-tr from-accent/20 via-transparent to-primary/30"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        
-        {/* Center core */}
-        <div className="absolute inset-1/4 rounded-full bg-gradient-radial from-primary/50 to-transparent" />
-      </div>
-      
-      {/* Subtle ring */}
-      <motion.div
-        className="absolute inset-0 rounded-full border border-primary/30"
-        animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0, 0.5] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-    </motion.div>
-  </motion.div>
-);
-
 const WhyPlane = () => {
   const [zoomedImage, setZoomedImage] = useState<{ src: string; alt: string } | null>(null);
 
@@ -109,10 +61,8 @@ const WhyPlane = () => {
       <FloatingPlanes count={3} className="opacity-30" />
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        {/* Pyramid Background with Sphere */}
+        {/* Pyramid Background */}
         <div className="absolute inset-x-0 top-0 h-[600px] md:h-[700px] pointer-events-none overflow-visible">
-          {/* Palantir Sphere on top */}
-          <PalantirSphere />
           
           {/* Dark Pyramid Shape */}
           <svg
