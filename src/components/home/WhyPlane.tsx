@@ -53,6 +53,54 @@ const MatrixStream = ({ delay = 0, left = "50%" }: { delay?: number; left?: stri
   );
 };
 
+// Palantir Sphere component
+const PalantirSphere = () => (
+  <motion.div
+    className="absolute left-1/2 -translate-x-1/2 top-0 z-20"
+    initial={{ opacity: 0, scale: 0.8 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8, delay: 0.2 }}
+  >
+    <motion.div
+      className="relative w-20 h-20 md:w-28 md:h-28"
+      animate={{ 
+        y: [0, -8, 0],
+      }}
+      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+    >
+      {/* Outer glow */}
+      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 via-accent/30 to-primary/40 blur-xl animate-pulse" />
+      
+      {/* Sphere body */}
+      <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary/80 via-card to-primary/60 border border-primary/50 shadow-2xl overflow-hidden">
+        {/* Inner glow */}
+        <div className="absolute inset-2 rounded-full bg-gradient-to-br from-primary/30 via-transparent to-accent/20" />
+        
+        {/* Light reflection */}
+        <div className="absolute top-2 left-3 w-4 h-4 md:w-6 md:h-6 rounded-full bg-gradient-to-br from-white/40 to-transparent blur-sm" />
+        
+        {/* Inner swirl effect */}
+        <motion.div
+          className="absolute inset-4 rounded-full bg-gradient-to-tr from-accent/20 via-transparent to-primary/30"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        
+        {/* Center core */}
+        <div className="absolute inset-1/4 rounded-full bg-gradient-radial from-primary/50 to-transparent" />
+      </div>
+      
+      {/* Subtle ring */}
+      <motion.div
+        className="absolute inset-0 rounded-full border border-primary/30"
+        animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0, 0.5] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      />
+    </motion.div>
+  </motion.div>
+);
+
 const WhyPlane = () => {
   const [zoomedImage, setZoomedImage] = useState<{ src: string; alt: string } | null>(null);
 
@@ -61,8 +109,64 @@ const WhyPlane = () => {
       <FloatingPlanes count={3} className="opacity-30" />
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
+        {/* Pyramid Background with Sphere */}
+        <div className="absolute inset-x-0 top-0 h-[600px] md:h-[700px] pointer-events-none overflow-visible">
+          {/* Palantir Sphere on top */}
+          <PalantirSphere />
+          
+          {/* Dark Pyramid Shape */}
+          <svg
+            className="absolute left-1/2 -translate-x-1/2 top-12 md:top-16 w-full max-w-4xl h-[550px] md:h-[650px]"
+            viewBox="0 0 800 600"
+            preserveAspectRatio="xMidYMin slice"
+          >
+            {/* Pyramid gradient definition */}
+            <defs>
+              <linearGradient id="pyramidGradient" x1="50%" y1="0%" x2="50%" y2="100%">
+                <stop offset="0%" stopColor="hsl(280 70% 60%)" stopOpacity="0.3" />
+                <stop offset="50%" stopColor="hsl(280 70% 40%)" stopOpacity="0.15" />
+                <stop offset="100%" stopColor="hsl(240 10% 6%)" stopOpacity="0.05" />
+              </linearGradient>
+              <linearGradient id="pyramidEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="hsl(280 70% 60%)" stopOpacity="0.6" />
+                <stop offset="100%" stopColor="hsl(185 80% 55%)" stopOpacity="0.2" />
+              </linearGradient>
+            </defs>
+            
+            {/* Main pyramid face */}
+            <polygon
+              points="400,0 100,600 700,600"
+              fill="url(#pyramidGradient)"
+            />
+            
+            {/* Left edge line */}
+            <line
+              x1="400" y1="0"
+              x2="100" y2="600"
+              stroke="url(#pyramidEdge)"
+              strokeWidth="1.5"
+            />
+            
+            {/* Right edge line */}
+            <line
+              x1="400" y1="0"
+              x2="700" y2="600"
+              stroke="url(#pyramidEdge)"
+              strokeWidth="1.5"
+            />
+            
+            {/* Horizontal lines for depth */}
+            <line x1="175" y1="150" x2="625" y2="150" stroke="hsl(280 70% 60%)" strokeOpacity="0.1" strokeWidth="1" />
+            <line x1="150" y1="300" x2="650" y2="300" stroke="hsl(280 70% 60%)" strokeOpacity="0.08" strokeWidth="1" />
+            <line x1="125" y1="450" x2="675" y2="450" stroke="hsl(280 70% 60%)" strokeOpacity="0.05" strokeWidth="1" />
+          </svg>
+          
+          {/* Glow at apex */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-16 md:top-20 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
+        </div>
+
         {/* Header */}
-        <ScrollReveal className="mx-auto max-w-2xl text-center">
+        <ScrollReveal className="mx-auto max-w-2xl text-center relative z-10 pt-28 md:pt-36">
           <div className="mb-6 flex items-center justify-center gap-3">
             <motion.img 
               src={planeLogo} 
