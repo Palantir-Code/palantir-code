@@ -219,13 +219,15 @@ const Testimonials = () => {
                     
                     {/* Header with Avatar */}
                     <div className="relative flex items-center gap-4 mb-4">
-                      {/* Real Avatar */}
+                      {/* Real Avatar with blur overlay */}
                       <div className="relative">
                         <img 
                           src={testimonial.avatar} 
                           alt={testimonial.name}
                           className="h-12 w-12 rounded-full object-cover ring-2 ring-primary/30"
                         />
+                        {/* Blur overlay */}
+                        <div className="absolute inset-0 rounded-full backdrop-blur-[2px] bg-background/20" />
                         {/* Online indicator */}
                         <motion.div 
                           className="absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-green-500 ring-2 ring-card"
