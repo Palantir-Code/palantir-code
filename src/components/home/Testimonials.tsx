@@ -132,7 +132,41 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-12 lg:py-16 relative overflow-hidden">
+    <section className="py-12 lg:py-16 relative overflow-hidden bg-muted/20">
+      {/* Airplane Silhouette Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Large airplane silhouette */}
+        <svg
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] max-w-[1400px] opacity-[0.04]"
+          viewBox="0 0 800 400"
+          fill="currentColor"
+        >
+          {/* Airplane body */}
+          <path
+            d="M750 200 L650 190 L400 180 L380 120 L350 120 L370 175 L150 160 L120 100 L90 100 L115 155 L50 150 L30 140 L20 150 L30 160 L50 160 L50 170 L30 180 L20 170 L30 160 L50 170 L115 175 L90 230 L120 230 L150 170 L370 185 L350 240 L380 240 L400 190 L650 200 L750 200"
+            className="text-primary"
+          />
+          {/* Wing top */}
+          <path
+            d="M300 180 L280 80 L320 80 L340 175"
+            className="text-primary"
+          />
+          {/* Wing bottom */}
+          <path
+            d="M300 190 L280 290 L320 290 L340 195"
+            className="text-primary"
+          />
+          {/* Tail */}
+          <path
+            d="M680 190 L700 130 L720 130 L705 185 M680 200 L700 260 L720 260 L705 205"
+            className="text-primary"
+          />
+        </svg>
+        
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+      </div>
+      
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Header */}
         <ScrollReveal className="mx-auto max-w-2xl text-center mb-12">
