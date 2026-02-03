@@ -9,6 +9,7 @@ import projectsHero from "@/assets/projects-hero.avif";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
 import FloatingPlanes from "@/components/animations/FloatingPlanes";
+import MatrixRain from "@/components/animations/MatrixRain";
 
 const carouselImages = [
   { src: aiHero, alt: "AI Features" },
@@ -58,6 +59,7 @@ const WhyPlane = () => {
 
   return (
     <section className="py-12 lg:py-16 relative overflow-hidden">
+      <MatrixRain columnCount={25} opacity={0.3} />
       <FloatingPlanes count={3} className="opacity-30" />
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
