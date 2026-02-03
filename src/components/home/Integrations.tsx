@@ -9,7 +9,7 @@ import FloatingPlanes from "@/components/animations/FloatingPlanes";
 import integration1 from "@/assets/integrations/github.avif";
 import integration2 from "@/assets/integrations/integration-2.avif";
 import integration3 from "@/assets/integrations/integration-3.avif";
-import integration5 from "@/assets/integrations/integration-5.avif";
+import integration5 from "@/assets/integrations/jira.avif";
 import integration6 from "@/assets/integrations/integration-6.avif";
 import integration7 from "@/assets/integrations/vscode.avif";
 import integration72 from "@/assets/integrations/drawio.avif";
