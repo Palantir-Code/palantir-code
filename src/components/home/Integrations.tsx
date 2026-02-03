@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/animations/ScrollReveal";
 import FloatingPlanes from "@/components/animations/FloatingPlanes";
 
 // Import integration images
-import integration1 from "@/assets/integrations/integration-1.avif";
+import integration1 from "@/assets/integrations/jira.avif";
 import integration2 from "@/assets/integrations/integration-2.avif";
 import integration3 from "@/assets/integrations/integration-3.avif";
 import integration5 from "@/assets/integrations/integration-5.avif";
