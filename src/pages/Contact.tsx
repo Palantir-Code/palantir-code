@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Calendar, MessageSquare } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
+import MatrixRain from "@/components/animations/MatrixRain";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -78,8 +79,9 @@ const Contact = () => {
         jsonLd={contactJsonLd}
       />
       {/* Hero */}
-      <section className="bg-gradient-to-b from-primary/5 via-background to-background py-20">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative bg-gradient-to-b from-primary/5 via-background to-background py-20 overflow-hidden">
+        <MatrixRain columnCount={20} opacity={0.25} />
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               Get in Touch
