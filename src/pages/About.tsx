@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Award, Users, Globe, Shield, Target, Heart, ArrowRight } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
+import MatrixRain from "@/components/animations/MatrixRain";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/lib/constants";
 
@@ -65,8 +66,9 @@ const About = () => {
         jsonLd={aboutJsonLd}
       />
       {/* Hero */}
-      <section className="bg-gradient-to-b from-primary/5 via-background to-background py-20">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative bg-gradient-to-b from-primary/5 via-background to-background py-20 overflow-hidden">
+        <MatrixRain columnCount={20} opacity={0.25} />
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
               <Award className="h-4 w-4" />
