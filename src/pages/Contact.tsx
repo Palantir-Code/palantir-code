@@ -1,12 +1,31 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Calendar, MessageSquare } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { COMPANY } from "@/lib/constants";
 import { useToast } from "@/hooks/use-toast";
+
+const contactJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact PALANTIR-CODE",
+  "description": "Get in touch with PALANTIR-CODE for Plane implementation, migration, and consulting services.",
+  "url": "https://www.palantircode.com/contact",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "PALANTIR-CODE",
+    "email": "hello@palantircode.com",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "availableLanguage": ["English", "Spanish"]
+    }
+  }
+};
 
 const Contact = () => {
   const { toast } = useToast();
@@ -52,6 +71,12 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO 
+        title="Contact Us"
+        description="Contact PALANTIR-CODE for expert Plane implementation, migration, and consulting services. Schedule a demo or send us a message."
+        canonical="/contact"
+        jsonLd={contactJsonLd}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-primary/5 via-background to-background py-20">
         <div className="container mx-auto px-4 lg:px-8">

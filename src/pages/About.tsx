@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Award, Users, Globe, Shield, Target, Heart, ArrowRight } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/lib/constants";
 
@@ -40,9 +41,29 @@ const milestones = [
   },
 ];
 
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About PALANTIR-CODE",
+  "description": "Learn about PALANTIR-CODE, Spain's first certified Plane partner. Our mission, values, and team.",
+  "url": "https://www.palantircode.com/about",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "PALANTIR-CODE",
+    "foundingDate": "2023",
+    "description": "Spain's first certified Plane partner",
+  }
+};
+
 const About = () => {
   return (
     <Layout>
+      <SEO 
+        title="About Us"
+        description="Learn about PALANTIR-CODE, Spain's first certified Plane partner. Our mission is to empower organizations with modern project management solutions."
+        canonical="/about"
+        jsonLd={aboutJsonLd}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-primary/5 via-background to-background py-20">
         <div className="container mx-auto px-4 lg:px-8">
