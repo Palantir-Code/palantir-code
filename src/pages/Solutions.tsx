@@ -12,6 +12,7 @@ import {
   Check,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { SOLUTIONS } from "@/lib/constants";
 
@@ -85,9 +86,32 @@ const solutionDetails: Record<string, string[]> = {
   ],
 };
 
+const solutionsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Plane Solutions by Team",
+  "description": "Pre-built accelerators and templates for different teams",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Marketing Teams" },
+    { "@type": "ListItem", "position": 2, "name": "Sales Teams" },
+    { "@type": "ListItem", "position": 3, "name": "HR Teams" },
+    { "@type": "ListItem", "position": 4, "name": "Operations" },
+    { "@type": "ListItem", "position": 5, "name": "Finance" },
+    { "@type": "ListItem", "position": 6, "name": "IT" },
+    { "@type": "ListItem", "position": 7, "name": "Customer Support" },
+    { "@type": "ListItem", "position": 8, "name": "R&D" }
+  ]
+};
+
 const SolutionsPage = () => {
   return (
     <Layout>
+      <SEO 
+        title="Solutions"
+        description="Pre-built Plane accelerators and templates for Marketing, Sales, HR, Operations, Finance, IT, Support, and R&D teams. Get started quickly with customizable workflows."
+        canonical="/solutions"
+        jsonLd={solutionsJsonLd}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-primary/5 via-background to-background py-20">
         <div className="container mx-auto px-4 lg:px-8">

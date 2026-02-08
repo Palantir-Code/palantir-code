@@ -11,6 +11,7 @@ import {
   Zap,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { SERVICES } from "@/lib/constants";
 
@@ -84,9 +85,64 @@ const serviceDetails: Record<string, { benefits: string[]; process: string[] }> 
   },
 };
 
+const servicesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Software Consulting",
+  "provider": {
+    "@type": "Organization",
+    "name": "PALANTIR-CODE"
+  },
+  "areaServed": "Spain",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Plane Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Migration Services",
+          "description": "Seamless migration from Jira, Asana, Monday.com and other tools"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Implementation & Setup",
+          "description": "End-to-end Plane deployment tailored to your organization"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom Development",
+          "description": "Bespoke integrations and workflow automation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Managed Services",
+          "description": "Ongoing support, maintenance, and optimization"
+        }
+      }
+    ]
+  }
+};
+
 const ServicesPage = () => {
   return (
     <Layout>
+      <SEO 
+        title="Services"
+        description="Expert Plane consulting services: migration, implementation, custom development, and managed services. Spain's first certified Plane partner."
+        canonical="/services"
+        jsonLd={servicesJsonLd}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-primary/5 via-background to-background py-20">
         <div className="container mx-auto px-4 lg:px-8">
