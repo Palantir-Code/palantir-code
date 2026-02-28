@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/lib/constants";
 import planeLogo from "@/assets/plane-logo-transparent.png";
@@ -8,8 +9,9 @@ import GridBackground from "@/components/animations/GridBackground";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
-  const fullText = "Accelerate Your Projects with ";
-  const highlightText = "Plane & PALANTIR-CODE";
+  const { t } = useTranslation();
+  const fullText = t("hero.titlePart1");
+  const highlightText = t("hero.titleHighlight");
   const [displayedText, setDisplayedText] = useState("");
   const [showHighlight, setShowHighlight] = useState(false);
   const [highlightDisplayed, setHighlightDisplayed] = useState("");
@@ -24,7 +26,6 @@ const Hero = () => {
       } else {
         clearInterval(typeInterval);
         setShowHighlight(true);
-        // Start typing highlight text
         let highlightIndex = 0;
         const highlightInterval = setInterval(() => {
           if (highlightIndex < highlightText.length) {
@@ -38,9 +39,8 @@ const Hero = () => {
     }, 50);
 
     return () => clearInterval(typeInterval);
-  }, []);
+  }, [fullText, highlightText]);
 
-  // Blinking cursor effect
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor((prev) => !prev);
@@ -50,16 +50,13 @@ const Hero = () => {
 
   return (
     <section className="relative overflow-hidden bg-background min-h-[80vh] flex items-center">
-      {/* Grid background animation */}
       <GridBackground className="z-0" />
 
-      {/* Background glow effects */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/20 blur-3xl" />
         <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-accent/15 blur-3xl" />
       </div>
 
-      {/* Plane logo watermark */}
       <div className="absolute inset-0 -z-5 flex items-center justify-center overflow-hidden pointer-events-none">
         <motion.img
           src={planeLogo}
@@ -74,9 +71,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 py-16 lg:px-8 lg:py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
           <div className="text-center lg:text-left">
-            {/* Partner Badge */}
             <motion.div
               className="mb-8 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
               initial={{ opacity: 0, y: 20 }}
@@ -87,11 +82,10 @@ const Hero = () => {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
               </span>
-              <span>Official Plane Partner</span>
+              <span>{t("hero.badge")}</span>
               <img src={planeLogo} alt="Plane" className="h-5 w-auto terminal-logo-bright" />
             </motion.div>
 
-            {/* Headline with typewriter effect */}
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl min-h-[1.2em]">
               {displayedText}
               {showHighlight && <span className="text-gradient">{highlightDisplayed}</span>}
@@ -103,18 +97,15 @@ const Hero = () => {
               />
             </h1>
 
-            {/* Subheadline */}
             <motion.p
               className="mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              {COMPANY.name} is Spain's first certified Plane partner. We help teams ship faster with expert
-              implementation, migration, and custom solutions for Plane's unified workspace.
+              {t("hero.subtitle")}
             </motion.p>
 
-            {/* CTAs */}
             <motion.div
               className="flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"
               initial={{ opacity: 0, y: 30 }}
@@ -123,59 +114,39 @@ const Hero = () => {
             >
               <Button asChild size="lg" className="group min-w-[180px]">
                 <Link to="/solutions">
-                  Explore Solutions
+                  {t("hero.exploreSolutions")}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="min-w-[180px]">
                 <Link to="/contact">
                   <Play className="mr-2 h-4 w-4" />
-                  Schedule a Demo
+                  {t("hero.scheduleDemo")}
                 </Link>
               </Button>
             </motion.div>
 
-            {/* Trust indicators */}
             <motion.div
               className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground lg:justify-start"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
-              <div className="flex items-center gap-2">
-                <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Enterprise Ready
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                SOC 2 & GDPR
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                24/7 Support
-              </div>
+              {[t("hero.enterpriseReady"), t("hero.soc2gdpr"), t("hero.support247")].map((label) => (
+                <div key={label} className="flex items-center gap-2">
+                  <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  {label}
+                </div>
+              ))}
             </motion.div>
           </div>
 
-          {/* Right Video */}
           <motion.div
             className="relative"
             initial={{ opacity: 0, scale: 0.9 }}
