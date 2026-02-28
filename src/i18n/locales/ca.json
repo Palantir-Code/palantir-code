@@ -338,5 +338,43 @@
     "suggestion2": "Quins serveis oferiu?",
     "suggestion3": "Podeu migrar des de Jira?",
     "error": "Ho sentim, s'ha produït un error. Torna-ho a provar."
+  },
+  "blog": {
+    "badge": "BLOG",
+    "title": "Blog",
+    "heroDesc": "Articles, guies i millors pràctiques sobre gestió de projectes, Plane i transformació digital.",
+    "backToBlog": "Tornar al Blog",
+    "posts": [
+      {
+        "slug": "why-migrate-from-jira-to-plane",
+        "title": "Per què migrar de Jira a Plane el 2025",
+        "excerpt": "Descobreix els principals avantatges de canviar de Jira a Plane i com fer la transició sense problemes.",
+        "date": "2025-02-15",
+        "readTime": "5 min",
+        "author": "PALANTIR-CODE",
+        "category": "Migració",
+        "content": "Moltes organitzacions estan replantejant les seves eines de gestió de projectes el 2025. Jira, tot i ser potent, s'ha tornat cada vegada més complex i costós. Plane ofereix una alternativa moderna i open-source que combina simplicitat amb funcions de nivell empresarial.\n\nUn dels majors avantatges de Plane és la seva interfície intuïtiva. Els equips poden començar ràpidament sense la corba d'aprenentatge pronunciada per la qual Jira és conegut. L'espai de treball unificat reuneix seguiment de projectes, documentació i col·laboració en un sol lloc.\n\nPlane també ofereix opcions de desplegament flexibles: cloud, autoallotjat o airgapped. Això significa que les teves dades es queden on vulguis, complint fins i tot els requisits de compliment més estrictes.\n\nA PALANTIR-CODE, hem ajudat dotzenes d'equips a fer el canvi. El nostre procés de migració assegura zero pèrdua de dades, mapatge complet de camps i formació integral per a usuaris. El resultat? Equips més productius des del primer dia."
+      },
+      {
+        "slug": "plane-compose-projects-as-code",
+        "title": "Plane Compose: La revolució de Projectes-com-a-Codi",
+        "excerpt": "Descobreix com Plane Compose porta la disciplina de Git a la gestió de projectes amb configuracions versionades.",
+        "date": "2025-01-28",
+        "readTime": "7 min",
+        "author": "PALANTIR-CODE",
+        "category": "DevOps",
+        "content": "Plane Compose introdueix un concepte revolucionari: Projectes-com-a-Codi. Així com Infraestructura-com-a-Codi va transformar la gestió de servidors, Plane Compose transforma la gestió de projectes.\n\nAmb Plane Compose, l'estructura del teu projecte es converteix en un artefacte de primera classe. Els workflows, estats, etiquetes i camps personalitzats es defineixen en YAML, es versionen a Git i es revisen mitjançant pull requests.\n\nEl CLI ho fa simple: 'plane init' crea un scaffold de nou projecte, 'plane schema pull' sincronitza la teva configuració i 'plane clone' replica estructures entre workspaces.\n\nAquest enfocament aporta consistència entre equips, redueix el temps d'onboarding i permet als equips DevOps gestionar la infraestructura de projectes amb el mateix rigor que apliquen al codi. A PALANTIR-CODE, ajudem els equips a adoptar Plane Compose i integrar-lo als seus pipelines CI/CD existents."
+      },
+      {
+        "slug": "best-practices-project-management-2025",
+        "title": "Millors pràctiques de gestió de projectes per al 2025",
+        "excerpt": "Mantén-te al dia amb les últimes tendències i millors pràctiques en gestió de projectes per a equips d'alt rendiment.",
+        "date": "2025-01-10",
+        "readTime": "6 min",
+        "author": "PALANTIR-CODE",
+        "category": "Millors Pràctiques",
+        "content": "La gestió de projectes està evolucionant ràpidament. El 2025, els equips més exitosos estan adoptant nous enfocaments que prioritzen la flexibilitat, la transparència i l'automatització.\n\nPrimer, les eines open-source estan guanyant tracció. Les organitzacions volen transparència a les seves eines, no només als seus processos. Plane exemplifica aquesta tendència amb el seu codi font completament obert.\n\nSegon, l'automatització amb IA s'està tornant essencial. Des de l'assignació automàtica de tasques fins a la generació d'insights de projectes, la IA està ajudant els equips a centrar-se en el que més importa.\n\nTercer, els espais de treball unificats estan reemplaçant les cadenes d'eines fragmentades. En lloc de canviar entre eines de seguiment, documentació i comunicació, els equips volen tot en un sol lloc.\n\nFinalment, el compliment i la sobirania de dades són prioritats principals. Les opcions de desplegament autoallotjat i airgapped asseguren que les dades sensibles del projecte romanguin dins dels límits organitzacionals.\n\nA PALANTIR-CODE, ajudem les organitzacions a adoptar aquestes millors pràctiques amb Plane com a base."
+      }
+    ]
   }
 }

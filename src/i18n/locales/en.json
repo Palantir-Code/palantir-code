@@ -338,5 +338,43 @@
     "suggestion2": "What services do you offer?",
     "suggestion3": "Can you migrate from Jira?",
     "error": "Sorry, an error occurred. Please try again."
+  },
+  "blog": {
+    "badge": "BLOG",
+    "title": "Blog",
+    "heroDesc": "Insights, guides, and best practices on project management, Plane, and digital transformation.",
+    "backToBlog": "Back to Blog",
+    "posts": [
+      {
+        "slug": "why-migrate-from-jira-to-plane",
+        "title": "Why Migrate from Jira to Plane in 2025",
+        "excerpt": "Discover the key advantages of switching from Jira to Plane and how to make the transition seamless.",
+        "date": "2025-02-15",
+        "readTime": "5 min",
+        "author": "PALANTIR-CODE",
+        "category": "Migration",
+        "content": "Many organizations are rethinking their project management tools in 2025. Jira, while powerful, has grown increasingly complex and expensive. Plane offers a modern, open-source alternative that combines simplicity with enterprise-grade features.\n\nOne of the biggest advantages of Plane is its intuitive interface. Teams can get started quickly without the steep learning curve that Jira is known for. The unified workspace brings together project tracking, documentation, and collaboration in one place.\n\nPlane also offers flexible deployment options: cloud, self-hosted, or airgapped. This means your data stays where you want it, meeting even the strictest compliance requirements.\n\nAt PALANTIR-CODE, we've helped dozens of teams make the switch. Our migration process ensures zero data loss, complete field mapping, and comprehensive user training. The result? Teams that are more productive from day one."
+      },
+      {
+        "slug": "plane-compose-projects-as-code",
+        "title": "Plane Compose: Projects-as-Code Revolution",
+        "excerpt": "Learn how Plane Compose brings Git-style discipline to project management with version-controlled configurations.",
+        "date": "2025-01-28",
+        "readTime": "7 min",
+        "author": "PALANTIR-CODE",
+        "category": "DevOps",
+        "content": "Plane Compose introduces a groundbreaking concept: Projects-as-Code. Just as Infrastructure-as-Code transformed how we manage servers, Plane Compose transforms how we manage projects.\n\nWith Plane Compose, your project structure becomes a first-class artifact. Workflows, states, labels, and custom fields are defined in YAML, versioned in Git, and reviewed through pull requests.\n\nThe CLI makes it simple: 'plane init' scaffolds a new project, 'plane schema pull' syncs your configuration, and 'plane clone' replicates structures across workspaces.\n\nThis approach brings consistency across teams, reduces onboarding time, and enables DevOps teams to manage project infrastructure with the same rigor they apply to code. At PALANTIR-CODE, we help teams adopt Plane Compose and integrate it into their existing CI/CD pipelines."
+      },
+      {
+        "slug": "best-practices-project-management-2025",
+        "title": "Project Management Best Practices for 2025",
+        "excerpt": "Stay ahead with the latest trends and best practices in project management for high-performing teams.",
+        "date": "2025-01-10",
+        "readTime": "6 min",
+        "author": "PALANTIR-CODE",
+        "category": "Best Practices",
+        "content": "Project management is evolving rapidly. In 2025, the most successful teams are embracing new approaches that prioritize flexibility, transparency, and automation.\n\nFirst, open-source tools are gaining traction. Organizations want transparency in their tools, not just their processes. Plane exemplifies this trend with its fully open-source codebase.\n\nSecond, AI-powered automation is becoming essential. From auto-assigning tasks to generating project insights, AI is helping teams focus on what matters most.\n\nThird, unified workspaces are replacing fragmented toolchains. Instead of switching between project tracking, documentation, and communication tools, teams want everything in one place.\n\nFinally, compliance and data sovereignty are top priorities. Self-hosted and airgapped deployment options ensure that sensitive project data stays within organizational boundaries.\n\nAt PALANTIR-CODE, we help organizations adopt these best practices with Plane as the foundation."
+      }
+    ]
   }
 }
