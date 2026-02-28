@@ -338,5 +338,43 @@
     "suggestion2": "¿Qué servicios ofrecéis?",
     "suggestion3": "¿Podéis migrar desde Jira?",
     "error": "Lo siento, ha ocurrido un error. Inténtalo de nuevo."
+  },
+  "blog": {
+    "badge": "BLOG",
+    "title": "Blog",
+    "heroDesc": "Artículos, guías y mejores prácticas sobre gestión de proyectos, Plane y transformación digital.",
+    "backToBlog": "Volver al Blog",
+    "posts": [
+      {
+        "slug": "why-migrate-from-jira-to-plane",
+        "title": "Por qué migrar de Jira a Plane en 2025",
+        "excerpt": "Descubre las principales ventajas de cambiar de Jira a Plane y cómo hacer la transición sin problemas.",
+        "date": "2025-02-15",
+        "readTime": "5 min",
+        "author": "PALANTIR-CODE",
+        "category": "Migración",
+        "content": "Muchas organizaciones están replanteando sus herramientas de gestión de proyectos en 2025. Jira, aunque potente, se ha vuelto cada vez más complejo y costoso. Plane ofrece una alternativa moderna y open-source que combina simplicidad con funciones de nivel empresarial.\n\nUna de las mayores ventajas de Plane es su interfaz intuitiva. Los equipos pueden comenzar rápidamente sin la curva de aprendizaje pronunciada por la que Jira es conocido. El espacio de trabajo unificado reúne seguimiento de proyectos, documentación y colaboración en un solo lugar.\n\nPlane también ofrece opciones de despliegue flexibles: cloud, autoalojado o airgapped. Esto significa que tus datos se quedan donde quieras, cumpliendo incluso los requisitos de cumplimiento más estrictos.\n\nEn PALANTIR-CODE, hemos ayudado a docenas de equipos a hacer el cambio. Nuestro proceso de migración asegura cero pérdida de datos, mapeo completo de campos y formación integral para usuarios. ¿El resultado? Equipos más productivos desde el primer día."
+      },
+      {
+        "slug": "plane-compose-projects-as-code",
+        "title": "Plane Compose: La revolución de Proyectos-como-Código",
+        "excerpt": "Descubre cómo Plane Compose lleva la disciplina de Git a la gestión de proyectos con configuraciones versionadas.",
+        "date": "2025-01-28",
+        "readTime": "7 min",
+        "author": "PALANTIR-CODE",
+        "category": "DevOps",
+        "content": "Plane Compose introduce un concepto revolucionario: Proyectos-como-Código. Así como Infraestructura-como-Código transformó la gestión de servidores, Plane Compose transforma la gestión de proyectos.\n\nCon Plane Compose, la estructura de tu proyecto se convierte en un artefacto de primera clase. Los workflows, estados, etiquetas y campos personalizados se definen en YAML, se versionan en Git y se revisan mediante pull requests.\n\nEl CLI lo hace simple: 'plane init' crea un scaffold de nuevo proyecto, 'plane schema pull' sincroniza tu configuración y 'plane clone' replica estructuras entre workspaces.\n\nEste enfoque aporta consistencia entre equipos, reduce el tiempo de onboarding y permite a los equipos DevOps gestionar la infraestructura de proyectos con el mismo rigor que aplican al código. En PALANTIR-CODE, ayudamos a los equipos a adoptar Plane Compose e integrarlo en sus pipelines CI/CD existentes."
+      },
+      {
+        "slug": "best-practices-project-management-2025",
+        "title": "Mejores prácticas de gestión de proyectos para 2025",
+        "excerpt": "Mantente al día con las últimas tendencias y mejores prácticas en gestión de proyectos para equipos de alto rendimiento.",
+        "date": "2025-01-10",
+        "readTime": "6 min",
+        "author": "PALANTIR-CODE",
+        "category": "Mejores Prácticas",
+        "content": "La gestión de proyectos está evolucionando rápidamente. En 2025, los equipos más exitosos están adoptando nuevos enfoques que priorizan la flexibilidad, la transparencia y la automatización.\n\nPrimero, las herramientas open-source están ganando tracción. Las organizaciones quieren transparencia en sus herramientas, no solo en sus procesos. Plane ejemplifica esta tendencia con su código fuente completamente abierto.\n\nSegundo, la automatización con IA se está volviendo esencial. Desde la asignación automática de tareas hasta la generación de insights de proyectos, la IA está ayudando a los equipos a centrarse en lo que más importa.\n\nTercero, los espacios de trabajo unificados están reemplazando las cadenas de herramientas fragmentadas. En lugar de cambiar entre herramientas de seguimiento, documentación y comunicación, los equipos quieren todo en un solo lugar.\n\nFinalmente, el cumplimiento y la soberanía de datos son prioridades principales. Las opciones de despliegue autoalojado y airgapped aseguran que los datos sensibles del proyecto permanezcan dentro de los límites organizacionales.\n\nEn PALANTIR-CODE, ayudamos a las organizaciones a adoptar estas mejores prácticas con Plane como base."
+      }
+    ]
   }
 }
