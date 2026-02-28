@@ -25,6 +25,16 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Validate email format and sanitize against header injection
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const sanitizedEmail = email.replace(/[\r\n]/g, '');
+    if (!emailRegex.test(sanitizedEmail)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid email format' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     const gmailUser = Deno.env.get('GMAIL_USER')!;
     const gmailPass = Deno.env.get('GMAIL_APP_PASSWORD')!;
 
@@ -55,8 +65,8 @@ Deno.serve(async (req) => {
       from: gmailUser,
       to: "raul.pelaez@palantircode.com",
       bcc: "raul.pelaez@quabu.eu",
-      replyTo: email,
-      subject: `[Contact Form] ${subject}`,
+      replyTo: sanitizedEmail,
+      subject: `[Contact Form] ${subject.substring(0, 200)}`,
       html: htmlBody,
     });
 
