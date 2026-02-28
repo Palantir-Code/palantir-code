@@ -8,9 +8,9 @@ type Message = { role: "user" | "assistant"; content: string };
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`;
 
 const SUGGESTIONS = [
-  "¿Qué es Plane?",
-  "¿Qué servicios ofrecéis?",
-  "¿Podéis migrar desde Jira?",
+  "What is Plane?",
+  "What services do you offer?",
+  "Can you migrate from Jira?",
 ];
 
 const Chatbot = () => {
@@ -89,7 +89,7 @@ const Chatbot = () => {
     } catch {
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Lo siento, ha ocurrido un error. Inténtalo de nuevo." },
+        { role: "assistant", content: "Sorry, an error occurred. Please try again." },
       ]);
     } finally {
       setIsLoading(false);
@@ -143,7 +143,7 @@ const Chatbot = () => {
               {messages.length === 0 && (
                 <div className="space-y-3">
                   <p className="text-sm text-muted-foreground text-center">
-                    👋 ¡Hola! Soy el asistente de PALANTIR-CODE. ¿En qué puedo ayudarte?
+                    👋 Hi! I'm the PALANTIR-CODE assistant. How can I help you?
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center">
                     {SUGGESTIONS.map((s) => (
@@ -220,7 +220,7 @@ const Chatbot = () => {
                 <input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Escribe tu pregunta..."
+                  placeholder="Type your question..."
                   className="flex-1 rounded-xl border border-border bg-muted px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
                   disabled={isLoading}
                 />
