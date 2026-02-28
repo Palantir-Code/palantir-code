@@ -4,6 +4,7 @@ import { Calendar, Clock, ArrowRight, User } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import ScrollReveal from "@/components/animations/ScrollReveal";
+import MatrixRain from "@/components/animations/MatrixRain";
 import { Badge } from "@/components/ui/badge";
 
 const Blog = () => {
@@ -25,8 +26,9 @@ const Blog = () => {
       <SEO title={`Blog | PALANTIR-CODE`} description={t("blog.heroDesc")} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 to-background py-20 lg:py-28">
-        <div className="container mx-auto px-4 lg:px-8 text-center">
+      <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background py-20 lg:py-28">
+        <MatrixRain columnCount={20} opacity={0.25} />
+        <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
           <ScrollReveal>
             <Badge variant="outline" className="mb-4 border-primary/30 text-primary">
               {t("blog.badge")}
