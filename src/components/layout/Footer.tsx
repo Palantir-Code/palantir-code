@@ -76,12 +76,6 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 text-primary" />
-                <a href={`tel:${COMPANY.phone}`} className="hover:text-primary transition-colors">
-                  {COMPANY.phone}
-                </a>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-primary" />
                 {COMPANY.address}
               </li>
