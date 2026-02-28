@@ -60,7 +60,21 @@
     "label": "TESTIMONIS",
     "title": "Què diuen els equips sobre",
     "titleHighlight": "Plane",
-    "description": "Més d'1M+ d'usuaris confien en Plane. Això és el que diuen alguns d'ells."
+    "description": "Més d'1M+ d'usuaris confien en Plane. Això és el que diuen alguns d'ells.",
+    "items": [
+      { "name": "Clay Risser", "handle": "@risserclay", "content": "Personalment prefereixo plane.so @planepowers", "platform": "twitter" },
+      { "name": "Alex Drakonov", "handle": "@BogDrakonov", "content": "Ei @linear, quan serà possible tenir múltiples assignats al mateix tiquet? Una alternativa open source (@planepowers) té aquesta funció i és molt útil!", "platform": "twitter" },
+      { "name": "Sarah Wings", "content": "A hores d'ara, tot en el que treballo en múltiples equips utilitzarà Plane, així que ara tinc una sola manera de pensar sobre el món.", "platform": "discord" },
+      { "name": "Michael Chen", "content": "Gràcies per crear productes increïbles sense els quals el meu equip i jo no podem viure en el nostre treball diari.", "platform": "discord" },
+      { "name": "Albert Rodriguez", "content": "Hola, soc l'Albert. Estic molt impressionat amb el pla Cloud gratuït. Atlassian hauria d'estar espantat xd", "platform": "discord" },
+      { "name": "Laura Martinez", "content": "Personalment m'estic mudant d'Atlassian a Plane i l'experiència ha estat increïble.", "platform": "discord" },
+      { "name": "Marcus Williams", "content": "Plane és, sens dubte, el millor projecte que existeix.", "platform": "discord" },
+      { "name": "Niran Patel", "content": "Hola nois, soc nou aquí. Fa un temps que utilitzo Plane autoallotjat per gestionar projectes d'enginyeria. Ja estic enamorat de les funcions i la interfície tan fluida. 🤩", "platform": "discord" },
+      { "name": "Scott Thompson", "content": "Hola, soc en Scott! M'estic passant a Plane des de Linear, moltes gràcies per fer Plane open source.", "platform": "discord" },
+      { "name": "Elena Kowalski", "content": "Aquesta app es veu increïble! L'acabo d'autoallotjar i va ser molt fàcil.", "platform": "discord" },
+      { "name": "James Parker", "content": "Com és que això és gratis? És massa bo!", "platform": "discord" },
+      { "name": "Dr. Hannah Lee", "content": "M'agrada molt el tauler kanban i el tema general. Sembla una gran alternativa per a algú acostumat a Jira que vol canviar a autoallotjat.", "platform": "reddit" }
+    ]
   },
   "importers": {
     "badge": "IMPORTADORS",

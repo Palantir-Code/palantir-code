@@ -60,7 +60,21 @@
     "label": "TESTIMONIALS",
     "title": "What Teams Say About",
     "titleHighlight": "Plane",
-    "description": "Over 1M+ users trust Plane. Here's what some of them have to say."
+    "description": "Over 1M+ users trust Plane. Here's what some of them have to say.",
+    "items": [
+      { "name": "Clay Risser", "handle": "@risserclay", "content": "Personally I prefer plane.so @planepowers", "platform": "twitter" },
+      { "name": "Alex Drakonov", "handle": "@BogDrakonov", "content": "Hey @linear when will multiple assignees on the same ticket be a thing? An open source alternative (@planepowers) has this feature and it's super handy!", "platform": "twitter" },
+      { "name": "Sarah Wings", "content": "At this point everything I work on across multiple teams is going to use Plane, so I have now one way of thinking about the world.", "platform": "discord" },
+      { "name": "Michael Chen", "content": "Thank you for creating great products that my team and I can't live without in my actual work.", "platform": "discord" },
+      { "name": "Albert Rodriguez", "content": "Hello, Albert here. I am very impressed with the Free Cloud plan. Atlassian better be scared xd", "platform": "discord" },
+      { "name": "Laura Martinez", "content": "I'm personally moving from Atlassian to Plane and the experience has been amazing.", "platform": "discord" },
+      { "name": "Marcus Williams", "content": "Plane is hands down the best project in existence.", "platform": "discord" },
+      { "name": "Niran Patel", "content": "Hi guys, I am new here. It's been a while using a self hosted plane to manage engineering projects. Already in love with the features and smooth UI. 🤩", "platform": "discord" },
+      { "name": "Scott Thompson", "content": "Hello, Scott here! I'm moving to Plane from Linear, thank you so much for making Plane open source.", "platform": "discord" },
+      { "name": "Elena Kowalski", "content": "Hi this app looks amazing! I just selfhosted it and it was so easy.", "platform": "discord" },
+      { "name": "James Parker", "content": "Yo, how is this free? It's just so good!", "platform": "discord" },
+      { "name": "Dr. Hannah Lee", "content": "I really like the kanban board and overall theme. This looks like a great alternative for someone used to Jira that wants to switch to self-hosted.", "platform": "reddit" }
+    ]
   },
   "importers": {
     "badge": "IMPORTERS",
