@@ -31,12 +31,12 @@ const values = [
 
 const milestones = [
   {
-    year: "2024",
+    year: "2025",
     title: "Spain's First Plane Partner",
     description: "Became the first certified Plane partner in Spain, establishing our expertise in the platform.",
   },
   {
-    year: "2023",
+    year: "2024",
     title: "Company Founded",
     description: "PALANTIR-CODE was founded with a mission to help organizations transform their project management.",
   },
