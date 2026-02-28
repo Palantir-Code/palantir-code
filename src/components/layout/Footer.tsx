@@ -84,7 +84,9 @@ const Footer = () => {
             {/* Social Links */}
             <div className="mt-6 flex items-center gap-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/palantir-code"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-muted p-2 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                 aria-label="LinkedIn"
               >
