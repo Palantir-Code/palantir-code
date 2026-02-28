@@ -14,19 +14,19 @@ interface Testimonial {
   avatar: string;
 }
 
-const testimonials: Testimonial[] = [
-  { name: "Clay Risser", handle: "@risserclay", content: "Personally I prefer plane.so @planepowers", platform: "twitter", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" },
-  { name: "Alex Drakonov", handle: "@BogDrakonov", content: "Hey @linear when will multiple assignees on the same ticket be a thing? An open source alternative (@planepowers) has this feature and it's super handy!", platform: "twitter", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" },
-  { name: "Sarah Wings", content: "At this point everything I work on across multiple teams is going to use Plane, so I have now one way of thinking about the world.", platform: "discord", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" },
-  { name: "Michael Chen", content: "Thank you for creating great products that my team and I can't live without in my actual work.", platform: "discord", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" },
-  { name: "Albert Rodriguez", content: "Hello, Albert here. I am very impressed with the Free Cloud plan. Atlassian better be scared xd", platform: "discord", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" },
-  { name: "Laura Martinez", content: "I'm personally moving from Atlassian to Plane and the experience has been amazing.", platform: "discord", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" },
-  { name: "Marcus Williams", content: "Plane is hands down the best project in existence.", platform: "discord", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face" },
-  { name: "Niran Patel", content: "Hi guys, I am new here. It's been a while using a self hosted plane to manage engineering projects. Already in love with the features and smooth UI. 🤩", platform: "discord", avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face" },
-  { name: "Scott Thompson", content: "Hello, Scott here! I'm moving to Plane from Linear, thank you so much for making Plane open source.", platform: "discord", avatar: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=100&h=100&fit=crop&crop=face" },
-  { name: "Elena Kowalski", content: "Hi this app looks amazing! I just selfhosted it and it was so easy.", platform: "discord", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" },
-  { name: "James Parker", content: "Yo, how is this free? It's just so good!", platform: "discord", avatar: "https://images.unsplash.com/photo-1599566150163-29194dcabd36?w=100&h=100&fit=crop&crop=face" },
-  { name: "Dr. Hannah Lee", content: "I really like the kanban board and overall theme. This looks like a great alternative for someone used to Jira that wants to switch to self-hosted.", platform: "reddit", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face" },
+const avatars = [
+  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1463453091185-61582044d556?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1599566150163-29194dcabd36?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face",
 ];
 
 const PlatformIcon = ({ platform }: { platform: Platform }) => {
@@ -47,13 +47,18 @@ const Testimonials = () => {
   const [isPaused, setIsPaused] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const testimonials: Testimonial[] = (t("testimonials.items", { returnObjects: true }) as any[]).map((item: any, idx: number) => ({
+    ...item,
+    avatar: avatars[idx] || avatars[0],
+  }));
+
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, [isPaused, testimonials.length]);
 
   const getVisibleTestimonials = () => {
     const visible = [];

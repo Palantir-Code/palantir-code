@@ -60,7 +60,21 @@
     "label": "TESTIMONIOS",
     "title": "Lo que dicen los equipos sobre",
     "titleHighlight": "Plane",
-    "description": "Más de 1M+ usuarios confían en Plane. Esto es lo que dicen algunos de ellos."
+    "description": "Más de 1M+ usuarios confían en Plane. Esto es lo que dicen algunos de ellos.",
+    "items": [
+      { "name": "Clay Risser", "handle": "@risserclay", "content": "Personalmente prefiero plane.so @planepowers", "platform": "twitter" },
+      { "name": "Alex Drakonov", "handle": "@BogDrakonov", "content": "Oye @linear, ¿cuándo será posible tener múltiples asignados en el mismo ticket? ¡Una alternativa open source (@planepowers) tiene esta función y es muy útil!", "platform": "twitter" },
+      { "name": "Sarah Wings", "content": "A estas alturas, todo en lo que trabajo en múltiples equipos va a usar Plane, así que ahora tengo una sola forma de pensar sobre el mundo.", "platform": "discord" },
+      { "name": "Michael Chen", "content": "Gracias por crear productos increíbles sin los cuales mi equipo y yo no podemos vivir en nuestro trabajo diario.", "platform": "discord" },
+      { "name": "Albert Rodriguez", "content": "Hola, soy Albert. Estoy muy impresionado con el plan Cloud gratuito. Atlassian debería estar asustado xd", "platform": "discord" },
+      { "name": "Laura Martinez", "content": "Personalmente me estoy mudando de Atlassian a Plane y la experiencia ha sido increíble.", "platform": "discord" },
+      { "name": "Marcus Williams", "content": "Plane es, sin duda, el mejor proyecto que existe.", "platform": "discord" },
+      { "name": "Niran Patel", "content": "Hola chicos, soy nuevo aquí. Llevo un tiempo usando Plane autoalojado para gestionar proyectos de ingeniería. Ya estoy enamorado de las funciones y la interfaz tan fluida. 🤩", "platform": "discord" },
+      { "name": "Scott Thompson", "content": "¡Hola, soy Scott! Me estoy pasando a Plane desde Linear, muchas gracias por hacer Plane open source.", "platform": "discord" },
+      { "name": "Elena Kowalski", "content": "¡Esta app se ve increíble! La acabo de autoalojar y fue muy fácil.", "platform": "discord" },
+      { "name": "James Parker", "content": "¿Cómo es que esto es gratis? ¡Es demasiado bueno!", "platform": "discord" },
+      { "name": "Dr. Hannah Lee", "content": "Me gusta mucho el tablero kanban y el tema general. Parece una gran alternativa para alguien acostumbrado a Jira que quiere cambiar a autoalojado.", "platform": "reddit" }
+    ]
   },
   "importers": {
     "badge": "IMPORTADORES",
