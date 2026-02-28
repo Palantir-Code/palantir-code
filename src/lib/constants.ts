@@ -192,5 +192,5 @@ export const WHY_US = [
 export const SOCIAL_LINKS = [
   { name: "LinkedIn", href: "#", icon: "Linkedin" },
   { name: "Twitter", href: "#", icon: "Twitter" },
-  { name: "GitHub", href: "#", icon: "Github" },
+  { name: "GitHub", href: "https://github.com/Palantir-Code", icon: "Github" },
 ] as const;
