@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Plane } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import FloatingPlanes from "@/components/animations/FloatingPlanes";
 
-// Import integration images
 import integration1 from "@/assets/integrations/github.avif";
 import integration2 from "@/assets/integrations/integration-2.avif";
 import integration3 from "@/assets/integrations/integration-3.avif";
@@ -31,68 +31,42 @@ const integrations = [
 ];
 
 const Integrations = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-12 lg:py-16 relative overflow-hidden">
       <FloatingPlanes count={4} className="opacity-20" />
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-          {/* Visual */}
           <ScrollReveal direction="left" className="flex justify-center">
             <div className="grid grid-cols-5 gap-3">
               {integrations.map((integration, index) => (
-                <motion.div
-                  key={index}
+                <motion.div key={index}
                   className="group flex h-16 w-16 items-center justify-center rounded-xl bg-card border-2 border-border shadow-lg overflow-hidden"
                   initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
                   whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                   viewport={{ once: true }}
-                  transition={{ 
-                    delay: index * 0.05, 
-                    type: "spring",
-                    stiffness: 200
-                  }}
-                  whileHover={{ 
-                    scale: 1.15, 
-                    y: -8,
-                    boxShadow: "0 20px 40px rgba(0,255,0,0.15)",
-                    borderColor: "hsl(var(--primary))"
-                  }}
-                >
-                  <img 
-                    src={integration.image} 
-                    alt={integration.name}
-                    className="h-10 w-10 object-contain transition-transform group-hover:scale-110"
-                  />
+                  transition={{ delay: index * 0.05, type: "spring", stiffness: 200 }}
+                  whileHover={{ scale: 1.15, y: -8, boxShadow: "0 20px 40px rgba(0,255,0,0.15)", borderColor: "hsl(var(--primary))" }}>
+                  <img src={integration.image} alt={integration.name} className="h-10 w-10 object-contain transition-transform group-hover:scale-110" />
                 </motion.div>
               ))}
             </div>
           </ScrollReveal>
 
-          {/* Content */}
           <ScrollReveal direction="right">
-            <motion.span 
-              className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-4"
-              whileHover={{ scale: 1.05 }}
-            >
-              INTEGRATIONS
+            <motion.span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-4" whileHover={{ scale: 1.05 }}>
+              {t("integrations.badge")}
             </motion.span>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              Integrate everywhere
+              {t("integrations.title")}
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-lg">
-              Work from Slack, GitHub, GitLab, or wherever your team lives. 
-              We help you connect Plane to your entire workflow.
-            </p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-            >
+            <p className="mt-4 text-lg text-muted-foreground max-w-lg">{t("integrations.description")}</p>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
               <Button asChild size="lg" className="mt-8 group">
                 <Link to="/services#development">
-                  Connect your stack
+                  {t("integrations.cta")}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
@@ -101,18 +75,9 @@ const Integrations = () => {
         </div>
       </div>
       
-      {/* Decorative flying plane */}
-      <motion.div
-        className="absolute bottom-10 left-0 text-primary/20"
-        animate={{ 
-          x: ["0%", "100vw"],
-          y: [0, -20, 0, 20, 0],
-        }}
-        transition={{ 
-          x: { duration: 20, repeat: Infinity, ease: "linear" },
-          y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
-        }}
-      >
+      <motion.div className="absolute bottom-10 left-0 text-primary/20"
+        animate={{ x: ["0%", "100vw"], y: [0, -20, 0, 20, 0] }}
+        transition={{ x: { duration: 20, repeat: Infinity, ease: "linear" }, y: { duration: 4, repeat: Infinity, ease: "easeInOut" } }}>
         <Plane size={32} className="transform -rotate-12" />
       </motion.div>
     </section>

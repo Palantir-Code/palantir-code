@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Twitter, MessageCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import { useEffect, useState, useRef } from "react";
 
@@ -14,114 +15,46 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-  {
-    name: "Clay Risser",
-    handle: "@risserclay",
-    content: "Personally I prefer plane.so @planepowers",
-    platform: "twitter",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Alex Drakonov",
-    handle: "@BogDrakonov",
-    content: "Hey @linear when will multiple assignees on the same ticket be a thing? An open source alternative (@planepowers) has this feature and it's super handy!",
-    platform: "twitter",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Sarah Wings",
-    content: "At this point everything I work on across multiple teams is going to use Plane, so I have now one way of thinking about the world.",
-    platform: "discord",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Michael Chen",
-    content: "Thank you for creating great products that my team and I can't live without in my actual work.",
-    platform: "discord",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Albert Rodriguez",
-    content: "Hello, Albert here. I am very impressed with the Free Cloud plan. Atlassian better be scared xd",
-    platform: "discord",
-    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Laura Martinez",
-    content: "I'm personally moving from Atlassian to Plane and the experience has been amazing.",
-    platform: "discord",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Marcus Williams",
-    content: "Plane is hands down the best project in existence.",
-    platform: "discord",
-    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Niran Patel",
-    content: "Hi guys, I am new here. It's been a while using a self hosted plane to manage engineering projects. Already in love with the features and smooth UI. 🤩",
-    platform: "discord",
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Scott Thompson",
-    content: "Hello, Scott here! I'm moving to Plane from Linear, thank you so much for making Plane open source.",
-    platform: "discord",
-    avatar: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Elena Kowalski",
-    content: "Hi this app looks amazing! I just selfhosted it and it was so easy.",
-    platform: "discord",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "James Parker",
-    content: "Yo, how is this free? It's just so good!",
-    platform: "discord",
-    avatar: "https://images.unsplash.com/photo-1599566150163-29194dcabd36?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Dr. Hannah Lee",
-    content: "I really like the kanban board and overall theme. This looks like a great alternative for someone used to Jira that wants to switch to self-hosted.",
-    platform: "reddit",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face",
-  },
+  { name: "Clay Risser", handle: "@risserclay", content: "Personally I prefer plane.so @planepowers", platform: "twitter", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" },
+  { name: "Alex Drakonov", handle: "@BogDrakonov", content: "Hey @linear when will multiple assignees on the same ticket be a thing? An open source alternative (@planepowers) has this feature and it's super handy!", platform: "twitter", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" },
+  { name: "Sarah Wings", content: "At this point everything I work on across multiple teams is going to use Plane, so I have now one way of thinking about the world.", platform: "discord", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" },
+  { name: "Michael Chen", content: "Thank you for creating great products that my team and I can't live without in my actual work.", platform: "discord", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" },
+  { name: "Albert Rodriguez", content: "Hello, Albert here. I am very impressed with the Free Cloud plan. Atlassian better be scared xd", platform: "discord", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" },
+  { name: "Laura Martinez", content: "I'm personally moving from Atlassian to Plane and the experience has been amazing.", platform: "discord", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" },
+  { name: "Marcus Williams", content: "Plane is hands down the best project in existence.", platform: "discord", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face" },
+  { name: "Niran Patel", content: "Hi guys, I am new here. It's been a while using a self hosted plane to manage engineering projects. Already in love with the features and smooth UI. 🤩", platform: "discord", avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face" },
+  { name: "Scott Thompson", content: "Hello, Scott here! I'm moving to Plane from Linear, thank you so much for making Plane open source.", platform: "discord", avatar: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=100&h=100&fit=crop&crop=face" },
+  { name: "Elena Kowalski", content: "Hi this app looks amazing! I just selfhosted it and it was so easy.", platform: "discord", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" },
+  { name: "James Parker", content: "Yo, how is this free? It's just so good!", platform: "discord", avatar: "https://images.unsplash.com/photo-1599566150163-29194dcabd36?w=100&h=100&fit=crop&crop=face" },
+  { name: "Dr. Hannah Lee", content: "I really like the kanban board and overall theme. This looks like a great alternative for someone used to Jira that wants to switch to self-hosted.", platform: "reddit", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face" },
 ];
 
 const PlatformIcon = ({ platform }: { platform: Platform }) => {
   switch (platform) {
-    case "twitter":
-      return <Twitter className="h-4 w-4" />;
-    case "discord":
-      return <MessageCircle className="h-4 w-4" />;
-    case "reddit":
-      return (
-        <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
-        </svg>
-      );
+    case "twitter": return <Twitter className="h-4 w-4" />;
+    case "discord": return <MessageCircle className="h-4 w-4" />;
+    case "reddit": return (
+      <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+      </svg>
+    );
   }
 };
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Auto-advance carousel
   useEffect(() => {
     if (isPaused) return;
-    
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [isPaused]);
 
-  // Get visible testimonials (show 3 at a time on desktop)
   const getVisibleTestimonials = () => {
     const visible = [];
     for (let i = 0; i < 3; i++) {
@@ -170,14 +103,12 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Header */}
         <ScrollReveal className="mx-auto max-w-2xl text-center mb-12">
-          <p className="text-primary font-mono text-sm mb-2 terminal-glow">TESTIMONIALS</p>
+          <p className="text-primary font-mono text-sm mb-2 terminal-glow">{t("testimonials.label")}</p>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            What Teams Say About{" "}
-            <span className="text-gradient">Plane</span>
+            {t("testimonials.title")}{" "}
+            <span className="text-gradient">{t("testimonials.titleHighlight")}</span>
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Over 1M+ users trust Plane. Here's what some of them have to say.
-          </p>
+          <p className="mt-4 text-lg text-muted-foreground">{t("testimonials.description")}</p>
         </ScrollReveal>
 
         {/* Carousel Container */}

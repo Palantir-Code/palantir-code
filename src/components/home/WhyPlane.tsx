@@ -1,7 +1,7 @@
 import { Layout, FileText, Sparkles, Cloud, X, ZoomIn } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { WHY_PLANE } from "@/lib/constants";
+import { useTranslation } from "react-i18next";
 import planeLogo from "@/assets/plane-logo-transparent.png";
 import aiHero from "@/assets/ai-hero.avif";
 import wikiHero from "@/assets/wiki-hero.avif";
@@ -24,37 +24,30 @@ const iconMap: Record<string, React.ReactNode> = {
   Cloud: <Cloud className="h-6 w-6" />,
 };
 
-// Matrix stream component for connections between cards
+const featureKeys = [
+  { icon: "Layout", titleKey: "whyPlane.projects", descKey: "whyPlane.projectsDesc" },
+  { icon: "FileText", titleKey: "whyPlane.wiki", descKey: "whyPlane.wikiDesc" },
+  { icon: "Sparkles", titleKey: "whyPlane.ai", descKey: "whyPlane.aiDesc" },
+  { icon: "Cloud", titleKey: "whyPlane.deployment", descKey: "whyPlane.deploymentDesc" },
+];
+
 const MatrixStream = ({ delay = 0, left = "50%" }: { delay?: number; left?: string }) => {
   const chars = "アイウエオカキクケコ0123456789";
   const getChar = () => chars[Math.floor(Math.random() * chars.length)];
-  
   return (
-    <motion.div
-      className="absolute flex flex-col items-center text-primary font-mono text-[10px] z-0"
-      style={{ left, top: 0 }}
+    <motion.div className="absolute flex flex-col items-center text-primary font-mono text-[10px] z-0" style={{ left, top: 0 }}
       initial={{ y: "-20px", opacity: 0 }}
-      animate={{ 
-        y: "100%", 
-        opacity: [0, 0.8, 0.8, 0],
-      }}
-      transition={{
-        duration: 2,
-        delay,
-        repeat: Infinity,
-        ease: "linear",
-      }}
-    >
+      animate={{ y: "100%", opacity: [0, 0.8, 0.8, 0] }}
+      transition={{ duration: 2, delay, repeat: Infinity, ease: "linear" }}>
       {[...Array(6)].map((_, i) => (
-        <span key={i} className="terminal-glow" style={{ opacity: 1 - i * 0.15 }}>
-          {getChar()}
-        </span>
+        <span key={i} className="terminal-glow" style={{ opacity: 1 - i * 0.15 }}>{getChar()}</span>
       ))}
     </motion.div>
   );
 };
 
 const WhyPlane = () => {
+  const { t } = useTranslation();
   const [zoomedImage, setZoomedImage] = useState<{ src: string; alt: string } | null>(null);
 
   return (
@@ -129,11 +122,11 @@ const WhyPlane = () => {
             />
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Why Teams Choose{" "}
-            <span className="text-gradient">Plane</span>
+            {t("whyPlane.title")}{" "}
+            <span className="text-gradient">{t("whyPlane.titleHighlight")}</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Plane is the open-source project management platform that gives you everything you need to plan, track, and ship.
+            {t("whyPlane.description")}
           </p>
         </ScrollReveal>
 
@@ -228,7 +221,7 @@ const WhyPlane = () => {
 
               {/* Instruction text */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-muted-foreground text-sm">
-                Click anywhere to close
+                {t("whyPlane.clickToClose")}
               </div>
             </motion.div>
           )}
@@ -259,7 +252,7 @@ const WhyPlane = () => {
           </div>
 
           <StaggerContainer className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 relative z-10" staggerDelay={0.15}>
-            {WHY_PLANE.map((feature, index) => (
+            {featureKeys.map((feature, index) => (
               <StaggerItem key={index}>
                 <motion.div
                   className="group relative rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg backdrop-blur-sm"
@@ -280,10 +273,10 @@ const WhyPlane = () => {
 
                   {/* Content */}
                   <h3 className="relative mb-2 text-lg font-semibold text-foreground">
-                    {feature.title}
+                    {t(feature.titleKey)}
                   </h3>
                   <p className="relative text-sm text-muted-foreground leading-relaxed">
-                    {feature.description}
+                    {t(feature.descKey)}
                   </p>
                 </motion.div>
               </StaggerItem>
@@ -302,7 +295,7 @@ const WhyPlane = () => {
             whileTap={{ scale: 0.98 }}
           >
             <img src={planeLogo} alt="Plane" className="h-5 w-auto terminal-logo-bright" />
-            Powered by Plane
+            {t("whyPlane.poweredBy")}
           </motion.a>
         </ScrollReveal>
       </div>
