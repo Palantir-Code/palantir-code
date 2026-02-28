@@ -47,7 +47,7 @@ export default function PrivacyPolicy() {
               </div>
             </div>
 
-            <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:mt-10 prose-headings:mb-6 prose-p:my-6 prose-ul:my-6 prose-li:my-2">
+            <div className="space-y-8 text-foreground [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_ul]:text-muted-foreground [&_li]:leading-relaxed [&_a]:text-primary [&_a]:underline">
               <h2>1. Data Controller</h2>
               <p>
                 <strong>Identity:</strong> PALANTIR CODE<br />
