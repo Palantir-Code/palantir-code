@@ -4,9 +4,9 @@ export const COMPANY = {
   name: "PALANTIR-CODE",
   tagline: "Spain's First Certified Plane Partner",
   description: "We help teams ship faster with expert implementation, migration, and custom solutions for Plane's unified workspace.",
-  email: "info@palantir-code.com",
+  email: "raul.pelaez@palantircode.com",
   phone: "+34 900 000 000",
-  address: "Madrid, Spain",
+  address: "Benet Cortada 8, 08174 Sant Cugat del Vallés, Barcelona, Spain",
 } as const;
 
 export const NAVIGATION = {
