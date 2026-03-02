@@ -21,8 +21,9 @@
   "stats": {
     "firstPartner": "First Partner in Spain",
     "certified": "Plane Certified",
-    "enterpriseReady": "Enterprise Ready",
-    "supportAvailable": "Support Available"
+    "enterpriseReady": "Enterprise Companies",
+    "supportAvailable": "Support Available",
+    "europeanPartner": "European Partner of the World"
   },
   "planeCompose": {
     "badge": "Projects-as-Code",

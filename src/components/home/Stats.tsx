@@ -8,8 +8,9 @@ const Stats = () => {
 
   const stats = [
     { label: t("stats.firstPartner"), value: "#1" },
+    { label: t("stats.europeanPartner"), value: "2nd" },
     { label: t("stats.certified"), value: "100%" },
-    { label: t("stats.enterpriseReady"), value: "✓" },
+    { label: t("stats.enterpriseReady"), value: "+300" },
     { label: t("stats.supportAvailable"), value: "24/7" },
   ];
 
@@ -60,7 +61,7 @@ const Stats = () => {
             ))}
           </svg>
 
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4 relative z-10">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-5 relative z-10">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
