@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Twitter, MessageCircle } from "lucide-react";
+import { Twitter, MessageCircle, Quote, Building2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import { useEffect, useState, useRef } from "react";
@@ -12,6 +12,13 @@ interface Testimonial {
   content: string;
   platform: Platform;
   avatar: string;
+}
+
+interface CustomerQuote {
+  quote: string;
+  author: string;
+  company: string;
+  industry: string;
 }
 
 const avatars = [
@@ -52,6 +59,8 @@ const Testimonials = () => {
     avatar: avatars[idx] || avatars[0],
   }));
 
+  const customers: CustomerQuote[] = t("testimonials.customers", { returnObjects: true }) as CustomerQuote[];
+
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
@@ -73,35 +82,19 @@ const Testimonials = () => {
     <section className="py-12 lg:py-16 relative overflow-hidden bg-muted/20">
       {/* Airplane Silhouette Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Large airplane silhouette */}
         <svg
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] max-w-[1400px] opacity-[0.04]"
           viewBox="0 0 800 400"
           fill="currentColor"
         >
-          {/* Airplane body */}
           <path
             d="M750 200 L650 190 L400 180 L380 120 L350 120 L370 175 L150 160 L120 100 L90 100 L115 155 L50 150 L30 140 L20 150 L30 160 L50 160 L50 170 L30 180 L20 170 L30 160 L50 170 L115 175 L90 230 L120 230 L150 170 L370 185 L350 240 L380 240 L400 190 L650 200 L750 200"
             className="text-primary"
           />
-          {/* Wing top */}
-          <path
-            d="M300 180 L280 80 L320 80 L340 175"
-            className="text-primary"
-          />
-          {/* Wing bottom */}
-          <path
-            d="M300 190 L280 290 L320 290 L340 195"
-            className="text-primary"
-          />
-          {/* Tail */}
-          <path
-            d="M680 190 L700 130 L720 130 L705 185 M680 200 L700 260 L720 260 L705 205"
-            className="text-primary"
-          />
+          <path d="M300 180 L280 80 L320 80 L340 175" className="text-primary" />
+          <path d="M300 190 L280 290 L320 290 L340 195" className="text-primary" />
+          <path d="M680 190 L700 130 L720 130 L705 185 M680 200 L700 260 L720 260 L705 205" className="text-primary" />
         </svg>
-        
-        {/* Subtle gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </div>
       
@@ -123,11 +116,9 @@ const Testimonials = () => {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          {/* Gradient masks */}
           <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
-          {/* Carousel Track */}
           <div className="overflow-hidden px-4">
             <motion.div 
               className="flex gap-6"
@@ -141,53 +132,23 @@ const Testimonials = () => {
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}
-                  transition={{ 
-                    duration: 0.5, 
-                    delay: idx * 0.1,
-                    type: "spring",
-                    stiffness: 100,
-                    damping: 20 
-                  }}
+                  transition={{ duration: 0.5, delay: idx * 0.1, type: "spring", stiffness: 100, damping: 20 }}
                 >
                   <div className="group relative rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 backdrop-blur-sm h-full">
-                    {/* Glow effect */}
                     <div className="absolute inset-0 rounded-xl bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    
-                    {/* Header with Avatar */}
                     <div className="relative flex items-center gap-4 mb-4">
-                      {/* Real Avatar with blur overlay */}
                       <div className="relative">
-                        <img 
-                          src={testimonial.avatar} 
-                          alt={testimonial.name}
-                          className="h-12 w-12 rounded-full object-cover ring-2 ring-primary/30"
-                        />
-                        {/* Blur overlay */}
+                        <img src={testimonial.avatar} alt={testimonial.name} className="h-12 w-12 rounded-full object-cover ring-2 ring-primary/30" />
                         <div className="absolute inset-0 rounded-full backdrop-blur-[2px] bg-background/20" />
-                        {/* Online indicator */}
-                        <motion.div 
-                          className="absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-green-500 ring-2 ring-card"
-                          animate={{ scale: [1, 1.2, 1] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                        />
+                        <motion.div className="absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-green-500 ring-2 ring-card" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }} />
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="font-semibold text-foreground truncate">{testimonial.name}</p>
-                        {testimonial.handle && (
-                          <p className="text-xs text-primary/70">{testimonial.handle}</p>
-                        )}
+                        {testimonial.handle && <p className="text-xs text-primary/70">{testimonial.handle}</p>}
                       </div>
-                      <div className="text-primary/60">
-                        <PlatformIcon platform={testimonial.platform} />
-                      </div>
+                      <div className="text-primary/60"><PlatformIcon platform={testimonial.platform} /></div>
                     </div>
-
-                    {/* Content */}
-                    <p className="relative text-sm text-muted-foreground leading-relaxed">
-                      "{testimonial.content}"
-                    </p>
-
-                    {/* Scanline effect on hover */}
+                    <p className="relative text-sm text-muted-foreground leading-relaxed">"{testimonial.content}"</p>
                     <div className="absolute inset-0 rounded-xl scanlines opacity-0 group-hover:opacity-20 pointer-events-none transition-opacity" />
                   </div>
                 </motion.div>
@@ -202,9 +163,7 @@ const Testimonials = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'w-8 bg-primary' 
-                    : 'w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                  index === currentIndex ? 'w-8 bg-primary' : 'w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
@@ -230,6 +189,55 @@ const Testimonials = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
+        </div>
+
+        {/* Customer Quotes Section */}
+        <div className="mt-20">
+          <ScrollReveal className="mx-auto max-w-2xl text-center mb-12">
+            <p className="text-primary font-mono text-sm mb-2 terminal-glow">{t("testimonials.customersLabel")}</p>
+            <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+              {t("testimonials.customersTitle")}{" "}
+              <span className="text-gradient">{t("testimonials.customersTitleHighlight")}</span>
+            </h3>
+            <p className="mt-4 text-muted-foreground">{t("testimonials.customersDescription")}</p>
+          </ScrollReveal>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {customers.map((customer, index) => (
+              <motion.div
+                key={index}
+                className="group relative"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+              >
+                <div className="relative rounded-xl border border-border bg-card p-6 h-full transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5">
+                  {/* Quote icon */}
+                  <Quote className="h-8 w-8 text-primary/20 mb-4" />
+                  
+                  {/* Quote text */}
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-6 italic">
+                    "{customer.quote}"
+                  </p>
+
+                  {/* Author info */}
+                  <div className="flex items-center gap-3 pt-4 border-t border-border">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                      <Building2 className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-semibold text-foreground">{customer.author}</p>
+                      <p className="text-xs text-muted-foreground">{customer.company} · {customer.industry}</p>
+                    </div>
+                  </div>
+
+                  {/* Hover glow */}
+                  <div className="absolute inset-0 rounded-xl bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
