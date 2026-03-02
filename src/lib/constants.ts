@@ -36,8 +36,9 @@ export const NAVIGATION = {
 
 export const STATS = [
   { label: "First Partner in Spain", value: "#1" },
+  { label: "2nd European Partner", value: "2nd" },
   { label: "Plane Certified", value: "100%" },
-  { label: "Enterprise Ready", value: "✓" },
+  { label: "Enterprise Companies", value: "+300" },
   { label: "Support Available", value: "24/7" },
 ] as const;
 

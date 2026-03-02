@@ -21,8 +21,9 @@
   "stats": {
     "firstPartner": "Primer Partner a Espanya",
     "certified": "Certificat Plane",
-    "enterpriseReady": "Preparat per a Empreses",
-    "supportAvailable": "Suport Disponible"
+    "enterpriseReady": "Empreses Enterprise",
+    "supportAvailable": "Suport Disponible",
+    "europeanPartner": "Partner Europeu del Món"
   },
   "planeCompose": {
     "badge": "Projectes-com-a-Codi",
