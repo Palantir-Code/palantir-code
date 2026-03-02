@@ -8,7 +8,7 @@ const Stats = () => {
 
   const stats = [
     { label: t("stats.firstPartner"), value: "#1" },
-    { label: t("stats.europeanPartner"), value: "2nd" },
+    { label: t("stats.europeanPartner"), value: "#2" },
     { label: t("stats.certified"), value: "100%" },
     { label: t("stats.enterpriseReady"), value: "+300" },
     { label: t("stats.supportAvailable"), value: "24/7" },
