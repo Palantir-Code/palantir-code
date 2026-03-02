@@ -75,6 +75,22 @@
       { "name": "Elena Kowalski", "content": "Aquesta app es veu increïble! L'acabo d'autoallotjar i va ser molt fàcil.", "platform": "discord" },
       { "name": "James Parker", "content": "Com és que això és gratis? És massa bo!", "platform": "discord" },
       { "name": "Dr. Hannah Lee", "content": "M'agrada molt el tauler kanban i el tema general. Sembla una gran alternativa per a algú acostumat a Jira que vol canviar a autoallotjat.", "platform": "reddit" }
+    ],
+    "customersLabel": "CLIENTS DE PLANE",
+    "customersTitle": "Empreses que confien en",
+    "customersTitleHighlight": "Plane",
+    "customersDescription": "Històries reals d'empreses que van canviar a Plane i mai van mirar enrere.",
+    "customers": [
+      { "quote": "The Plane team is creating a product that our business has been needing for years. Modern features, flexible workflows, without sacrificing reporting abilities.", "author": "Duane Arnett", "company": "FortyAU", "industry": "Desenvolupament de Software" },
+      { "quote": "It feels like modern software and it works reliably. We don't need a dedicated admin, and we're not forcing simple boards to do jobs they can't do.", "author": "Duane Arnett", "company": "FortyAU", "industry": "Desenvolupament de Software" },
+      { "quote": "It's a very safe environment for us to blindfold ourselves and say, okay, my PM cannot go wrong at the most common places.", "author": "Ramprasath", "company": "Foxsense", "industry": "Desenvolupament de Software" },
+      { "quote": "Pages blew us away. Most tools miss this. The ability for the whole team to work live on the same doc, without silos, was a game-changer.", "author": "Satyam Krishna", "company": "GobbleCube", "industry": "SaaS" },
+      { "quote": "Our metric was simple: how quickly can we unblock each other? Plane makes it visible—who's stuck, at what stage, on which module.", "author": "Satyam Krishna", "company": "GobbleCube", "industry": "SaaS" },
+      { "quote": "Easy to configure, easy to use, especially when the number of work items increases. With Plane, we could finally bring everyone into the same system.", "author": "Marc U.", "company": "VATES", "industry": "Desenvolupament de Software" },
+      { "quote": "We've been using Plane Pro, and we're still absolutely thrilled with it! Thank you so much for all your hard work, it's really appreciated.", "author": "Marc Ungeschikts", "company": "VATES", "industry": "Desenvolupament de Software" },
+      { "quote": "Switching was easy, and the impact was immediate. Reports that took hours now take minutes. That alone made the move worth it.", "author": "Max Kraszewski", "company": "MinimalArt", "industry": "Agència" },
+      { "quote": "We ship faster because everything flows through Plane. No spreadsheets, no lost threads, no wasted cycles.", "author": "Mahesh Sagi", "company": "Rever", "industry": "Fintech" },
+      { "quote": "Our metric was simple: how quickly can we unblock each other? Plane makes it visible, who's stuck, at what stage, on which module.", "author": "Gryphon", "company": "Groupthink Labs", "industry": "Serveis de Recerca" }
     ]
   },
   "importers": {
