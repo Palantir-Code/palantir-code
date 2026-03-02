@@ -8,6 +8,16 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import NotFound from "./NotFound";
 
+import coverJiraMigration from "@/assets/blog/cover-jira-migration.jpg";
+import coverPlaneCompose from "@/assets/blog/cover-plane-compose.jpg";
+import coverBestPractices from "@/assets/blog/cover-best-practices.jpg";
+
+const coverImages: Record<string, string> = {
+  "cover-jira-migration": coverJiraMigration,
+  "cover-plane-compose": coverPlaneCompose,
+  "cover-best-practices": coverBestPractices,
+};
+
 const BlogPost = () => {
   const { slug } = useParams();
   const { t } = useTranslation();
@@ -20,6 +30,7 @@ const BlogPost = () => {
     readTime: string;
     author: string;
     category: string;
+    image: string;
     content: string;
   }>;
 
@@ -49,7 +60,7 @@ const BlogPost = () => {
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-4">
               {post.title}
             </h1>
-            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8 pb-8 border-b border-border">
+            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
               <span className="flex items-center gap-1">
                 <User className="h-4 w-4" />
                 {post.author}
@@ -62,6 +73,16 @@ const BlogPost = () => {
                 <Clock className="h-4 w-4" />
                 {post.readTime}
               </span>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.15}>
+            <div className="aspect-[16/9] overflow-hidden rounded-xl mb-8">
+              <img
+                src={coverImages[post.image]}
+                alt={post.title}
+                className="h-full w-full object-cover"
+              />
             </div>
           </ScrollReveal>
 

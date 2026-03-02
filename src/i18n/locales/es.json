@@ -344,6 +344,7 @@
     "title": "Blog",
     "heroDesc": "Artículos, guías y mejores prácticas sobre gestión de proyectos, Plane y transformación digital.",
     "backToBlog": "Volver al Blog",
+    "featured": "Destacados",
     "posts": [
       {
         "slug": "why-migrate-from-jira-to-plane",
@@ -353,6 +354,8 @@
         "readTime": "5 min",
         "author": "PALANTIR-CODE",
         "category": "Migración",
+        "image": "cover-jira-migration",
+        "featured": true,
         "content": "Muchas organizaciones están replanteando sus herramientas de gestión de proyectos en 2025. Jira, aunque potente, se ha vuelto cada vez más complejo y costoso. Plane ofrece una alternativa moderna y open-source que combina simplicidad con funciones de nivel empresarial.\n\nUna de las mayores ventajas de Plane es su interfaz intuitiva. Los equipos pueden comenzar rápidamente sin la curva de aprendizaje pronunciada por la que Jira es conocido. El espacio de trabajo unificado reúne seguimiento de proyectos, documentación y colaboración en un solo lugar.\n\nPlane también ofrece opciones de despliegue flexibles: cloud, autoalojado o airgapped. Esto significa que tus datos se quedan donde quieras, cumpliendo incluso los requisitos de cumplimiento más estrictos.\n\nEn PALANTIR-CODE, hemos ayudado a docenas de equipos a hacer el cambio. Nuestro proceso de migración asegura cero pérdida de datos, mapeo completo de campos y formación integral para usuarios. ¿El resultado? Equipos más productivos desde el primer día."
       },
       {
@@ -363,6 +366,8 @@
         "readTime": "7 min",
         "author": "PALANTIR-CODE",
         "category": "DevOps",
+        "image": "cover-plane-compose",
+        "featured": true,
         "content": "Plane Compose introduce un concepto revolucionario: Proyectos-como-Código. Así como Infraestructura-como-Código transformó la gestión de servidores, Plane Compose transforma la gestión de proyectos.\n\nCon Plane Compose, la estructura de tu proyecto se convierte en un artefacto de primera clase. Los workflows, estados, etiquetas y campos personalizados se definen en YAML, se versionan en Git y se revisan mediante pull requests.\n\nEl CLI lo hace simple: 'plane init' crea un scaffold de nuevo proyecto, 'plane schema pull' sincroniza tu configuración y 'plane clone' replica estructuras entre workspaces.\n\nEste enfoque aporta consistencia entre equipos, reduce el tiempo de onboarding y permite a los equipos DevOps gestionar la infraestructura de proyectos con el mismo rigor que aplican al código. En PALANTIR-CODE, ayudamos a los equipos a adoptar Plane Compose e integrarlo en sus pipelines CI/CD existentes."
       },
       {
@@ -373,6 +378,8 @@
         "readTime": "6 min",
         "author": "PALANTIR-CODE",
         "category": "Mejores Prácticas",
+        "image": "cover-best-practices",
+        "featured": true,
         "content": "La gestión de proyectos está evolucionando rápidamente. En 2025, los equipos más exitosos están adoptando nuevos enfoques que priorizan la flexibilidad, la transparencia y la automatización.\n\nPrimero, las herramientas open-source están ganando tracción. Las organizaciones quieren transparencia en sus herramientas, no solo en sus procesos. Plane ejemplifica esta tendencia con su código fuente completamente abierto.\n\nSegundo, la automatización con IA se está volviendo esencial. Desde la asignación automática de tareas hasta la generación de insights de proyectos, la IA está ayudando a los equipos a centrarse en lo que más importa.\n\nTercero, los espacios de trabajo unificados están reemplazando las cadenas de herramientas fragmentadas. En lugar de cambiar entre herramientas de seguimiento, documentación y comunicación, los equipos quieren todo en un solo lugar.\n\nFinalmente, el cumplimiento y la soberanía de datos son prioridades principales. Las opciones de despliegue autoalojado y airgapped aseguran que los datos sensibles del proyecto permanezcan dentro de los límites organizacionales.\n\nEn PALANTIR-CODE, ayudamos a las organizaciones a adoptar estas mejores prácticas con Plane como base."
       }
     ]
