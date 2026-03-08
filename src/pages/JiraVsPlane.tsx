@@ -450,7 +450,10 @@ const JiraVsPlane = () => {
 
             <ScrollReveal delay={0.2}>
               <div className="rounded-xl border border-border bg-card p-8">
-                <h3 className="text-xl font-bold text-foreground mb-1">Jira + Confluence Standard</h3>
+                <h3 className="text-xl font-bold text-foreground mb-1 flex items-center gap-2">
+                  <img src={jiraLogo} alt="Jira" className="h-6 w-6" />
+                  Jira + Confluence Standard
+                </h3>
                 <div className="flex items-baseline gap-1 mb-4">
                   <span className="text-4xl font-bold text-muted-foreground">$16</span>
                   <span className="text-sm text-muted-foreground">/ user / month</span>
