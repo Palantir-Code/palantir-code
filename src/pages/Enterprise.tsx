@@ -3,6 +3,7 @@ import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import ScrollReveal from "@/components/animations/ScrollReveal";
+import MatrixRain from "@/components/animations/MatrixRain";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
