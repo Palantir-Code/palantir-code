@@ -135,7 +135,7 @@ export default function PrivacyPolicy() {
               <p>
                 <strong>PALANTIR CODE</strong><br />
                 Email: <a href="mailto:raul.pelaez@palantircode.com">raul.pelaez@palantircode.com</a><br />
-                Address: Benet Cortada 8, 08174 Sant Cugat del Vallés, Barcelona, Spain
+                Address: Benet Cortada 8, Escalera F, 2º 1ª, 08174 Sant Cugat del Vallés, Barcelona, Spain
               </p>
             </div>
           </motion.div>
