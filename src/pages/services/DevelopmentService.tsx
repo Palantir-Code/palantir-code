@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Code, ArrowRight, Check, Plug, Workflow, Database, Bot, Blocks, Terminal } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Layout from "@/components/layout/Layout";

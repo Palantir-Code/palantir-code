@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Wrench, ArrowRight, Check, Clock, Settings, Users, BarChart3, Target } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Layout from "@/components/layout/Layout";

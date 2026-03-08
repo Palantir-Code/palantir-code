@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { ArrowRightLeft, ArrowRight, Check, Search, Map, FileCheck, Box, MessageSquare, CheckCircle2, Layers, Shield } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Layout from "@/components/layout/Layout";
