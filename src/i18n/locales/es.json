@@ -419,12 +419,12 @@
   },
   "enterprise": {
     "meta": {
-      "description": "Plane para Enterprise: gestión de proyectos con certificación ISO 27001, SOC2 y GDPR, despliegue air-gapped, migración white-glove y Plane AI Agent. Confiado por StarkBank, Zerodha y Brown Brothers Harriman."
+      "description": "Soluciones enterprise de gestión de proyectos: certificación ISO 27001, SOC2 y GDPR, despliegue air-gapped, migración white-glove y automatización con IA. Confiado por StarkBank, Zerodha y Brown Brothers Harriman."
     },
-    "badge": "ENTERPRISE",
+    "badge": "SOLUCIONES ENTERPRISE",
     "heroTitle": "Construido para la",
     "heroTitleHighlight": "Gobernanza Empresarial",
-    "heroDescription": "Plane ofrece gestión de proyectos preparada para el cumplimiento normativo, con despliegues air-gapped, registros de auditoría inmutables y una metodología de migración white-glove. Confiado por bancos globales, líderes fintech y empresas Fortune 500.",
+    "heroDescription": "Ofrecemos soluciones de gestión de proyectos preparadas para el cumplimiento normativo, con despliegues air-gapped, registros de auditoría inmutables y una metodología de migración white-glove. Confiado por bancos globales, líderes fintech y empresas Fortune 500.",
     "heroCta": "Solicitar Consultoría",
     "heroCtaSecondary": "Ver Servicios",
     "trustedBy": "Confiado por líderes de la industria en todo el mundo",
@@ -462,7 +462,7 @@
     "deployment": {
       "badge": "OPCIONES DE DESPLIEGUE",
       "title": "Elige dónde",
-      "titleHighlight": "ejecutar Plane",
+      "titleHighlight": "ejecutar tu plataforma",
       "description": "Air-gapped on-prem, red restringida o gestionado en tu entorno elegido.",
       "airgappedTitle": "Air-gapped puro",
       "airgappedDesc": "Workspaces ilimitados para todos tus equipos sin conectividad externa.",
@@ -471,8 +471,8 @@
       "restrictedDesc": "Red interna controlada con rutas de egreso autorizadas.",
       "restrictedTag": "Compartido",
       "managedTitle": "Gestionado en tu entorno",
-      "managedDesc": "Tu nube seleccionada o infraestructura soberana, gestionada por Plane.",
-      "managedTag": "Gestionado por Plane"
+      "managedDesc": "Tu nube seleccionada o infraestructura soberana, totalmente gestionada por nuestro equipo.",
+      "managedTag": "Totalmente gestionado"
     },
     "features": {
       "badge": "ESCALA ENTERPRISE",
@@ -488,11 +488,11 @@
       "k8sDesc": "Escalado horizontal via Kubernetes con aislamiento a nivel de workspace y proyecto."
     },
     "ai": {
-      "badge": "PLANE AI",
+      "badge": "AUTOMATIZACIÓN IA",
       "title": "Automatiza con",
-      "titleHighlight": "Plane AI Agent",
-      "description": "Consulta, automatiza y genera cualquier cosa en tu workspace con el contexto completo de tu trabajo. Plane AI entiende tus proyectos, equipos y flujos de trabajo.",
-      "feature1": "@menciona al agente IA directamente en los comentarios de work items",
+      "titleHighlight": "Agentes IA",
+      "description": "Consulta, automatiza y genera cualquier cosa en tu workspace con el contexto completo de tu trabajo. Los agentes IA entienden tus proyectos, equipos y flujos de trabajo.",
+      "feature1": "@menciona agentes IA directamente en los comentarios de work items",
       "feature2": "Crea proyectos automáticamente con objetivos, work items y milestones",
       "feature3": "Obtén respuestas con IA con contexto completo del proyecto",
       "flow1": "@menciona al agente en un comentario",
@@ -502,7 +502,7 @@
     },
     "cta": {
       "title": "¿Listo para modernizar tu gestión de proyectos?",
-      "description": "Te ayudamos a implementar Plane con cumplimiento enterprise, seguridad y una metodología de migración que garantiza cero pérdida de datos.",
+      "description": "Te ayudamos a implementar soluciones enterprise con cumplimiento normativo, seguridad y una metodología de migración que garantiza cero pérdida de datos.",
       "button": "Contactar"
     }
   }
