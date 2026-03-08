@@ -65,7 +65,7 @@ const ServicesPage = () => {
 
   return (
     <Layout>
-      <SEO title="Services" description="Expert Plane consulting services." canonical="/services" jsonLd={servicesJsonLd} />
+      <SEO title="Plane Implementation & Consulting Services" description="Expert Plane implementation, Jira migration, custom development, and 24/7 managed support. Spain's first certified Plane partner offers end-to-end project management solutions." canonical="/services" jsonLd={servicesJsonLd} />
       
       <section className="relative bg-gradient-to-b from-primary/5 via-background to-background py-20 overflow-hidden">
         <MatrixRain columnCount={20} opacity={0.25} />

@@ -38,7 +38,7 @@ const SolutionsPage = () => {
 
   return (
     <Layout>
-      <SEO title="Solutions" description="Pre-built Plane accelerators and templates for every team." canonical="/solutions" jsonLd={solutionsJsonLd} />
+      <SEO title="Plane Solutions for Every Team" description="Pre-built Plane solutions for Marketing, Sales, HR, IT, Finance, and more. Accelerate your team's productivity with tailored project management workflows." canonical="/solutions" jsonLd={solutionsJsonLd} />
 
       <section className="bg-gradient-to-b from-primary/5 via-background to-background py-20">
         <div className="container mx-auto px-4 lg:px-8">

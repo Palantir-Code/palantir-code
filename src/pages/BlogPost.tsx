@@ -40,7 +40,7 @@ const BlogPost = () => {
 
   return (
     <Layout>
-      <SEO title={`${post.title} | PALANTIR-CODE Blog`} description={post.excerpt} />
+      <SEO title={post.title} description={post.excerpt} canonical={`/blog/${post.slug}`} type="article" />
 
       <article className="py-16 lg:py-24">
         <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
