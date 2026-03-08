@@ -202,17 +202,6 @@ const JiraVsPlane = () => {
             </div>
           </ScrollReveal>
 
-          {/* Hero image */}
-          <ScrollReveal delay={0.3}>
-            <div className="mt-16 max-w-4xl mx-auto">
-              <img
-                src={jiraVsPlaneImg}
-                alt="Jira vs Plane comparison"
-                className="w-full rounded-xl border border-border shadow-2xl shadow-primary/10"
-                loading="lazy"
-              />
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
