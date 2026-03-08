@@ -1,166 +1,73 @@
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import MatrixRain from "@/components/animations/MatrixRain";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  ArrowRight, Check, X, Zap, Layout as LayoutIcon, Shield, Globe,
-  FileText, DollarSign, Server, Users, Bot, Clock, Layers,
+  ArrowRight, Check, X, Zap, Shield,
+  DollarSign, Server, Layers,
   Cloud, Lock, CheckCircle2, ArrowRightLeft
 } from "lucide-react";
-import jiraVsPlaneImg from "@/assets/jira-vs-plane.png";
 import planeLogo from "@/assets/plane-logo.svg";
 import jiraLogo from "@/assets/integrations/jira.avif";
 
-const comparisonData = [
-  {
-    category: "Speed",
-    plane: "Snappy, low-friction UI that stays fast as projects grow",
-    jira: "Can feel heavy in large projects and complex workflows",
-    planeWins: true,
-  },
-  {
-    category: "Setup",
-    plane: "Up and running in minutes — cloud & self-hosted",
-    jira: "Admin-heavy setup; EOL announced for self-hosting",
-    planeWins: true,
-  },
-  {
-    category: "Usability",
-    plane: "Clean, modern, keyboard-driven interface",
-    jira: "Powerful but cluttered, steep learning curve",
-    planeWins: true,
-  },
-  {
-    category: "Structure",
-    plane: "Workspaces → Projects → Work Items — intuitive hierarchy",
-    jira: "Projects, schemes, screens, fields — easy to over-configure",
-    planeWins: true,
-  },
-  {
-    category: "Docs & Wiki",
-    plane: "Built-in Pages/Wiki next to your projects",
-    jira: "Confluence is a separate subscription",
-    planeWins: true,
-  },
-  {
-    category: "AI & Automation",
-    plane: "Native AI assist + lightweight rules included",
-    jira: "Powerful, but often needs paid add-ons/Marketplace",
-    planeWins: true,
-  },
-  {
-    category: "Cost to Scale",
-    plane: "Lower TCO, no unpredictable add-on costs",
-    jira: "Higher TCO, add-ons add up quickly at scale",
-    planeWins: true,
-  },
-  {
-    category: "Deployment",
-    plane: "Cloud, self-hosted, and air-gapped — open-source",
-    jira: "Cloud only; Data Centre sales end March 2026",
-    planeWins: true,
-  },
-];
-
-const featureTable = [
-  { feature: "Layouts", plane: "List, Board, Calendar, Gantt, Kanban — all included", jira: "Basic views in free tier", planeWins: true },
-  { feature: "Project Management", plane: "Unified workspace — no add-ons needed", jira: "Fragmented across multiple products", planeWins: true },
-  { feature: "Docs & Wiki", plane: "Built-in, out-of-the-box", jira: "Confluence (separate product)", planeWins: true },
-  { feature: "Custom Fields", plane: "Unlimited in Pro+ — text, number, date, dropdown, boolean & more", jira: "Limited in Standard, full access requires Premium", planeWins: true },
-  { feature: "Time Tracking", plane: "Native time-tracking", jira: "Basic built-in, advanced via add-ons", planeWins: true },
-  { feature: "Admin Overhead", plane: "Minimal by design", jira: "Very high, customization adds complexity", planeWins: true },
-  { feature: "Dashboards", plane: "Modern, point-and-click customization", jira: "Requires complex JQL, outdated interface", planeWins: true },
-  { feature: "Intake & Approvals", plane: "Built-in", jira: "Marketplace forms and apps", planeWins: true },
-  { feature: "Self-hosting", plane: "Complete self-hosted option", jira: "Server discontinued, DC sales ending", planeWins: true },
-  { feature: "Pricing Transparency", plane: "Simple plans, more features included", jira: "Seat tiers and plugins = unpredictable costs", planeWins: true },
-];
-
-const migrationSteps = [
-  { step: "1", title: "Connect Jira", desc: "Authenticate, select projects, and choose scope" },
-  { step: "2", title: "Map Your World", desc: "Map fields, statuses, and workflows to Plane" },
-  { step: "3", title: "Import & Verify", desc: "Dry run import, validate data integrity" },
-  { step: "4", title: "Go Live", desc: "Full migration with Jira in read-only during cutover" },
-];
-
-const whatMovesOver = [
-  "Projects and active/backlog issues",
-  "Assignees, labels, and priorities",
-  "Sprints mapped into Plane Cycles",
-  "Issue types, statuses and custom fields",
-  "Comments and attachments (via Jira's API)",
-];
-
-const experienceAfterSwitch = [
-  {
-    title: "Unified Workspace",
-    desc: "Pages, Wiki and Issues live together — no more split context across Jira, Confluence and plug-ins.",
-    icon: Layers,
-  },
-  {
-    title: "Speed at Scale",
-    desc: "Boards open fast, issue details appear in-place. No full-page navigations or slow board loads.",
-    icon: Zap,
-  },
-  {
-    title: "Admin Simplicity",
-    desc: "Guided rules and shared schemas replace schemes, screens and permission sprawl.",
-    icon: Shield,
-  },
-  {
-    title: "Cost Clarity",
-    desc: "Wiki, automations, analytics and dashboards included — no paying extra for Confluence or reporting apps.",
-    icon: DollarSign,
-  },
-  {
-    title: "Built-in Intake & Approvals",
-    desc: "Native Intake and Approvals turn requests into issues with guardrails — no JSM forms or marketplace add-ons.",
-    icon: CheckCircle2,
-  },
-  {
-    title: "Deployment Sovereignty",
-    desc: "Run the same product in cloud, self-hosted, or fully air-gapped to meet security and residency policies.",
-    icon: Lock,
-  },
-];
-
-const editions = [
-  {
-    name: "Cloud",
-    desc: "Fully managed, lowest-friction path. Provision a secure workspace in minutes.",
-    icon: Cloud,
-    tag: "Fastest Setup",
-  },
-  {
-    name: "Self-hosted",
-    desc: "Full control on your infrastructure. Same product model as cloud.",
-    icon: Server,
-    tag: "Full Control",
-  },
-  {
-    name: "Airgapped",
-    desc: "Completely offline deployment for maximum security and compliance.",
-    icon: Lock,
-    tag: "Maximum Security",
-  },
-];
+const experienceIcons = [Layers, Zap, Shield, DollarSign, CheckCircle2, Lock];
+const editionIcons = [Cloud, Server, Lock];
 
 const JiraVsPlane = () => {
+  const { t } = useTranslation();
+
+  const comparisonData = Array.from({ length: 8 }, (_, i) => ({
+    category: t(`jiraVsPlane.comparison.${i}.category`),
+    plane: t(`jiraVsPlane.comparison.${i}.plane`),
+    jira: t(`jiraVsPlane.comparison.${i}.jira`),
+  }));
+
+  const featureTable = Array.from({ length: 10 }, (_, i) => ({
+    feature: t(`jiraVsPlane.features.${i}.feature`),
+    plane: t(`jiraVsPlane.features.${i}.plane`),
+    jira: t(`jiraVsPlane.features.${i}.jira`),
+  }));
+
+  const migrationSteps = Array.from({ length: 4 }, (_, i) => ({
+    step: String(i + 1),
+    title: t(`jiraVsPlane.migration.steps.${i}.title`),
+    desc: t(`jiraVsPlane.migration.steps.${i}.desc`),
+  }));
+
+  const whatMovesOver = Array.from({ length: 5 }, (_, i) =>
+    t(`jiraVsPlane.migration.whatMoves.${i}`)
+  );
+
+  const experienceAfterSwitch = Array.from({ length: 6 }, (_, i) => ({
+    title: t(`jiraVsPlane.experience.${i}.title`),
+    desc: t(`jiraVsPlane.experience.${i}.desc`),
+    icon: experienceIcons[i],
+  }));
+
+  const editions = Array.from({ length: 3 }, (_, i) => ({
+    name: t(`jiraVsPlane.editions.${i}.name`),
+    desc: t(`jiraVsPlane.editions.${i}.desc`),
+    tag: t(`jiraVsPlane.editions.${i}.tag`),
+    icon: editionIcons[i],
+  }));
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Jira vs Plane — Why Teams Switch | PALANTIR-CODE",
-    "description": "Compare Jira vs Plane: speed, usability, cost, deployment options, and migration path. See why teams switch to Plane.",
+    "description": t("jiraVsPlane.hero.subtitle"),
     "url": "https://www.palantircode.com/jira-vs-plane",
   };
 
   return (
     <Layout>
       <SEO
-        title="Jira vs Plane | Complete Comparison & Migration Guide"
-        description="Compare Jira vs Plane: speed, usability, cost, deployment. See why teams switch to Plane and how PALANTIR-CODE makes migration seamless."
+        title={t("jiraVsPlane.seo.title")}
+        description={t("jiraVsPlane.seo.description")}
         canonical="/jira-vs-plane"
         jsonLd={jsonLd}
       />
@@ -181,27 +88,25 @@ const JiraVsPlane = () => {
                 PLANE VS JIRA
               </span>
               <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                Switch from Jira to{" "}
+                {t("jiraVsPlane.hero.title")}{" "}
                 <span className="text-gradient">Plane</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Unify projects, docs, intake, approvals, and analytics in one place.
-                Run it on cloud, self-hosted, or fully air-gapped.
+                {t("jiraVsPlane.hero.subtitle")}
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2">
                   <Link to="/contact">
-                    Talk to a Migration Expert
+                    {t("jiraVsPlane.hero.ctaPrimary")}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link to="/services/migration">Our Migration Services</Link>
+                  <Link to="/services/migration">{t("jiraVsPlane.hero.ctaSecondary")}</Link>
                 </Button>
               </div>
             </div>
           </ScrollReveal>
-
         </div>
       </section>
 
@@ -210,10 +115,10 @@ const JiraVsPlane = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-primary font-mono text-sm mb-2">// COMPARISON</p>
+              <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.comparisonSection.badge")}</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Why do teams move to{" "}
-                <span className="text-gradient">Plane?</span>
+                {t("jiraVsPlane.comparisonSection.title")}{" "}
+                <span className="text-gradient">{t("jiraVsPlane.comparisonSection.titleHighlight")}</span>
               </h2>
             </div>
           </ScrollReveal>
@@ -279,18 +184,17 @@ const JiraVsPlane = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-primary font-mono text-sm mb-2">// MIGRATION</p>
+              <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.migrationSection.badge")}</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Switch to Plane in{" "}
-                <span className="text-gradient">4 Simple Steps</span>
+                {t("jiraVsPlane.migrationSection.title")}{" "}
+                <span className="text-gradient">{t("jiraVsPlane.migrationSection.titleHighlight")}</span>
               </h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Most teams finish a first dry run in under three hours; larger workspaces pilot a few projects, then migrate the rest over 3–7 days.
+                {t("jiraVsPlane.migrationSection.subtitle")}
               </p>
             </div>
           </ScrollReveal>
 
-          {/* Steps */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {migrationSteps.map((step, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
@@ -305,12 +209,11 @@ const JiraVsPlane = () => {
             ))}
           </div>
 
-          {/* What moves over */}
           <ScrollReveal delay={0.3}>
             <div className="max-w-2xl mx-auto rounded-xl border border-border bg-card p-8">
               <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
                 <ArrowRightLeft className="h-5 w-5 text-primary" />
-                What Moves Over
+                {t("jiraVsPlane.migrationSection.whatMovesTitle")}
               </h3>
               <ul className="space-y-3">
                 {whatMovesOver.map((item, i) => (
@@ -330,10 +233,10 @@ const JiraVsPlane = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-primary font-mono text-sm mb-2">// AFTER THE SWITCH</p>
+              <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.experienceSection.badge")}</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                What Jira Users{" "}
-                <span className="text-gradient">Immediately Experience</span>
+                {t("jiraVsPlane.experienceSection.title")}{" "}
+                <span className="text-gradient">{t("jiraVsPlane.experienceSection.titleHighlight")}</span>
               </h2>
             </div>
           </ScrollReveal>
@@ -362,13 +265,13 @@ const JiraVsPlane = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-primary font-mono text-sm mb-2">// EDITIONS</p>
+              <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.editionsSection.badge")}</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Run Plane{" "}
-                <span className="text-gradient">Your Way</span>
+                {t("jiraVsPlane.editionsSection.title")}{" "}
+                <span className="text-gradient">{t("jiraVsPlane.editionsSection.titleHighlight")}</span>
               </h2>
               <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-                Choose between fully managed cloud, self-hosted or completely offline airgapped.
+                {t("jiraVsPlane.editionsSection.subtitle")}
               </p>
             </div>
           </ScrollReveal>
@@ -402,13 +305,13 @@ const JiraVsPlane = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-primary font-mono text-sm mb-2">// PRICING</p>
+              <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.pricingSection.badge")}</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Keep Costs in{" "}
-                <span className="text-gradient">Control</span>
+                {t("jiraVsPlane.pricingSection.title")}{" "}
+                <span className="text-gradient">{t("jiraVsPlane.pricingSection.titleHighlight")}</span>
               </h2>
               <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-                Issues, sprints, roadmaps, and docs in one place — at a fraction of the cost.
+                {t("jiraVsPlane.pricingSection.subtitle")}
               </p>
             </div>
           </ScrollReveal>
@@ -417,7 +320,7 @@ const JiraVsPlane = () => {
             <ScrollReveal delay={0.1}>
               <div className="rounded-xl border-2 border-primary bg-card p-8 relative">
                 <div className="absolute -top-3 left-6">
-                  <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">RECOMMENDED</span>
+                  <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">{t("jiraVsPlane.pricing.recommended")}</span>
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1 flex items-center gap-2">
                   <img src={planeLogo} alt="Plane" className="h-6 w-6" />
@@ -425,14 +328,15 @@ const JiraVsPlane = () => {
                 </h3>
                 <div className="flex items-baseline gap-1 mb-4">
                   <span className="text-4xl font-bold text-primary">$8</span>
-                  <span className="text-sm text-muted-foreground">/ user / month</span>
+                  <span className="text-sm text-muted-foreground">/ {t("jiraVsPlane.pricing.perUser")}</span>
                 </div>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> All layouts included</li>
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Built-in Wiki & Pages</li>
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Unlimited custom fields</li>
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Native AI & Automations</li>
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> 1TB storage</li>
+                  {Array.from({ length: 5 }, (_, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-primary" />
+                      {t(`jiraVsPlane.pricing.planeFeatures.${i}`)}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </ScrollReveal>
@@ -445,14 +349,15 @@ const JiraVsPlane = () => {
                 </h3>
                 <div className="flex items-baseline gap-1 mb-4">
                   <span className="text-4xl font-bold text-muted-foreground">$16</span>
-                  <span className="text-sm text-muted-foreground">/ user / month</span>
+                  <span className="text-sm text-muted-foreground">/ {t("jiraVsPlane.pricing.perUser")}</span>
                 </div>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2"><X className="h-4 w-4 text-destructive/50" /> Basic views only in free tier</li>
-                  <li className="flex items-center gap-2"><X className="h-4 w-4 text-destructive/50" /> Confluence is separate cost</li>
-                  <li className="flex items-center gap-2"><X className="h-4 w-4 text-destructive/50" /> Limited custom fields</li>
-                  <li className="flex items-center gap-2"><X className="h-4 w-4 text-destructive/50" /> Add-ons needed for automation</li>
-                  <li className="flex items-center gap-2"><X className="h-4 w-4 text-destructive/50" /> 250GB storage</li>
+                  {Array.from({ length: 5 }, (_, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <X className="h-4 w-4 text-destructive/50" />
+                      {t(`jiraVsPlane.pricing.jiraFeatures.${i}`)}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </ScrollReveal>
@@ -460,7 +365,7 @@ const JiraVsPlane = () => {
 
           <ScrollReveal delay={0.3}>
             <p className="text-center text-xs text-muted-foreground mt-6">
-              *Have fewer than 12 users? Take advantage of Plane's Free Plan with all core features included.
+              {t("jiraVsPlane.pricing.freePlanNote")}
             </p>
           </ScrollReveal>
         </div>
@@ -471,10 +376,10 @@ const JiraVsPlane = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-primary font-mono text-sm mb-2">// FULL COMPARISON</p>
+              <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.featureSection.badge")}</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Plane is the Best{" "}
-                <span className="text-gradient">Jira Alternative</span>
+                {t("jiraVsPlane.featureSection.title")}{" "}
+                <span className="text-gradient">{t("jiraVsPlane.featureSection.titleHighlight")}</span>
               </h2>
             </div>
           </ScrollReveal>
@@ -484,7 +389,7 @@ const JiraVsPlane = () => {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b border-border bg-muted/50">
-                    <th className="py-4 px-6 text-left text-sm font-mono text-muted-foreground w-1/4">Feature</th>
+                    <th className="py-4 px-6 text-left text-sm font-mono text-muted-foreground w-1/4">{t("jiraVsPlane.featureSection.featureCol")}</th>
                     <th className="py-4 px-6 text-left text-sm font-semibold text-primary w-[37.5%]">
                       <span className="flex items-center gap-2">
                         <img src={planeLogo} alt="Plane" className="h-5 w-5" />
@@ -534,22 +439,21 @@ const JiraVsPlane = () => {
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center rounded-2xl border border-primary/30 bg-gradient-to-b from-primary/10 to-primary/5 p-12">
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
-                Switch from Jira Without Starting Over
+                {t("jiraVsPlane.cta.title")}
               </h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-                Import a live project, keep Jira read-only for a week, and see how
-                work feels when boards, docs, and analytics live in one place.
+                {t("jiraVsPlane.cta.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2">
                   <Link to="/contact">
-                    Talk to a Migration Expert
+                    {t("jiraVsPlane.cta.ctaPrimary")}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <a href="https://app.plane.so/sign-up" target="_blank" rel="noopener noreferrer">
-                    Get Started Free
+                    {t("jiraVsPlane.cta.ctaSecondary")}
                   </a>
                 </Button>
               </div>

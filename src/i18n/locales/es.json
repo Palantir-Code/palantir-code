@@ -610,5 +610,127 @@
       "description": "Te ayudamos a implementar soluciones enterprise con cumplimiento normativo, seguridad y una metodología de migración que garantiza cero pérdida de datos.",
       "button": "Contactar"
     }
+  },
+  "jiraVsPlane": {
+    "seo": {
+      "title": "Jira vs Plane | Comparativa Completa y Guía de Migración",
+      "description": "Compara Jira vs Plane: velocidad, usabilidad, coste, despliegue. Descubre por qué los equipos migran a Plane con PALANTIR-CODE."
+    },
+    "hero": {
+      "title": "Cambia de Jira a",
+      "subtitle": "Unifica proyectos, documentación, intake, aprobaciones y analíticas en un solo lugar. Ejecútalo en cloud, self-hosted o completamente air-gapped.",
+      "ctaPrimary": "Habla con un Experto en Migración",
+      "ctaSecondary": "Nuestros Servicios de Migración"
+    },
+    "comparisonSection": {
+      "badge": "COMPARATIVA",
+      "title": "¿Por qué los equipos migran a",
+      "titleHighlight": "Plane?"
+    },
+    "comparison": [
+      { "category": "Velocidad", "plane": "Interfaz ágil y sin fricción que se mantiene rápida a medida que crecen los proyectos", "jira": "Puede volverse pesado en proyectos grandes y flujos complejos" },
+      { "category": "Configuración", "plane": "Operativo en minutos — cloud y self-hosted", "jira": "Configuración pesada; fin de vida anunciado para self-hosting" },
+      { "category": "Usabilidad", "plane": "Interfaz limpia, moderna y orientada al teclado", "jira": "Potente pero desordenado, curva de aprendizaje pronunciada" },
+      { "category": "Estructura", "plane": "Workspaces → Proyectos → Work Items — jerarquía intuitiva", "jira": "Proyectos, esquemas, pantallas, campos — fácil de sobre-configurar" },
+      { "category": "Docs y Wiki", "plane": "Pages/Wiki integrado junto a tus proyectos", "jira": "Confluence es una suscripción separada" },
+      { "category": "IA y Automatización", "plane": "IA nativa + reglas ligeras incluidas", "jira": "Potente, pero a menudo necesita add-ons de pago/Marketplace" },
+      { "category": "Coste a Escala", "plane": "TCO más bajo, sin costes imprevisibles de add-ons", "jira": "TCO más alto, los add-ons se acumulan rápidamente a escala" },
+      { "category": "Despliegue", "plane": "Cloud, self-hosted y air-gapped — open-source", "jira": "Solo cloud; venta de Data Centre termina en marzo 2026" }
+    ],
+    "migrationSection": {
+      "badge": "MIGRACIÓN",
+      "title": "Cambia a Plane en",
+      "titleHighlight": "4 Pasos Simples",
+      "subtitle": "La mayoría de equipos completan un primer ensayo en menos de tres horas; los workspaces más grandes pilotean unos proyectos y luego migran el resto en 3–7 días.",
+      "whatMovesTitle": "Qué se Migra"
+    },
+    "migration": {
+      "steps": [
+        { "title": "Conectar Jira", "desc": "Autenticarse, seleccionar proyectos y elegir alcance" },
+        { "title": "Mapear tu Mundo", "desc": "Mapear campos, estados y flujos de trabajo a Plane" },
+        { "title": "Importar y Verificar", "desc": "Importación de prueba, validar integridad de datos" },
+        { "title": "Salir en Vivo", "desc": "Migración completa con Jira en solo lectura durante el corte" }
+      ],
+      "whatMoves": [
+        "Proyectos e issues activos/backlog",
+        "Asignados, etiquetas y prioridades",
+        "Sprints mapeados a Cycles de Plane",
+        "Tipos de issue, estados y campos personalizados",
+        "Comentarios y adjuntos (vía API de Jira)"
+      ]
+    },
+    "experienceSection": {
+      "badge": "DESPUÉS DEL CAMBIO",
+      "title": "Lo que los Usuarios de Jira",
+      "titleHighlight": "Experimentan Inmediatamente"
+    },
+    "experience": [
+      { "title": "Workspace Unificado", "desc": "Pages, Wiki e Issues conviven — sin más contexto dividido entre Jira, Confluence y plug-ins." },
+      { "title": "Velocidad a Escala", "desc": "Los tableros se abren rápido, los detalles de issues aparecen in-situ. Sin navegaciones de página completa ni cargas lentas." },
+      { "title": "Simplicidad de Admin", "desc": "Reglas guiadas y esquemas compartidos reemplazan esquemas, pantallas y dispersión de permisos." },
+      { "title": "Claridad de Costes", "desc": "Wiki, automatizaciones, analíticas y dashboards incluidos — sin pagar extra por Confluence o apps de reporting." },
+      { "title": "Intake y Aprobaciones Integrados", "desc": "Intake y Aprobaciones nativos convierten solicitudes en issues con guardrails — sin formularios JSM ni add-ons del marketplace." },
+      { "title": "Soberanía de Despliegue", "desc": "Ejecuta el mismo producto en cloud, self-hosted o completamente air-gapped para cumplir políticas de seguridad y residencia." }
+    ],
+    "editionsSection": {
+      "badge": "EDICIONES",
+      "title": "Ejecuta Plane",
+      "titleHighlight": "A Tu Manera",
+      "subtitle": "Elige entre cloud totalmente gestionado, self-hosted o completamente offline airgapped."
+    },
+    "editions": [
+      { "name": "Cloud", "desc": "Totalmente gestionado, el camino con menos fricción. Provisiona un workspace seguro en minutos.", "tag": "Configuración Rápida" },
+      { "name": "Self-hosted", "desc": "Control total en tu infraestructura. Mismo modelo de producto que cloud.", "tag": "Control Total" },
+      { "name": "Airgapped", "desc": "Despliegue completamente offline para máxima seguridad y cumplimiento.", "tag": "Máxima Seguridad" }
+    ],
+    "pricingSection": {
+      "badge": "PRECIOS",
+      "title": "Mantén los Costes",
+      "titleHighlight": "Bajo Control",
+      "subtitle": "Issues, sprints, roadmaps y documentación en un solo lugar — a una fracción del coste."
+    },
+    "pricing": {
+      "recommended": "RECOMENDADO",
+      "perUser": "usuario / mes",
+      "planeFeatures": [
+        "Todas las vistas incluidas",
+        "Wiki y Pages integrados",
+        "Campos personalizados ilimitados",
+        "IA y Automatizaciones nativas",
+        "1TB de almacenamiento"
+      ],
+      "jiraFeatures": [
+        "Solo vistas básicas en el plan gratuito",
+        "Confluence tiene coste aparte",
+        "Campos personalizados limitados",
+        "Add-ons necesarios para automatización",
+        "250GB de almacenamiento"
+      ],
+      "freePlanNote": "*¿Menos de 12 usuarios? Aprovecha el Plan Gratuito de Plane con todas las funcionalidades principales incluidas."
+    },
+    "featureSection": {
+      "badge": "COMPARATIVA COMPLETA",
+      "title": "Plane es la Mejor",
+      "titleHighlight": "Alternativa a Jira",
+      "featureCol": "Funcionalidad"
+    },
+    "features": [
+      { "feature": "Vistas", "plane": "Lista, Board, Calendario, Gantt, Kanban — todo incluido", "jira": "Vistas básicas en el plan gratuito" },
+      { "feature": "Gestión de Proyectos", "plane": "Workspace unificado — sin add-ons necesarios", "jira": "Fragmentado en múltiples productos" },
+      { "feature": "Docs y Wiki", "plane": "Integrado, listo para usar", "jira": "Confluence (producto separado)" },
+      { "feature": "Campos Personalizados", "plane": "Ilimitados en Pro+ — texto, número, fecha, dropdown, boolean y más", "jira": "Limitados en Standard, acceso completo requiere Premium" },
+      { "feature": "Seguimiento de Tiempo", "plane": "Seguimiento de tiempo nativo", "jira": "Básico integrado, avanzado vía add-ons" },
+      { "feature": "Carga Administrativa", "plane": "Mínima por diseño", "jira": "Muy alta, la personalización añade complejidad" },
+      { "feature": "Dashboards", "plane": "Modernos, personalización point-and-click", "jira": "Requiere JQL complejo, interfaz anticuada" },
+      { "feature": "Intake y Aprobaciones", "plane": "Integrado", "jira": "Formularios y apps del marketplace" },
+      { "feature": "Self-hosting", "plane": "Opción self-hosted completa", "jira": "Server descontinuado, venta DC finalizando" },
+      { "feature": "Transparencia de Precios", "plane": "Planes simples, más funcionalidades incluidas", "jira": "Tramos de seats y plugins = costes impredecibles" }
+    ],
+    "cta": {
+      "title": "Cambia de Jira Sin Empezar de Cero",
+      "description": "Importa un proyecto en vivo, mantén Jira en solo lectura durante una semana y descubre cómo se siente trabajar cuando tableros, docs y analíticas conviven en un solo lugar.",
+      "ctaPrimary": "Habla con un Experto en Migración",
+      "ctaSecondary": "Empieza Gratis"
+    }
   }
 }
