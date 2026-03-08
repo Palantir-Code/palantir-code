@@ -26,7 +26,9 @@ const SEO = ({
   jsonLd,
 }: SEOProps) => {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : DEFAULT_TITLE;
-  const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : undefined;
+  // Always strip hash fragments from canonical URLs
+  const cleanCanonical = canonical?.split('#')[0];
+  const canonicalUrl = cleanCanonical ? `${SITE_URL}${cleanCanonical}` : undefined;
 
   return (
     <Helmet>

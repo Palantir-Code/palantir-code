@@ -27,10 +27,10 @@ const Footer = () => {
           <div>
             <h3 className="mb-4 text-sm font-semibold text-foreground">{t("footer.services")}</h3>
             <ul className="space-y-3">
-              <li><Link to="/services#migration" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t("services.migration")}</Link></li>
-              <li><Link to="/services#implementation" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t("services.implementation")}</Link></li>
-              <li><Link to="/services#development" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t("services.development")}</Link></li>
-              <li><Link to="/services#managed" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t("services.managed")}</Link></li>
+              <li><Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t("services.migration")}</Link></li>
+              <li><Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t("services.implementation")}</Link></li>
+              <li><Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t("services.development")}</Link></li>
+              <li><Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t("services.managed")}</Link></li>
               <li><Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t("footer.aboutUs")}</Link></li>
               <li><Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
               <li><Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t("footer.contact")}</Link></li>

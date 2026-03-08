@@ -21,10 +21,10 @@ export const NAVIGATION = {
     { name: "R&D", href: "/solutions#rd", description: "Product development & innovation tracking" },
   ],
   services: [
-    { name: "Migration Services", href: "/services#migration", description: "Migrate from Jira, Linear, ClickUp, or Asana" },
-    { name: "Implementation", href: "/services#implementation", description: "Best practices setup & workflow design" },
-    { name: "Custom Development", href: "/services#development", description: "API integrations & custom automations" },
-    { name: "Managed Services", href: "/services#managed", description: "24/7 monitoring & proactive maintenance" },
+    { name: "Migration Services", href: "/services", description: "Migrate from Jira, Linear, ClickUp, or Asana" },
+    { name: "Implementation", href: "/services", description: "Best practices setup & workflow design" },
+    { name: "Custom Development", href: "/services", description: "API integrations & custom automations" },
+    { name: "Managed Services", href: "/services", description: "24/7 monitoring & proactive maintenance" },
   ],
   main: [
     { name: "Solutions", href: "/solutions" },
