@@ -22,6 +22,7 @@ import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Enterprise from "./pages/Enterprise";
+import JiraVsPlane from "./pages/JiraVsPlane";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/services/development" element={<DevelopmentService />} />
           <Route path="/services/managed" element={<ManagedService />} />
           <Route path="/enterprise" element={<Enterprise />} />
+          <Route path="/jira-vs-plane" element={<JiraVsPlane />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />

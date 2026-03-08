@@ -65,6 +65,12 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link to="/jira-vs-plane" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground", location.pathname === "/jira-vs-plane" && "bg-accent/50")}>
+                  Jira vs Plane
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link to="/blog" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground", location.pathname.startsWith("/blog") && "bg-accent/50")}>
                   Blog
                 </Link>
@@ -124,6 +130,10 @@ const Header = () => {
 
             <Link to="/enterprise" className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
               Enterprise
+            </Link>
+
+            <Link to="/jira-vs-plane" className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
+              Jira vs Plane
             </Link>
 
             <Link to="/about" className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
