@@ -43,8 +43,21 @@ const serviceDescKeys: Record<string, string> = {
 };
 
 const servicesJsonLd = {
-  "@context": "https://schema.org", "@type": "Service", "serviceType": "Software Consulting",
-  "provider": { "@type": "Organization", "name": "PALANTIR-CODE" }, "areaServed": "Spain",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Plane Implementation & Consulting Services",
+  "serviceType": ["Software Implementation", "Migration Services", "Custom Development", "Managed Services"],
+  "provider": {
+    "@type": "Organization",
+    "name": "PALANTIR-CODE",
+    "url": "https://www.palantircode.com"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Spain"
+  },
+  "description": "Expert Plane implementation, Jira migration, custom development, and 24/7 managed services. Spain's first certified Plane partner.",
+  "url": "https://www.palantircode.com/services"
 };
 
 const ServicesPage = () => {
