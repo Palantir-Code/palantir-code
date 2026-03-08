@@ -65,10 +65,8 @@ const About = () => {
             <div className="relative">
               <div className="aspect-square rounded-2xl border border-border bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-primary text-primary-foreground mx-auto mb-6">
-                    <span className="text-3xl font-bold">P</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground">{COMPANY.name}</h3>
+                  <img src={palantirLogo} alt="PALANTIR-CODE Logo" className="h-24 w-24 object-contain mx-auto mb-6 terminal-logo-bright" />
+                  <img src={palantirBrand} alt="PALANTIR-CODE" className="h-10 object-contain mx-auto mb-4 terminal-logo-bright" />
                   <p className="text-muted-foreground mt-2">{COMPANY.tagline}</p>
                 </div>
               </div>
