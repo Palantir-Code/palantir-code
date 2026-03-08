@@ -45,6 +45,13 @@ const DevelopmentService = () => {
               <Button asChild size="lg" className="mt-8 gap-2">
                 <Link to="/contact">{t("serviceDevelopment.cta")} <ArrowRight className="h-4 w-4" /></Link>
               </Button>
+              <motion.div
+                className="mt-10 mx-auto w-48 h-48 md:w-64 md:h-64"
+                animate={{ y: [0, -12, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <img src={sphereDevelopment} alt="Development crystal sphere" className="w-full h-full object-contain drop-shadow-[0_0_30px_hsl(280,70%,50%,0.4)]" />
+              </motion.div>
             </div>
           </ScrollReveal>
         </div>
