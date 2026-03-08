@@ -399,5 +399,22 @@
         "content": "La gestió de projectes està evolucionant ràpidament. El 2025, els equips més exitosos estan adoptant nous enfocaments que prioritzen la flexibilitat, la transparència i l'automatització.\n\nPrimer, les eines open-source estan guanyant tracció. Les organitzacions volen transparència a les seves eines, no només als seus processos. Plane exemplifica aquesta tendència amb el seu codi font completament obert.\n\nSegon, l'automatització amb IA s'està tornant essencial. Des de l'assignació automàtica de tasques fins a la generació d'insights de projectes, la IA està ajudant els equips a centrar-se en el que més importa.\n\nTercer, els espais de treball unificats estan reemplaçant les cadenes d'eines fragmentades. En lloc de canviar entre eines de seguiment, documentació i comunicació, els equips volen tot en un sol lloc.\n\nFinalment, el compliment i la sobirania de dades són prioritats principals. Les opcions de desplegament autoallotjat i airgapped asseguren que les dades sensibles del projecte romanguin dins dels límits organitzacionals.\n\nA PALANTIR-CODE, ajudem les organitzacions a adoptar aquestes millors pràctiques amb Plane com a base."
       }
     ]
+  },
+  "planeMCP": {
+    "badge": "SERVIDOR MCP",
+    "title": "Gestió de projectes amb IA amb",
+    "titleHighlight": "Plane MCP",
+    "description": "El servidor MCP de Plane permet als agents d'IA interactuar amb els teus projectes a través del Model Context Protocol. Crea issues, gestiona sprints i automatitza fluxos de treball des de les teves eines d'IA favorites.",
+    "feature1Title": "Integració amb Agents IA",
+    "feature1Desc": "Permet a assistents com Claude, Cursor i Copilot gestionar el teu workspace de Plane directament — crear issues, actualitzar estats i consultar projectes amb llenguatge natural.",
+    "feature2Title": "Múltiples Mètodes de Transport",
+    "feature2Desc": "Connecta't via HTTP amb OAuth, tokens PAT per a pipelines CI/CD, Stdio local per a instàncies autoallotjades, o SSE legacy — el que s'adapti al teu flux de treball.",
+    "feature3Title": "Segur per Disseny",
+    "feature3Desc": "OAuth basat en navegador per a usuaris cloud, autenticació per API key per a automatització, i suport complet autoallotjat per mantenir les teves dades a la teva infraestructura.",
+    "feature4Title": "Open Source i Extensible",
+    "feature4Desc": "Completament open source a GitHub. Estén, personalitza i contribueix al servidor MCP de Plane per adaptar-lo a les necessitats úniques del teu equip.",
+    "compatibleWith": "Compatible amb",
+    "cta": "Veure Documentació",
+    "ctaGithub": "Repositori GitHub"
   }
 }

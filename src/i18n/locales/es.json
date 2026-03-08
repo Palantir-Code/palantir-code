@@ -399,5 +399,22 @@
         "content": "La gestión de proyectos está evolucionando rápidamente. En 2025, los equipos más exitosos están adoptando nuevos enfoques que priorizan la flexibilidad, la transparencia y la automatización.\n\nPrimero, las herramientas open-source están ganando tracción. Las organizaciones quieren transparencia en sus herramientas, no solo en sus procesos. Plane ejemplifica esta tendencia con su código fuente completamente abierto.\n\nSegundo, la automatización con IA se está volviendo esencial. Desde la asignación automática de tareas hasta la generación de insights de proyectos, la IA está ayudando a los equipos a centrarse en lo que más importa.\n\nTercero, los espacios de trabajo unificados están reemplazando las cadenas de herramientas fragmentadas. En lugar de cambiar entre herramientas de seguimiento, documentación y comunicación, los equipos quieren todo en un solo lugar.\n\nFinalmente, el cumplimiento y la soberanía de datos son prioridades principales. Las opciones de despliegue autoalojado y airgapped aseguran que los datos sensibles del proyecto permanezcan dentro de los límites organizacionales.\n\nEn PALANTIR-CODE, ayudamos a las organizaciones a adoptar estas mejores prácticas con Plane como base."
       }
     ]
+  },
+  "planeMCP": {
+    "badge": "SERVIDOR MCP",
+    "title": "Gestión de proyectos con IA con",
+    "titleHighlight": "Plane MCP",
+    "description": "El servidor MCP de Plane permite a los agentes de IA interactuar con tus proyectos a través del Model Context Protocol. Crea issues, gestiona sprints y automatiza flujos de trabajo desde tus herramientas de IA favoritas.",
+    "feature1Title": "Integración con Agentes IA",
+    "feature1Desc": "Permite a asistentes como Claude, Cursor y Copilot gestionar tu workspace de Plane directamente — crear issues, actualizar estados y consultar proyectos con lenguaje natural.",
+    "feature2Title": "Múltiples Métodos de Transporte",
+    "feature2Desc": "Conéctate via HTTP con OAuth, tokens PAT para pipelines CI/CD, Stdio local para instancias autoalojadas, o SSE legacy — lo que se adapte a tu flujo de trabajo.",
+    "feature3Title": "Seguro por Diseño",
+    "feature3Desc": "OAuth basado en navegador para usuarios cloud, autenticación por API key para automatización, y soporte completo autoalojado para mantener tus datos en tu infraestructura.",
+    "feature4Title": "Open Source y Extensible",
+    "feature4Desc": "Completamente open source en GitHub. Extiende, personaliza y contribuye al servidor MCP de Plane para adaptarlo a las necesidades únicas de tu equipo.",
+    "compatibleWith": "Compatible con",
+    "cta": "Ver Documentación",
+    "ctaGithub": "Repositorio GitHub"
   }
 }

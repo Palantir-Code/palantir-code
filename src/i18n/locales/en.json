@@ -399,5 +399,22 @@
         "content": "Project management is evolving rapidly. In 2025, the most successful teams are embracing new approaches that prioritize flexibility, transparency, and automation.\n\nFirst, open-source tools are gaining traction. Organizations want transparency in their tools, not just their processes. Plane exemplifies this trend with its fully open-source codebase.\n\nSecond, AI-powered automation is becoming essential. From auto-assigning tasks to generating project insights, AI is helping teams focus on what matters most.\n\nThird, unified workspaces are replacing fragmented toolchains. Instead of switching between project tracking, documentation, and communication tools, teams want everything in one place.\n\nFinally, compliance and data sovereignty are top priorities. Self-hosted and airgapped deployment options ensure that sensitive project data stays within organizational boundaries.\n\nAt PALANTIR-CODE, we help organizations adopt these best practices with Plane as the foundation."
       }
     ]
+  },
+  "planeMCP": {
+    "badge": "MCP SERVER",
+    "title": "AI-Powered Project Management with",
+    "titleHighlight": "Plane MCP",
+    "description": "The Plane MCP Server lets AI agents interact with your projects through the Model Context Protocol. Create issues, manage sprints, and automate workflows — all from your favorite AI tools.",
+    "feature1Title": "AI Agent Integration",
+    "feature1Desc": "Let AI assistants like Claude, Cursor, and Copilot manage your Plane workspace directly — create issues, update statuses, and query projects with natural language.",
+    "feature2Title": "Multiple Transport Methods",
+    "feature2Desc": "Connect via HTTP with OAuth, PAT tokens for CI/CD pipelines, local Stdio for self-hosted instances, or legacy SSE — whatever fits your workflow.",
+    "feature3Title": "Secure by Design",
+    "feature3Desc": "Browser-based OAuth for cloud users, API key authentication for automation, and full self-hosted support to keep your data within your infrastructure.",
+    "feature4Title": "Open Source & Extensible",
+    "feature4Desc": "Fully open source on GitHub. Extend, customize, and contribute to the Plane MCP Server to match your team's unique needs.",
+    "compatibleWith": "Compatible with",
+    "cta": "View Documentation",
+    "ctaGithub": "GitHub Repository"
   }
 }
