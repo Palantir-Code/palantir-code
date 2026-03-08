@@ -6,6 +6,7 @@ import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import MatrixRain from "@/components/animations/MatrixRain";
 import ScrollReveal from "@/components/animations/ScrollReveal";
+import TypewriterTitle from "@/components/animations/TypewriterTitle";
 import { Button } from "@/components/ui/button";
 import sphereDevelopment from "@/assets/services/sphere-development.png";
 
@@ -38,9 +39,7 @@ const DevelopmentService = () => {
               <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary text-primary-foreground mb-6 mx-auto">
                 <Code className="h-8 w-8" />
               </div>
-              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                {t("serviceDevelopment.title")}
-              </h1>
+              <TypewriterTitle text={t("serviceDevelopment.title")} />
               <p className="mt-6 text-lg text-muted-foreground">{t("serviceDevelopment.heroDesc")}</p>
               <Button asChild size="lg" className="mt-8 gap-2">
                 <Link to="/contact">{t("serviceDevelopment.cta")} <ArrowRight className="h-4 w-4" /></Link>
