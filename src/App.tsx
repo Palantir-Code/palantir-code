@@ -44,6 +44,7 @@ const App = () => (
           <Route path="/services/managed" element={<ManagedService />} />
           <Route path="/enterprise" element={<Enterprise />} />
           <Route path="/jira-vs-plane" element={<JiraVsPlane />} />
+          <Route path="/partners/plane" element={<PlanePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
