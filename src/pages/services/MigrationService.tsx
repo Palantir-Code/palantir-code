@@ -77,8 +77,8 @@ const MigrationService = () => {
               </Button>
               <motion.div
                 className="mt-10 mx-auto w-48 h-48 md:w-64 md:h-64"
-                animate={{ y: [0, -12, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ x: [0, 20, 0, -20, 0], y: [0, -8, 0, -8, 0] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
               >
                 <img src={sphereMigration} alt="Migration crystal sphere" className="w-full h-full object-contain rounded-full drop-shadow-[0_0_30px_hsl(280,70%,50%,0.4)]" />
               </motion.div>
