@@ -7,6 +7,7 @@ import SEO from "@/components/SEO";
 import MatrixRain from "@/components/animations/MatrixRain";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/button";
+import sphereImplementation from "@/assets/services/sphere-implementation.png";
 
 const ImplementationService = () => {
   const { t } = useTranslation();
