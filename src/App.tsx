@@ -23,6 +23,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Enterprise from "./pages/Enterprise";
 import JiraVsPlane from "./pages/JiraVsPlane";
+import PlanePage from "./pages/partners/Plane";
 
 const queryClient = new QueryClient();
 
