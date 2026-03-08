@@ -53,7 +53,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Partners</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent">Experts</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[300px] gap-2 p-4">
                     <li>
@@ -145,7 +145,7 @@ const Header = () => {
 
             <div className="py-2">
               <div className="flex items-center justify-between px-3 py-2 text-sm font-medium text-muted-foreground">
-                Partners
+                Experts
                 <ChevronDown className="h-4 w-4" />
               </div>
               <div className="pl-4 space-y-1">
