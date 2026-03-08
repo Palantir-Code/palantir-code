@@ -73,7 +73,7 @@ const JiraVsPlane = () => {
       />
 
       {/* Hero */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
+      <section className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
         <MatrixRain columnCount={25} opacity={0.2} />
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 left-1/4 h-[500px] w-[500px] rounded-full bg-primary/8 blur-3xl" />
@@ -111,10 +111,10 @@ const JiraVsPlane = () => {
       </section>
 
       {/* Quick Comparison Table */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-12 lg:py-16 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
               <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.comparisonSection.badge")}</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 {t("jiraVsPlane.comparisonSection.title")}{" "}
@@ -176,14 +176,14 @@ const JiraVsPlane = () => {
       </section>
 
       {/* Migration Process */}
-      <section className="py-20 lg:py-28 bg-muted/20 relative overflow-hidden">
+      <section className="py-12 lg:py-16 bg-muted/20 relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 right-0 h-[300px] w-[300px] rounded-full bg-primary/10 blur-3xl" />
         </div>
 
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
               <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.migrationSection.badge")}</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 {t("jiraVsPlane.migrationSection.title")}{" "}
@@ -195,7 +195,7 @@ const JiraVsPlane = () => {
             </div>
           </ScrollReveal>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {migrationSteps.map((step, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="group rounded-xl border border-border bg-card p-6 h-full transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5">
@@ -229,10 +229,10 @@ const JiraVsPlane = () => {
       </section>
 
       {/* Experience After Switch */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-12 lg:py-16 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
               <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.experienceSection.badge")}</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 {t("jiraVsPlane.experienceSection.title")}{" "}
@@ -261,10 +261,10 @@ const JiraVsPlane = () => {
       </section>
 
       {/* Editions */}
-      <section className="py-20 lg:py-28 bg-muted/20">
+      <section className="py-12 lg:py-16 bg-muted/20">
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
               <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.editionsSection.badge")}</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 {t("jiraVsPlane.editionsSection.title")}{" "}
@@ -300,82 +300,11 @@ const JiraVsPlane = () => {
         </div>
       </section>
 
-      {/* Pricing comparison */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.pricingSection.badge")}</p>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                {t("jiraVsPlane.pricingSection.title")}{" "}
-                <span className="text-gradient">{t("jiraVsPlane.pricingSection.titleHighlight")}</span>
-              </h2>
-              <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-                {t("jiraVsPlane.pricingSection.subtitle")}
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <ScrollReveal delay={0.1}>
-              <div className="rounded-xl border-2 border-primary bg-card p-8 relative">
-                <div className="absolute -top-3 left-6">
-                  <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">{t("jiraVsPlane.pricing.recommended")}</span>
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1 flex items-center gap-2">
-                  <img src={planeLogo} alt="Plane" className="h-6 w-6" />
-                  Plane Pro
-                </h3>
-                <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-4xl font-bold text-primary">$8</span>
-                  <span className="text-sm text-muted-foreground">/ {t("jiraVsPlane.pricing.perUser")}</span>
-                </div>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  {Array.from({ length: 5 }, (_, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-primary" />
-                      {t(`jiraVsPlane.pricing.planeFeatures.${i}`)}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div className="rounded-xl border border-border bg-card p-8">
-                <h3 className="text-xl font-bold text-foreground mb-1 flex items-center gap-2">
-                  <img src={jiraLogo} alt="Jira" className="h-6 w-6" />
-                  Jira + Confluence Standard
-                </h3>
-                <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-4xl font-bold text-muted-foreground">$16</span>
-                  <span className="text-sm text-muted-foreground">/ {t("jiraVsPlane.pricing.perUser")}</span>
-                </div>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  {Array.from({ length: 5 }, (_, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <X className="h-4 w-4 text-destructive/50" />
-                      {t(`jiraVsPlane.pricing.jiraFeatures.${i}`)}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          <ScrollReveal delay={0.3}>
-            <p className="text-center text-xs text-muted-foreground mt-6">
-              {t("jiraVsPlane.pricing.freePlanNote")}
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* Full Feature Table */}
-      <section className="py-20 lg:py-28 bg-muted/20">
+      <section className="py-12 lg:py-16 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
               <p className="text-primary font-mono text-sm mb-2">// {t("jiraVsPlane.featureSection.badge")}</p>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 {t("jiraVsPlane.featureSection.title")}{" "}
@@ -406,7 +335,14 @@ const JiraVsPlane = () => {
                 </thead>
                 <tbody>
                   {featureTable.map((row, i) => (
-                    <tr key={i} className="border-b border-border/30 hover:bg-muted/20 transition-colors">
+                    <motion.tr
+                      key={i}
+                      className="border-b border-border/30 hover:bg-muted/20 transition-colors"
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.04 }}
+                    >
                       <td className="py-3 px-6 text-sm font-medium text-foreground">{row.feature}</td>
                       <td className="py-3 px-6 text-sm text-foreground">
                         <span className="flex items-start gap-2">
@@ -420,7 +356,7 @@ const JiraVsPlane = () => {
                           {row.jira}
                         </span>
                       </td>
-                    </tr>
+                    </motion.tr>
                   ))}
                 </tbody>
               </table>
@@ -430,7 +366,7 @@ const JiraVsPlane = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
+      <section className="py-12 lg:py-16 bg-muted/20 relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <div className="absolute bottom-0 left-1/3 h-[300px] w-[300px] rounded-full bg-primary/8 blur-3xl" />
         </div>
