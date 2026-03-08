@@ -60,7 +60,7 @@ const ManagedService = () => {
                 animate={{ y: [0, -12, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
-                <img src={sphereManaged} alt="Managed services crystal sphere" className="w-full h-full object-contain drop-shadow-[0_0_30px_hsl(280,70%,50%,0.4)]" />
+                <img src={sphereManaged} alt="Managed services crystal sphere" className="w-full h-full object-contain rounded-full drop-shadow-[0_0_30px_hsl(280,70%,50%,0.4)]" />
               </motion.div>
             </div>
           </ScrollReveal>
