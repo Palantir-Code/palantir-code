@@ -134,7 +134,8 @@ const Enterprise = () => {
       />
 
       {/* Hero */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-background">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
+        <MatrixRain columnCount={25} opacity={0.2} />
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 left-1/4 h-[500px] w-[500px] rounded-full bg-primary/8 blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 h-[400px] w-[400px] rounded-full bg-accent/6 blur-3xl" />
