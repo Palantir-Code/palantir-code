@@ -23,7 +23,7 @@ export default function TermsOfService() {
               </p>
               <p>
                 <strong>Company Name:</strong> PALANTIR CODE<br />
-                <strong>Address:</strong> Benet Cortada 8, 08174 Sant Cugat del Vallés, Barcelona, Spain<br />
+                <strong>Address:</strong> Benet Cortada 8, Escalera F, 2º 1ª, 08174 Sant Cugat del Vallés, Barcelona, Spain<br />
                 <strong>Email:</strong> raul.pelaez@palantircode.com
               </p>
 
