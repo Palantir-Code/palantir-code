@@ -6,7 +6,7 @@ export const COMPANY = {
   description: "We help teams ship faster with expert implementation, migration, and custom solutions for Plane's unified workspace.",
   email: "raul.pelaez@palantircode.com",
   phone: "+34 900 000 000",
-  address: "Benet Cortada 8, 08174 Sant Cugat del Vallés, Barcelona, Spain",
+  address: "Benet Cortada 8, Escalera F, 2º 1ª, 08174 Sant Cugat del Vallés, Barcelona, Spain",
 } as const;
 
 export const NAVIGATION = {
