@@ -84,11 +84,11 @@ const OutSystemsPage = () => {
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
               {t("outsystems.badge")}
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-              {t("outsystems.heroTitle1")}
-              <span className="text-primary">{t("outsystems.heroTitleHighlight")}</span>
-              {t("outsystems.heroTitle2")}
-            </h1>
+            <TypewriterTitle
+              text={t("outsystems.heroTitle1")}
+              highlightText={t("outsystems.heroTitleHighlight") + t("outsystems.heroTitle2")}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
+            />
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               {t("outsystems.heroDescription")}
             </p>
