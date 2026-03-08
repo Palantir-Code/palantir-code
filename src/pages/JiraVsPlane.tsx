@@ -11,6 +11,8 @@ import {
   Cloud, Lock, CheckCircle2, ArrowRightLeft
 } from "lucide-react";
 import jiraVsPlaneImg from "@/assets/jira-vs-plane.png";
+import planeLogo from "@/assets/plane-logo.svg";
+import jiraLogo from "@/assets/integrations/jira.avif";
 
 const comparisonData = [
   {
@@ -235,11 +237,16 @@ const JiraVsPlane = () => {
                     <th className="py-4 px-4 text-left text-sm font-mono text-muted-foreground w-1/5"></th>
                     <th className="py-4 px-4 text-left text-sm font-semibold text-primary w-2/5">
                       <span className="flex items-center gap-2">
-                        <Check className="h-4 w-4" />
+                        <img src={planeLogo} alt="Plane" className="h-5 w-5" />
                         Plane
                       </span>
                     </th>
-                    <th className="py-4 px-4 text-left text-sm font-semibold text-muted-foreground w-2/5">Jira</th>
+                    <th className="py-4 px-4 text-left text-sm font-semibold text-muted-foreground w-2/5">
+                      <span className="flex items-center gap-2">
+                        <img src={jiraLogo} alt="Jira" className="h-5 w-5" />
+                        Jira
+                      </span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -423,7 +430,10 @@ const JiraVsPlane = () => {
                 <div className="absolute -top-3 left-6">
                   <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">RECOMMENDED</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Plane Pro</h3>
+                <h3 className="text-xl font-bold text-foreground mb-1 flex items-center gap-2">
+                  <img src={planeLogo} alt="Plane" className="h-6 w-6" />
+                  Plane Pro
+                </h3>
                 <div className="flex items-baseline gap-1 mb-4">
                   <span className="text-4xl font-bold text-primary">$8</span>
                   <span className="text-sm text-muted-foreground">/ user / month</span>
@@ -440,7 +450,10 @@ const JiraVsPlane = () => {
 
             <ScrollReveal delay={0.2}>
               <div className="rounded-xl border border-border bg-card p-8">
-                <h3 className="text-xl font-bold text-foreground mb-1">Jira + Confluence Standard</h3>
+                <h3 className="text-xl font-bold text-foreground mb-1 flex items-center gap-2">
+                  <img src={jiraLogo} alt="Jira" className="h-6 w-6" />
+                  Jira + Confluence Standard
+                </h3>
                 <div className="flex items-baseline gap-1 mb-4">
                   <span className="text-4xl font-bold text-muted-foreground">$16</span>
                   <span className="text-sm text-muted-foreground">/ user / month</span>
@@ -483,8 +496,18 @@ const JiraVsPlane = () => {
                 <thead>
                   <tr className="border-b border-border bg-muted/50">
                     <th className="py-4 px-6 text-left text-sm font-mono text-muted-foreground w-1/4">Feature</th>
-                    <th className="py-4 px-6 text-left text-sm font-semibold text-primary w-[37.5%]">Plane</th>
-                    <th className="py-4 px-6 text-left text-sm font-semibold text-muted-foreground w-[37.5%]">Jira</th>
+                    <th className="py-4 px-6 text-left text-sm font-semibold text-primary w-[37.5%]">
+                      <span className="flex items-center gap-2">
+                        <img src={planeLogo} alt="Plane" className="h-5 w-5" />
+                        Plane
+                      </span>
+                    </th>
+                    <th className="py-4 px-6 text-left text-sm font-semibold text-muted-foreground w-[37.5%]">
+                      <span className="flex items-center gap-2">
+                        <img src={jiraLogo} alt="Jira" className="h-5 w-5" />
+                        Jira
+                      </span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
