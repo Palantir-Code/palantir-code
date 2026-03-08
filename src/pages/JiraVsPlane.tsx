@@ -430,7 +430,10 @@ const JiraVsPlane = () => {
                 <div className="absolute -top-3 left-6">
                   <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">RECOMMENDED</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Plane Pro</h3>
+                <h3 className="text-xl font-bold text-foreground mb-1 flex items-center gap-2">
+                  <img src={planeLogo} alt="Plane" className="h-6 w-6" />
+                  Plane Pro
+                </h3>
                 <div className="flex items-baseline gap-1 mb-4">
                   <span className="text-4xl font-bold text-primary">$8</span>
                   <span className="text-sm text-muted-foreground">/ user / month</span>
