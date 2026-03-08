@@ -16,6 +16,7 @@ import CookiesPolicy from "./pages/CookiesPolicy";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Enterprise from "./pages/Enterprise";
 
 const queryClient = new QueryClient();
 
