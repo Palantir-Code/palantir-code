@@ -89,8 +89,7 @@
       { "quote": "Easy to configure, easy to use, especially when the number of work items increases. With Plane, we could finally bring everyone into the same system.", "author": "Marc U.", "company": "VATES", "industry": "Software Development" },
       { "quote": "We've been using Plane Pro, and we're still absolutely thrilled with it! Thank you so much for all your hard work, it's really appreciated.", "author": "Marc Ungeschikts", "company": "VATES", "industry": "Software Development" },
       { "quote": "Switching was easy, and the impact was immediate. Reports that took hours now take minutes. That alone made the move worth it.", "author": "Max Kraszewski", "company": "MinimalArt", "industry": "Agency" },
-      { "quote": "We ship faster because everything flows through Plane. No spreadsheets, no lost threads, no wasted cycles.", "author": "Mahesh Sagi", "company": "Rever", "industry": "Fintech" },
-      { "quote": "Our metric was simple: how quickly can we unblock each other? Plane makes it visible, who's stuck, at what stage, on which module.", "author": "Gryphon", "company": "Groupthink Labs", "industry": "Research Services" }
+      { "quote": "We ship faster because everything flows through Plane. No spreadsheets, no lost threads, no wasted cycles.", "author": "Mahesh Sagi", "company": "Rever", "industry": "Fintech" }
     ]
   },
   "importers": {
