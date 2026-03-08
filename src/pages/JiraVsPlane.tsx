@@ -237,11 +237,16 @@ const JiraVsPlane = () => {
                     <th className="py-4 px-4 text-left text-sm font-mono text-muted-foreground w-1/5"></th>
                     <th className="py-4 px-4 text-left text-sm font-semibold text-primary w-2/5">
                       <span className="flex items-center gap-2">
-                        <Check className="h-4 w-4" />
+                        <img src={planeLogo} alt="Plane" className="h-5 w-5" />
                         Plane
                       </span>
                     </th>
-                    <th className="py-4 px-4 text-left text-sm font-semibold text-muted-foreground w-2/5">Jira</th>
+                    <th className="py-4 px-4 text-left text-sm font-semibold text-muted-foreground w-2/5">
+                      <span className="flex items-center gap-2">
+                        <img src={jiraLogo} alt="Jira" className="h-5 w-5" />
+                        Jira
+                      </span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
