@@ -6,6 +6,8 @@ import SEO from "@/components/SEO";
 import MatrixRain from "@/components/animations/MatrixRain";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/lib/constants";
+import palantirLogo from "@/assets/palantir-logo-square.png";
+import palantirBrand from "@/assets/palantir-brand.png";
 
 const About = () => {
   const { t } = useTranslation();
