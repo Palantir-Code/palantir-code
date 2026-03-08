@@ -24,6 +24,7 @@ import BlogPost from "./pages/BlogPost";
 import Enterprise from "./pages/Enterprise";
 import JiraVsPlane from "./pages/JiraVsPlane";
 import PlanePage from "./pages/partners/Plane";
+import OutSystemsPage from "./pages/partners/OutSystems";
 
 const queryClient = new QueryClient();
 
