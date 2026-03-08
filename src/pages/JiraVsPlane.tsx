@@ -11,6 +11,8 @@ import {
   Cloud, Lock, CheckCircle2, ArrowRightLeft
 } from "lucide-react";
 import jiraVsPlaneImg from "@/assets/jira-vs-plane.png";
+import planeLogo from "@/assets/plane-logo.svg";
+import jiraLogo from "@/assets/integrations/jira.avif";
 
 const comparisonData = [
   {
