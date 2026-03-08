@@ -416,5 +416,94 @@
     "compatibleWith": "Compatible amb",
     "cta": "Veure Documentació",
     "ctaGithub": "Repositori GitHub"
+  },
+  "enterprise": {
+    "meta": {
+      "description": "Plane per a Enterprise: gestió de projectes amb certificació ISO 27001, SOC2 i GDPR, desplegament air-gapped, migració white-glove i Plane AI Agent. Confiat per StarkBank, Zerodha i Brown Brothers Harriman."
+    },
+    "badge": "ENTERPRISE",
+    "heroTitle": "Construït per a la",
+    "heroTitleHighlight": "Governança Empresarial",
+    "heroDescription": "Plane ofereix gestió de projectes preparada per al compliment normatiu, amb desplegaments air-gapped, registres d'auditoria immutables i una metodologia de migració white-glove. Confiat per bancs globals, líders fintech i empreses Fortune 500.",
+    "heroCta": "Sol·licitar Consultoria",
+    "heroCtaSecondary": "Veure Serveis",
+    "trustedBy": "Confiat per líders de la indústria a tot el món",
+    "compliance": {
+      "badge": "COMPLIMENT I SEGURETAT",
+      "title": "Compliment",
+      "titleHighlight": "de sèrie",
+      "compliantTitle": "Alineat amb estàndards",
+      "compliantDesc": "Controls alineats amb estàndards empresarials comuns, reduint la preparació d'auditories i la recopilació d'evidències.",
+      "secureTitle": "Desplegament segur",
+      "secureDesc": "Desplega en núvols gestionats, entorns autoallotjats o xarxes air-gapped sense call-home i amb rutes d'egrés controlades.",
+      "auditTitle": "Preparat per auditories",
+      "auditDesc": "Registres d'auditoria programàtics amb historial immutable, propietat explícita i traçabilitat de cada canvi."
+    },
+    "migration": {
+      "badge": "METODOLOGIA DE MIGRACIÓ",
+      "title": "Migració",
+      "titleHighlight": "White-glove",
+      "description": "Migració pas a pas que garanteix el 100% d'integritat de dades, migració white-glove i proves d'acceptació en les quals pots confiar.",
+      "phase1Label": "Fase 1",
+      "phase1Title": "Descobriment i Modelatge",
+      "phase2Label": "Fase 2",
+      "phase2Title": "Mapeig de la teva Eina Actual",
+      "phase3Label": "Fase 3",
+      "phase3Title": "Implementació i Validació",
+      "step1": "Descobriment d'entitats",
+      "step2": "Fitxer de migració YAML",
+      "step3": "Mapeig d'entitats",
+      "step4": "Revisió de dependències",
+      "step5": "Configuració del sandbox",
+      "step6": "Feedback iteratiu",
+      "step7": "Sign-off de producció",
+      "guarantee": "100% d'integritat de dades garantida — migració sense pèrdua de dades"
+    },
+    "deployment": {
+      "badge": "OPCIONS DE DESPLEGAMENT",
+      "title": "Tria on",
+      "titleHighlight": "executar Plane",
+      "description": "Air-gapped on-prem, xarxa restringida o gestionat al teu entorn triat.",
+      "airgappedTitle": "Air-gapped pur",
+      "airgappedDesc": "Workspaces il·limitats per a tots els teus equips sense connectivitat externa.",
+      "airgappedTag": "Autogestionat",
+      "restrictedTitle": "Xarxa restringida",
+      "restrictedDesc": "Xarxa interna controlada amb rutes d'egrés autoritzades.",
+      "restrictedTag": "Compartit",
+      "managedTitle": "Gestionat al teu entorn",
+      "managedDesc": "El teu núvol seleccionat o infraestructura sobirana, gestionada per Plane.",
+      "managedTag": "Gestionat per Plane"
+    },
+    "features": {
+      "badge": "ESCALA ENTERPRISE",
+      "title": "Construït per a",
+      "titleHighlight": "escala i operabilitat",
+      "multiRegionTitle": "Escala multi-regió",
+      "multiRegionDesc": "Alta disponibilitat i redundància amb preparació multi-regió per a continuïtat empresarial.",
+      "managedTitle": "Desplegaments gestionats",
+      "managedDesc": "Instàncies clau en mà amb failsafes, switchovers i redundància.",
+      "ltsTitle": "Suport a llarg termini",
+      "ltsDesc": "Tracks de release estables amb versions majors suportades i cadència d'actualització controlada.",
+      "k8sTitle": "Escalat Kubernetes",
+      "k8sDesc": "Escalat horitzontal via Kubernetes amb aïllament a nivell de workspace i projecte."
+    },
+    "ai": {
+      "badge": "PLANE AI",
+      "title": "Automatitza amb",
+      "titleHighlight": "Plane AI Agent",
+      "description": "Consulta, automatitza i genera qualsevol cosa al teu workspace amb el context complet del teu treball. Plane AI entén els teus projectes, equips i fluxos de treball.",
+      "feature1": "@menciona l'agent IA directament als comentaris de work items",
+      "feature2": "Crea projectes automàticament amb objectius, work items i milestones",
+      "feature3": "Obtén respostes amb IA amb context complet del projecte",
+      "flow1": "@menciona l'agent en un comentari",
+      "flow2": "L'agent processa i raona amb context",
+      "flow3": "Executa accions al teu workspace",
+      "flow4": "Retorna resposta com a comentari"
+    },
+    "cta": {
+      "title": "Preparat per modernitzar la teva gestió de projectes?",
+      "description": "T'ajudem a implementar Plane amb compliment enterprise, seguretat i una metodologia de migració que garanteix zero pèrdua de dades.",
+      "button": "Contactar"
+    }
   }
 }

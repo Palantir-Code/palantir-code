@@ -29,6 +29,7 @@ export const NAVIGATION = {
   main: [
     { name: "Solutions", href: "/solutions" },
     { name: "Services", href: "/services" },
+    { name: "Enterprise", href: "/enterprise" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ],

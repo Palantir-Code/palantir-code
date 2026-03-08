@@ -416,5 +416,94 @@
     "compatibleWith": "Compatible with",
     "cta": "View Documentation",
     "ctaGithub": "GitHub Repository"
+  },
+  "enterprise": {
+    "meta": {
+      "description": "Plane for Enterprise: ISO 27001, SOC2 & GDPR compliant project management with air-gapped deployment, white-glove migration, and Plane AI Agent. Trusted by StarkBank, Zerodha, and Brown Brothers Harriman."
+    },
+    "badge": "ENTERPRISE",
+    "heroTitle": "Built for",
+    "heroTitleHighlight": "Enterprise Governance",
+    "heroDescription": "Plane delivers compliance-ready project management with air-gapped deployments, immutable audit logs, and a white-glove migration methodology. Trusted by global banks, fintech leaders, and Fortune 500 companies.",
+    "heroCta": "Schedule a Consultation",
+    "heroCtaSecondary": "View Services",
+    "trustedBy": "Trusted by industry leaders worldwide",
+    "compliance": {
+      "badge": "COMPLIANCE & SECURITY",
+      "title": "Compliant",
+      "titleHighlight": "out of the box",
+      "compliantTitle": "Standards-aligned",
+      "compliantDesc": "Controls aligned to common enterprise standards, reducing audit prep and evidence collection.",
+      "secureTitle": "Secure Deployment",
+      "secureDesc": "Deploy on managed clouds, self-hosted environments, or air-gapped networks with no call-home and allowlisted egress paths.",
+      "auditTitle": "Audit-ready",
+      "auditDesc": "Programmatic audit logs with immutable history, explicit ownership, and traceability of every change."
+    },
+    "migration": {
+      "badge": "MIGRATION METHODOLOGY",
+      "title": "White-glove",
+      "titleHighlight": "Rollout Plan",
+      "description": "Step-by-step migration that ensures 100% data integrity, white-glove migration, and acceptance tests you can rely on.",
+      "phase1Label": "Phase 1",
+      "phase1Title": "Discovery & Modeling",
+      "phase2Label": "Phase 2",
+      "phase2Title": "Mapping Your Current Tool",
+      "phase3Label": "Phase 3",
+      "phase3Title": "Implementation & Validation",
+      "step1": "Entity discovery",
+      "step2": "YAML migration file",
+      "step3": "Mapping entities",
+      "step4": "Review dependencies",
+      "step5": "Sandbox set-up",
+      "step6": "Iterative feedback",
+      "step7": "Production sign-off",
+      "guarantee": "100% data integrity guaranteed — zero data loss migration"
+    },
+    "deployment": {
+      "badge": "DEPLOYMENT OPTIONS",
+      "title": "Choose where",
+      "titleHighlight": "Plane runs",
+      "description": "On-prem air-gapped, restricted network, or managed in your chosen environment.",
+      "airgappedTitle": "Pure Air-gapped",
+      "airgappedDesc": "Unlimited workspaces for all your teams with zero external connectivity.",
+      "airgappedTag": "Self-managed",
+      "restrictedTitle": "Restricted Network",
+      "restrictedDesc": "Controlled internal network with allowlisted egress paths.",
+      "restrictedTag": "Shared",
+      "managedTitle": "Managed in Your Environment",
+      "managedDesc": "Your selected cloud or sovereign infrastructure, managed by Plane.",
+      "managedTag": "Plane-managed"
+    },
+    "features": {
+      "badge": "ENTERPRISE SCALE",
+      "title": "Built for",
+      "titleHighlight": "scale & operability",
+      "multiRegionTitle": "Multi-region Scale",
+      "multiRegionDesc": "High availability and redundancy with multi-region readiness for enterprise continuity.",
+      "managedTitle": "Managed Deployments",
+      "managedDesc": "Done-for-you instances with failsafes, switchovers, and redundancy.",
+      "ltsTitle": "Long-term Support",
+      "ltsDesc": "Stable release tracks with supported major versions and controlled upgrade cadence.",
+      "k8sTitle": "Kubernetes Scaling",
+      "k8sDesc": "Horizontal scaling via Kubernetes with workspace and project-level isolation."
+    },
+    "ai": {
+      "badge": "PLANE AI",
+      "title": "Automate with",
+      "titleHighlight": "Plane AI Agent",
+      "description": "Query, automate, and generate anything in your workspace with the fullest context of your work. Plane AI understands your projects, teams, and workflows.",
+      "feature1": "@mention the AI agent directly in work item comments",
+      "feature2": "Auto-create projects with goals, work items, and milestones",
+      "feature3": "Get AI-powered responses with full project context",
+      "flow1": "@mention agent in a comment",
+      "flow2": "Agent processes and reasons with context",
+      "flow3": "Executes actions across your workspace",
+      "flow4": "Returns response as a comment"
+    },
+    "cta": {
+      "title": "Ready to modernize your project management?",
+      "description": "Let us help you implement Plane with enterprise-grade compliance, security, and a migration methodology that guarantees zero data loss.",
+      "button": "Get in Touch"
+    }
   }
 }
