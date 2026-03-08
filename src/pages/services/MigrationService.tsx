@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { ArrowRightLeft, ArrowRight, Check, Search, Map, FileCheck, Box, MessageSquare, CheckCircle2, Layers, Shield } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Layout from "@/components/layout/Layout";
@@ -6,6 +7,7 @@ import SEO from "@/components/SEO";
 import MatrixRain from "@/components/animations/MatrixRain";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/button";
+import sphereMigration from "@/assets/services/sphere-migration.png";
 
 const MigrationService = () => {
   const { t } = useTranslation();
@@ -74,6 +76,13 @@ const MigrationService = () => {
               <Button asChild size="lg" className="mt-8 gap-2">
                 <Link to="/contact">{t("serviceMigration.cta")} <ArrowRight className="h-4 w-4" /></Link>
               </Button>
+              <motion.div
+                className="mt-10 mx-auto w-48 h-48 md:w-64 md:h-64"
+                animate={{ y: [0, -12, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <img src={sphereMigration} alt="Migration crystal sphere" className="w-full h-full object-contain drop-shadow-[0_0_30px_hsl(280,70%,50%,0.4)]" />
+              </motion.div>
             </div>
           </ScrollReveal>
         </div>
