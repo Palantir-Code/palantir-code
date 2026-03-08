@@ -154,6 +154,12 @@ const Header = () => {
                 <Link to="/partners/plane" className="block rounded-md px-3 py-2 text-sm hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
                   Plane
                 </Link>
+                <Link to="/enterprise" className="block rounded-md px-3 py-2 text-sm hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
+                  Enterprise
+                </Link>
+                <Link to="/jira-vs-plane" className="block rounded-md px-3 py-2 text-sm hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
+                  Jira vs Plane
+                </Link>
               </div>
             </div>
 
