@@ -105,10 +105,6 @@ const Contact = () => {
                   <div><h3 className="font-semibold text-foreground">{t("contact.emailLabel")}</h3><a href={`mailto:${COMPANY.email}`} className="text-muted-foreground hover:text-primary transition-colors">{COMPANY.email}</a></div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary"><Phone className="h-5 w-5" /></div>
-                  <div><h3 className="font-semibold text-foreground">{t("contact.phoneLabel")}</h3><a href={`tel:${COMPANY.phone}`} className="text-muted-foreground hover:text-primary transition-colors">{COMPANY.phone}</a></div>
-                </div>
-                <div className="flex items-start gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary"><MapPin className="h-5 w-5" /></div>
                   <div><h3 className="font-semibold text-foreground">{t("contact.locationLabel")}</h3><p className="text-muted-foreground">{COMPANY.address}</p></div>
                 </div>
