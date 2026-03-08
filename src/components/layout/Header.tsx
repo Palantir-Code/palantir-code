@@ -122,6 +122,10 @@ const Header = () => {
               </div>
             </div>
 
+            <Link to="/enterprise" className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
+              Enterprise
+            </Link>
+
             <Link to="/about" className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
               {t("nav.about")}
             </Link>
