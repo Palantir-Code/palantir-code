@@ -53,7 +53,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Partners</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent">Experts</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[300px] gap-2 p-4">
                     <li>
