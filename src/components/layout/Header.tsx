@@ -132,6 +132,10 @@ const Header = () => {
               Enterprise
             </Link>
 
+            <Link to="/jira-vs-plane" className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
+              Jira vs Plane
+            </Link>
+
             <Link to="/about" className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
               {t("nav.about")}
             </Link>
