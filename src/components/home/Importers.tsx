@@ -45,7 +45,7 @@ const Importers = () => {
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.6 }}>
               <Button asChild size="lg" className="mt-8 group">
-                <Link to="/services#migration">
+                <Link to="/services">
                   {t("importers.cta")}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
