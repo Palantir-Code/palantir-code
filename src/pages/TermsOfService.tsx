@@ -1,9 +1,11 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 
 export default function TermsOfService() {
   return (
     <Layout>
+      <SEO title="Terms of Service" description="Terms of Service for PALANTIR-CODE. Read our terms governing access to and use of our Plane consulting and implementation services." canonical="/terms" noindex={false} />
       <section className="py-20">
         <div className="container max-w-4xl">
           <motion.div

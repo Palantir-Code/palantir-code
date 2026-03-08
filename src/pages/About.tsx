@@ -33,7 +33,7 @@ const About = () => {
 
   return (
     <Layout>
-      <SEO title="About Us" description="Learn about PALANTIR-CODE, Spain's first certified Plane partner." canonical="/about" jsonLd={aboutJsonLd} />
+      <SEO title="About Us – Spain's First Certified Plane Partner" description="Meet PALANTIR-CODE, Spain's first certified Plane partner. We deliver expert implementation, migration, and consulting for Plane's unified workspace with bilingual EN/ES support." canonical="/about" jsonLd={aboutJsonLd} />
       
       <section className="relative bg-gradient-to-b from-primary/5 via-background to-background py-20 overflow-hidden">
         <MatrixRain columnCount={20} opacity={0.25} />

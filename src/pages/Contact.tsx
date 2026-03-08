@@ -49,7 +49,7 @@ const Contact = () => {
 
   return (
     <Layout>
-      <SEO title="Contact Us" description="Contact PALANTIR-CODE for expert Plane implementation, migration, and consulting services." canonical="/contact" jsonLd={contactJsonLd} />
+      <SEO title="Contact Us – Get Expert Plane Support" description="Contact PALANTIR-CODE for a free consultation on Plane implementation, Jira migration, and custom development. Based in Barcelona, serving teams across Spain and Europe." canonical="/contact" jsonLd={contactJsonLd} />
       
       <section className="relative bg-gradient-to-b from-primary/5 via-background to-background py-20 overflow-hidden">
         <MatrixRain columnCount={20} opacity={0.25} />

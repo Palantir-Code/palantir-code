@@ -45,7 +45,7 @@ const Blog = () => {
 
   return (
     <Layout>
-      <SEO title={`Blog | PALANTIR-CODE`} description={t("blog.heroDesc")} />
+      <SEO title="Blog – Plane Tips, Migration Guides & Best Practices" description="Insights on Plane project management, Jira migration guides, workflow automation tips, and best practices from Spain's first certified Plane partner." canonical="/blog" />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background py-20 lg:py-28">
