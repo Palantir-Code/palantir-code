@@ -63,6 +63,20 @@ const Header = () => {
                         </Link>
                       </NavigationMenuLink>
                     </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link to="/enterprise" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <div className="text-sm font-medium leading-none">Enterprise</div>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link to="/jira-vs-plane" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <div className="text-sm font-medium leading-none">Jira vs Plane</div>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -70,18 +84,6 @@ const Header = () => {
               <NavigationMenuItem>
                 <Link to="/about" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground", location.pathname === "/about" && "bg-accent/50")}>
                   {t("nav.about")}
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link to="/enterprise" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground", location.pathname === "/enterprise" && "bg-accent/50")}>
-                  Enterprise
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link to="/jira-vs-plane" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground", location.pathname === "/jira-vs-plane" && "bg-accent/50")}>
-                  Jira vs Plane
                 </Link>
               </NavigationMenuItem>
 
@@ -152,16 +154,15 @@ const Header = () => {
                 <Link to="/partners/plane" className="block rounded-md px-3 py-2 text-sm hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
                   Plane
                 </Link>
+                <Link to="/enterprise" className="block rounded-md px-3 py-2 text-sm hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
+                  Enterprise
+                </Link>
+                <Link to="/jira-vs-plane" className="block rounded-md px-3 py-2 text-sm hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
+                  Jira vs Plane
+                </Link>
               </div>
             </div>
 
-            <Link to="/enterprise" className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
-              Enterprise
-            </Link>
-
-            <Link to="/jira-vs-plane" className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
-              Jira vs Plane
-            </Link>
 
             <Link to="/about" className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-accent" onClick={() => setMobileMenuOpen(false)}>
               {t("nav.about")}
