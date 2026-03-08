@@ -610,5 +610,127 @@
       "description": "Let us help you implement enterprise-grade compliance, security, and a migration methodology that guarantees zero data loss.",
       "button": "Get in Touch"
     }
+  },
+  "jiraVsPlane": {
+    "seo": {
+      "title": "Jira vs Plane | Complete Comparison & Migration Guide",
+      "description": "Compare Jira vs Plane: speed, usability, cost, deployment. See why teams switch to Plane and how PALANTIR-CODE makes migration seamless."
+    },
+    "hero": {
+      "title": "Switch from Jira to",
+      "subtitle": "Unify projects, docs, intake, approvals, and analytics in one place. Run it on cloud, self-hosted, or fully air-gapped.",
+      "ctaPrimary": "Talk to a Migration Expert",
+      "ctaSecondary": "Our Migration Services"
+    },
+    "comparisonSection": {
+      "badge": "COMPARISON",
+      "title": "Why do teams move to",
+      "titleHighlight": "Plane?"
+    },
+    "comparison": [
+      { "category": "Speed", "plane": "Snappy, low-friction UI that stays fast as projects grow", "jira": "Can feel heavy in large projects and complex workflows" },
+      { "category": "Setup", "plane": "Up and running in minutes — cloud & self-hosted", "jira": "Admin-heavy setup; EOL announced for self-hosting" },
+      { "category": "Usability", "plane": "Clean, modern, keyboard-driven interface", "jira": "Powerful but cluttered, steep learning curve" },
+      { "category": "Structure", "plane": "Workspaces → Projects → Work Items — intuitive hierarchy", "jira": "Projects, schemes, screens, fields — easy to over-configure" },
+      { "category": "Docs & Wiki", "plane": "Built-in Pages/Wiki next to your projects", "jira": "Confluence is a separate subscription" },
+      { "category": "AI & Automation", "plane": "Native AI assist + lightweight rules included", "jira": "Powerful, but often needs paid add-ons/Marketplace" },
+      { "category": "Cost to Scale", "plane": "Lower TCO, no unpredictable add-on costs", "jira": "Higher TCO, add-ons add up quickly at scale" },
+      { "category": "Deployment", "plane": "Cloud, self-hosted, and air-gapped — open-source", "jira": "Cloud only; Data Centre sales end March 2026" }
+    ],
+    "migrationSection": {
+      "badge": "MIGRATION",
+      "title": "Switch to Plane in",
+      "titleHighlight": "4 Simple Steps",
+      "subtitle": "Most teams finish a first dry run in under three hours; larger workspaces pilot a few projects, then migrate the rest over 3–7 days.",
+      "whatMovesTitle": "What Moves Over"
+    },
+    "migration": {
+      "steps": [
+        { "title": "Connect Jira", "desc": "Authenticate, select projects, and choose scope" },
+        { "title": "Map Your World", "desc": "Map fields, statuses, and workflows to Plane" },
+        { "title": "Import & Verify", "desc": "Dry run import, validate data integrity" },
+        { "title": "Go Live", "desc": "Full migration with Jira in read-only during cutover" }
+      ],
+      "whatMoves": [
+        "Projects and active/backlog issues",
+        "Assignees, labels, and priorities",
+        "Sprints mapped into Plane Cycles",
+        "Issue types, statuses and custom fields",
+        "Comments and attachments (via Jira's API)"
+      ]
+    },
+    "experienceSection": {
+      "badge": "AFTER THE SWITCH",
+      "title": "What Jira Users",
+      "titleHighlight": "Immediately Experience"
+    },
+    "experience": [
+      { "title": "Unified Workspace", "desc": "Pages, Wiki and Issues live together — no more split context across Jira, Confluence and plug-ins." },
+      { "title": "Speed at Scale", "desc": "Boards open fast, issue details appear in-place. No full-page navigations or slow board loads." },
+      { "title": "Admin Simplicity", "desc": "Guided rules and shared schemas replace schemes, screens and permission sprawl." },
+      { "title": "Cost Clarity", "desc": "Wiki, automations, analytics and dashboards included — no paying extra for Confluence or reporting apps." },
+      { "title": "Built-in Intake & Approvals", "desc": "Native Intake and Approvals turn requests into issues with guardrails — no JSM forms or marketplace add-ons." },
+      { "title": "Deployment Sovereignty", "desc": "Run the same product in cloud, self-hosted, or fully air-gapped to meet security and residency policies." }
+    ],
+    "editionsSection": {
+      "badge": "EDITIONS",
+      "title": "Run Plane",
+      "titleHighlight": "Your Way",
+      "subtitle": "Choose between fully managed cloud, self-hosted or completely offline airgapped."
+    },
+    "editions": [
+      { "name": "Cloud", "desc": "Fully managed, lowest-friction path. Provision a secure workspace in minutes.", "tag": "Fastest Setup" },
+      { "name": "Self-hosted", "desc": "Full control on your infrastructure. Same product model as cloud.", "tag": "Full Control" },
+      { "name": "Airgapped", "desc": "Completely offline deployment for maximum security and compliance.", "tag": "Maximum Security" }
+    ],
+    "pricingSection": {
+      "badge": "PRICING",
+      "title": "Keep Costs in",
+      "titleHighlight": "Control",
+      "subtitle": "Issues, sprints, roadmaps, and docs in one place — at a fraction of the cost."
+    },
+    "pricing": {
+      "recommended": "RECOMMENDED",
+      "perUser": "user / month",
+      "planeFeatures": [
+        "All layouts included",
+        "Built-in Wiki & Pages",
+        "Unlimited custom fields",
+        "Native AI & Automations",
+        "1TB storage"
+      ],
+      "jiraFeatures": [
+        "Basic views only in free tier",
+        "Confluence is separate cost",
+        "Limited custom fields",
+        "Add-ons needed for automation",
+        "250GB storage"
+      ],
+      "freePlanNote": "*Have fewer than 12 users? Take advantage of Plane's Free Plan with all core features included."
+    },
+    "featureSection": {
+      "badge": "FULL COMPARISON",
+      "title": "Plane is the Best",
+      "titleHighlight": "Jira Alternative",
+      "featureCol": "Feature"
+    },
+    "features": [
+      { "feature": "Layouts", "plane": "List, Board, Calendar, Gantt, Kanban — all included", "jira": "Basic views in free tier" },
+      { "feature": "Project Management", "plane": "Unified workspace — no add-ons needed", "jira": "Fragmented across multiple products" },
+      { "feature": "Docs & Wiki", "plane": "Built-in, out-of-the-box", "jira": "Confluence (separate product)" },
+      { "feature": "Custom Fields", "plane": "Unlimited in Pro+ — text, number, date, dropdown, boolean & more", "jira": "Limited in Standard, full access requires Premium" },
+      { "feature": "Time Tracking", "plane": "Native time-tracking", "jira": "Basic built-in, advanced via add-ons" },
+      { "feature": "Admin Overhead", "plane": "Minimal by design", "jira": "Very high, customization adds complexity" },
+      { "feature": "Dashboards", "plane": "Modern, point-and-click customization", "jira": "Requires complex JQL, outdated interface" },
+      { "feature": "Intake & Approvals", "plane": "Built-in", "jira": "Marketplace forms and apps" },
+      { "feature": "Self-hosting", "plane": "Complete self-hosted option", "jira": "Server discontinued, DC sales ending" },
+      { "feature": "Pricing Transparency", "plane": "Simple plans, more features included", "jira": "Seat tiers and plugins = unpredictable costs" }
+    ],
+    "cta": {
+      "title": "Switch from Jira Without Starting Over",
+      "description": "Import a live project, keep Jira read-only for a week, and see how work feels when boards, docs, and analytics live in one place.",
+      "ctaPrimary": "Talk to a Migration Expert",
+      "ctaSecondary": "Get Started Free"
+    }
   }
 }

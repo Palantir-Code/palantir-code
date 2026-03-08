@@ -610,5 +610,127 @@
       "description": "T'ajudem a implementar solucions enterprise amb compliment normatiu, seguretat i una metodologia de migració que garanteix zero pèrdua de dades.",
       "button": "Contactar"
     }
+  },
+  "jiraVsPlane": {
+    "seo": {
+      "title": "Jira vs Plane | Comparativa Completa i Guia de Migració",
+      "description": "Compara Jira vs Plane: velocitat, usabilitat, cost, desplegament. Descobreix per què els equips migren a Plane amb PALANTIR-CODE."
+    },
+    "hero": {
+      "title": "Canvia de Jira a",
+      "subtitle": "Unifica projectes, documentació, intake, aprovacions i analítiques en un sol lloc. Executa'l al cloud, self-hosted o completament air-gapped.",
+      "ctaPrimary": "Parla amb un Expert en Migració",
+      "ctaSecondary": "Els Nostres Serveis de Migració"
+    },
+    "comparisonSection": {
+      "badge": "COMPARATIVA",
+      "title": "Per què els equips migren a",
+      "titleHighlight": "Plane?"
+    },
+    "comparison": [
+      { "category": "Velocitat", "plane": "Interfície àgil i sense fricció que es manté ràpida a mesura que creixen els projectes", "jira": "Pot tornar-se pesat en projectes grans i fluxos complexos" },
+      { "category": "Configuració", "plane": "Operatiu en minuts — cloud i self-hosted", "jira": "Configuració pesada; fi de vida anunciat per al self-hosting" },
+      { "category": "Usabilitat", "plane": "Interfície neta, moderna i orientada al teclat", "jira": "Potent però desordenat, corba d'aprenentatge pronunciada" },
+      { "category": "Estructura", "plane": "Workspaces → Projectes → Work Items — jerarquia intuïtiva", "jira": "Projectes, esquemes, pantalles, camps — fàcil de sobre-configurar" },
+      { "category": "Docs i Wiki", "plane": "Pages/Wiki integrat al costat dels teus projectes", "jira": "Confluence és una subscripció separada" },
+      { "category": "IA i Automatització", "plane": "IA nativa + regles lleugeres incloses", "jira": "Potent, però sovint necessita add-ons de pagament/Marketplace" },
+      { "category": "Cost a Escala", "plane": "TCO més baix, sense costos imprevisibles d'add-ons", "jira": "TCO més alt, els add-ons s'acumulen ràpidament a escala" },
+      { "category": "Desplegament", "plane": "Cloud, self-hosted i air-gapped — open-source", "jira": "Només cloud; venda de Data Centre acaba el març 2026" }
+    ],
+    "migrationSection": {
+      "badge": "MIGRACIÓ",
+      "title": "Canvia a Plane en",
+      "titleHighlight": "4 Passos Simples",
+      "subtitle": "La majoria d'equips completen un primer assaig en menys de tres hores; els workspaces més grans piloten uns projectes i després migren la resta en 3–7 dies.",
+      "whatMovesTitle": "Què es Migra"
+    },
+    "migration": {
+      "steps": [
+        { "title": "Connectar Jira", "desc": "Autenticar-se, seleccionar projectes i triar abast" },
+        { "title": "Mapejar el teu Món", "desc": "Mapejar camps, estats i fluxos de treball a Plane" },
+        { "title": "Importar i Verificar", "desc": "Importació de prova, validar integritat de dades" },
+        { "title": "Sortir en Viu", "desc": "Migració completa amb Jira en només lectura durant el tall" }
+      ],
+      "whatMoves": [
+        "Projectes i issues actius/backlog",
+        "Assignats, etiquetes i prioritats",
+        "Sprints mapejats a Cycles de Plane",
+        "Tipus d'issue, estats i camps personalitzats",
+        "Comentaris i adjunts (via API de Jira)"
+      ]
+    },
+    "experienceSection": {
+      "badge": "DESPRÉS DEL CANVI",
+      "title": "El que els Usuaris de Jira",
+      "titleHighlight": "Experimenten Immediatament"
+    },
+    "experience": [
+      { "title": "Workspace Unificat", "desc": "Pages, Wiki i Issues conviuen — sense més context dividit entre Jira, Confluence i plug-ins." },
+      { "title": "Velocitat a Escala", "desc": "Els taulers s'obren ràpid, els detalls d'issues apareixen in-situ. Sense navegacions de pàgina completa ni càrregues lentes." },
+      { "title": "Simplicitat d'Admin", "desc": "Regles guiades i esquemes compartits reemplacen esquemes, pantalles i dispersió de permisos." },
+      { "title": "Claredat de Costos", "desc": "Wiki, automatitzacions, analítiques i dashboards inclosos — sense pagar extra per Confluence o apps de reporting." },
+      { "title": "Intake i Aprovacions Integrats", "desc": "Intake i Aprovacions natius converteixen sol·licituds en issues amb guardrails — sense formularis JSM ni add-ons del marketplace." },
+      { "title": "Sobirania de Desplegament", "desc": "Executa el mateix producte al cloud, self-hosted o completament air-gapped per complir polítiques de seguretat i residència." }
+    ],
+    "editionsSection": {
+      "badge": "EDICIONS",
+      "title": "Executa Plane",
+      "titleHighlight": "A la Teva Manera",
+      "subtitle": "Tria entre cloud totalment gestionat, self-hosted o completament offline airgapped."
+    },
+    "editions": [
+      { "name": "Cloud", "desc": "Totalment gestionat, el camí amb menys fricció. Provisiona un workspace segur en minuts.", "tag": "Configuració Ràpida" },
+      { "name": "Self-hosted", "desc": "Control total a la teva infraestructura. Mateix model de producte que cloud.", "tag": "Control Total" },
+      { "name": "Airgapped", "desc": "Desplegament completament offline per a màxima seguretat i compliment.", "tag": "Màxima Seguretat" }
+    ],
+    "pricingSection": {
+      "badge": "PREUS",
+      "title": "Mantén els Costos",
+      "titleHighlight": "Sota Control",
+      "subtitle": "Issues, sprints, roadmaps i documentació en un sol lloc — a una fracció del cost."
+    },
+    "pricing": {
+      "recommended": "RECOMANAT",
+      "perUser": "usuari / mes",
+      "planeFeatures": [
+        "Totes les vistes incloses",
+        "Wiki i Pages integrats",
+        "Camps personalitzats il·limitats",
+        "IA i Automatitzacions natives",
+        "1TB d'emmagatzematge"
+      ],
+      "jiraFeatures": [
+        "Només vistes bàsiques al pla gratuït",
+        "Confluence té cost a part",
+        "Camps personalitzats limitats",
+        "Add-ons necessaris per automatització",
+        "250GB d'emmagatzematge"
+      ],
+      "freePlanNote": "*Menys de 12 usuaris? Aprofita el Pla Gratuït de Plane amb totes les funcionalitats principals incloses."
+    },
+    "featureSection": {
+      "badge": "COMPARATIVA COMPLETA",
+      "title": "Plane és la Millor",
+      "titleHighlight": "Alternativa a Jira",
+      "featureCol": "Funcionalitat"
+    },
+    "features": [
+      { "feature": "Vistes", "plane": "Llista, Board, Calendari, Gantt, Kanban — tot inclòs", "jira": "Vistes bàsiques al pla gratuït" },
+      { "feature": "Gestió de Projectes", "plane": "Workspace unificat — sense add-ons necessaris", "jira": "Fragmentat en múltiples productes" },
+      { "feature": "Docs i Wiki", "plane": "Integrat, llest per usar", "jira": "Confluence (producte separat)" },
+      { "feature": "Camps Personalitzats", "plane": "Il·limitats en Pro+ — text, número, data, dropdown, boolean i més", "jira": "Limitats en Standard, accés complet requereix Premium" },
+      { "feature": "Seguiment de Temps", "plane": "Seguiment de temps natiu", "jira": "Bàsic integrat, avançat via add-ons" },
+      { "feature": "Càrrega Administrativa", "plane": "Mínima per disseny", "jira": "Molt alta, la personalització afegeix complexitat" },
+      { "feature": "Dashboards", "plane": "Moderns, personalització point-and-click", "jira": "Requereix JQL complex, interfície antiquada" },
+      { "feature": "Intake i Aprovacions", "plane": "Integrat", "jira": "Formularis i apps del marketplace" },
+      { "feature": "Self-hosting", "plane": "Opció self-hosted completa", "jira": "Server descontinuat, venda DC finalitzant" },
+      { "feature": "Transparència de Preus", "plane": "Plans simples, més funcionalitats incloses", "jira": "Trams de seats i plugins = costos impredictibles" }
+    ],
+    "cta": {
+      "title": "Canvia de Jira Sense Començar de Zero",
+      "description": "Importa un projecte en viu, mantén Jira en només lectura durant una setmana i descobreix com se sent treballar quan taulers, docs i analítiques conviuen en un sol lloc.",
+      "ctaPrimary": "Parla amb un Expert en Migració",
+      "ctaSecondary": "Comença Gratis"
+    }
   }
 }
