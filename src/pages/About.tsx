@@ -27,15 +27,15 @@ const About = () => {
   const aboutJsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About PALANTIR-CODE",
-    "description": "Learn about PALANTIR-CODE, Spain's first certified Plane partner.",
+    "name": "About RESTRICTED OUTREACH",
+    "description": "Learn about RESTRICTED OUTREACH, Spain's first certified Plane partner.",
     "url": "https://www.palantircode.com/about",
-    "mainEntity": { "@type": "Organization", "name": "PALANTIR-CODE", "foundingDate": "2023", "description": "Spain's first certified Plane partner" }
+    "mainEntity": { "@type": "Organization", "name": "RESTRICTED OUTREACH", "foundingDate": "2023", "description": "Spain's first certified Plane partner" }
   };
 
   return (
     <Layout>
-      <SEO title="About Us – Spain's First Certified Plane Partner" description="Meet PALANTIR-CODE, Spain's first certified Plane partner. We deliver expert implementation, migration, and consulting for Plane's unified workspace with bilingual EN/ES support." canonical="/about" jsonLd={aboutJsonLd} />
+      <SEO title="About Us – Spain's First Certified Plane Partner" description="Meet RESTRICTED OUTREACH, Spain's first certified Plane partner. We deliver expert implementation, migration, and consulting for Plane's unified workspace with bilingual EN/ES support." canonical="/about" jsonLd={aboutJsonLd} />
       
       <section className="relative bg-gradient-to-b from-primary/5 via-background to-background py-20 overflow-hidden">
         <MatrixRain columnCount={20} opacity={0.25} />
@@ -65,8 +65,8 @@ const About = () => {
             <div className="relative">
               <div className="aspect-square rounded-2xl border border-border bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <img src={palantirLogo} alt="PALANTIR-CODE Logo" className="h-36 w-36 object-contain mx-auto mb-6 terminal-logo-bright" />
-                  <img src={palantirBrand} alt="PALANTIR-CODE" className="h-14 object-contain mx-auto mb-4 terminal-logo-bright" />
+                  <img src={palantirLogo} alt="RESTRICTED OUTREACH Logo" className="h-36 w-36 object-contain mx-auto mb-6 terminal-logo-bright" />
+                  <img src={palantirBrand} alt="RESTRICTED OUTREACH" className="h-14 object-contain mx-auto mb-4 terminal-logo-bright" />
                   <p className="text-muted-foreground mt-2">{COMPANY.tagline}</p>
                 </div>
               </div>

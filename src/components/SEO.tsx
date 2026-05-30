@@ -10,9 +10,9 @@ interface SEOProps {
   jsonLd?: object;
 }
 
-const SITE_NAME = "PALANTIR-CODE";
-const DEFAULT_TITLE = "PALANTIR-CODE | Spain's First Certified Plane Partner";
-const DEFAULT_DESCRIPTION = "PALANTIR-CODE is Spain's first certified Plane partner. Expert implementation, migration, and custom solutions for Plane's unified workspace.";
+const SITE_NAME = "RESTRICTED OUTREACH";
+const DEFAULT_TITLE = "RESTRICTED OUTREACH | Spain's First Certified Plane Partner";
+const DEFAULT_DESCRIPTION = "RESTRICTED OUTREACH is Spain's first certified Plane partner. Expert implementation, migration, and custom solutions for Plane's unified workspace.";
 const DEFAULT_IMAGE = "https://www.palantircode.com/og-image.png";
 const SITE_URL = "https://www.palantircode.com";
 

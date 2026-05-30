@@ -27,9 +27,9 @@ import {
 const lovableJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Lovable & Vibe Coding Experts | PALANTIR-CODE",
+  name: "Lovable & Vibe Coding Experts | RESTRICTED OUTREACH",
   description:
-    "Expert Lovable developers and vibe coding specialists. Build production-ready web apps with AI-powered development. PALANTIR-CODE.",
+    "Expert Lovable developers and vibe coding specialists. Build production-ready web apps with AI-powered development. RESTRICTED OUTREACH.",
   url: "https://www.palantircode.com/experts/lovable",
 };
 
@@ -80,7 +80,7 @@ const LovablePage = () => {
     <Layout>
       <SEO
         title="Lovable & Vibe Coding | AI-Powered Web Development"
-        description="Expert Lovable developers and vibe coding specialists. Build production-ready web apps with AI-powered development. PALANTIR-CODE."
+        description="Expert Lovable developers and vibe coding specialists. Build production-ready web apps with AI-powered development. RESTRICTED OUTREACH."
         canonical="/experts/lovable"
         jsonLd={lovableJsonLd}
       />
@@ -257,7 +257,7 @@ const LovablePage = () => {
         </div>
       </section>
 
-      {/* Why PALANTIR-CODE */}
+      {/* Why RESTRICTED OUTREACH */}
       <section className="py-16 lg:py-20 bg-muted/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

@@ -15,8 +15,8 @@ import CTASection from "@/components/home/CTASection";
 const planeJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Plane - Project Management Platform | PALANTIR-CODE",
-  "description": "Discover Plane: the unified workspace for projects, docs, and analytics. Expert implementation by PALANTIR-CODE.",
+  "name": "Plane - Project Management Platform | RESTRICTED OUTREACH",
+  "description": "Discover Plane: the unified workspace for projects, docs, and analytics. Expert implementation by RESTRICTED OUTREACH.",
   "url": "https://www.palantircode.com/partners/plane",
 };
 
@@ -25,7 +25,7 @@ const PlanePage = () => {
     <Layout>
       <SEO
         title="Plane | Unified Project Management Platform"
-        description="Discover Plane: the unified workspace for projects, docs, and analytics. Expert implementation by PALANTIR-CODE, Spain's first certified partner."
+        description="Discover Plane: the unified workspace for projects, docs, and analytics. Expert implementation by RESTRICTED OUTREACH, Spain's first certified partner."
         canonical="/partners/plane"
         jsonLd={planeJsonLd}
       />

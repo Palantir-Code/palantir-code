@@ -13,9 +13,9 @@ import { useToast } from "@/hooks/use-toast";
 
 const contactJsonLd = {
   "@context": "https://schema.org", "@type": "ContactPage",
-  "name": "Contact PALANTIR-CODE",
+  "name": "Contact RESTRICTED OUTREACH",
   "url": "https://www.palantircode.com/contact",
-  "mainEntity": { "@type": "Organization", "name": "PALANTIR-CODE", "email": "hello@palantircode.com", "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "availableLanguage": ["English", "Spanish"] } }
+  "mainEntity": { "@type": "Organization", "name": "RESTRICTED OUTREACH", "email": "hello@palantircode.com", "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "availableLanguage": ["English", "Spanish"] } }
 };
 
 const Contact = () => {
@@ -49,7 +49,7 @@ const Contact = () => {
 
   return (
     <Layout>
-      <SEO title="Contact Us – Get Expert Plane Support" description="Contact PALANTIR-CODE for a free consultation on Plane implementation, Jira migration, and custom development. Based in Barcelona, serving teams across Spain and Europe." canonical="/contact" jsonLd={contactJsonLd} />
+      <SEO title="Contact Us – Get Expert Plane Support" description="Contact RESTRICTED OUTREACH for a free consultation on Plane implementation, Jira migration, and custom development. Based in Barcelona, serving teams across Spain and Europe." canonical="/contact" jsonLd={contactJsonLd} />
       
       <section className="relative bg-gradient-to-b from-primary/5 via-background to-background py-20 overflow-hidden">
         <MatrixRain columnCount={20} opacity={0.25} />

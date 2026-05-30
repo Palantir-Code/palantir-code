@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function TermsOfService() {
   return (
     <Layout>
-      <SEO title="Terms of Service" description="Terms of Service for PALANTIR-CODE. Read our terms governing access to and use of our Plane consulting and implementation services." canonical="/terms" noindex={false} />
+      <SEO title="Terms of Service" description="Terms of Service for RESTRICTED OUTREACH. Read our terms governing access to and use of our Plane consulting and implementation services." canonical="/terms" noindex={false} />
       <section className="py-20">
         <div className="container max-w-4xl">
           <motion.div
@@ -24,14 +24,14 @@ export default function TermsOfService() {
                 In compliance with Law 34/2002, of July 11, on Information Society Services and Electronic Commerce (LSSI-CE), we provide the following information:
               </p>
               <p>
-                <strong>Company Name:</strong> PALANTIR CODE<br />
+                <strong>Company Name:</strong> RESTRICTED OUTREACH<br />
                 <strong>Address:</strong> Benet Cortada 8, Escalera F, 2º 1ª, 08174 Sant Cugat del Vallés, Barcelona, Spain<br />
                 <strong>Email:</strong> raul.pelaez@palantircode.com
               </p>
 
               <h2>2. Object and Scope</h2>
               <p>
-                These Terms of Service govern access to and use of the website palantircode.com (hereinafter, the "Website") operated by PALANTIR CODE (hereinafter, "PALANTIR CODE", "we", "us", or "our").
+                These Terms of Service govern access to and use of the website palantircode.com (hereinafter, the "Website") operated by RESTRICTED OUTREACH (hereinafter, "RESTRICTED OUTREACH", "we", "us", or "our").
               </p>
               <p>
                 By accessing or using our Website and services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our Website or services.
@@ -39,7 +39,7 @@ export default function TermsOfService() {
 
               <h2>3. Services</h2>
               <p>
-                PALANTIR CODE provides professional services including but not limited to:
+                RESTRICTED OUTREACH provides professional services including but not limited to:
               </p>
               <ul>
                 <li>Plane consulting and implementation services</li>
@@ -65,10 +65,10 @@ export default function TermsOfService() {
 
               <h2>5. Intellectual Property</h2>
               <p>
-                All content on this Website, including but not limited to text, graphics, logos, icons, images, audio clips, software, and compilations, is the property of PALANTIR CODE or its content suppliers and is protected by Spanish and international intellectual property laws.
+                All content on this Website, including but not limited to text, graphics, logos, icons, images, audio clips, software, and compilations, is the property of RESTRICTED OUTREACH or its content suppliers and is protected by Spanish and international intellectual property laws.
               </p>
               <p>
-                The reproduction, distribution, public communication, transformation, or any other activity involving the content of this Website, as well as its design and the selection and form of presentation of the materials included therein, is prohibited without the prior written consent of PALANTIR CODE.
+                The reproduction, distribution, public communication, transformation, or any other activity involving the content of this Website, as well as its design and the selection and form of presentation of the materials included therein, is prohibited without the prior written consent of RESTRICTED OUTREACH.
               </p>
               <p>
                 Plane and related trademarks are the property of Plane Inc. and are used under license or fair use.
@@ -97,7 +97,7 @@ export default function TermsOfService() {
 
               <h2>8. Limitation of Liability</h2>
               <p>
-                To the fullest extent permitted by applicable law, PALANTIR CODE shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
+                To the fullest extent permitted by applicable law, RESTRICTED OUTREACH shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
               </p>
               <ul>
                 <li>Loss of profits, revenue, data, or use</li>
@@ -106,12 +106,12 @@ export default function TermsOfService() {
                 <li>Any other commercial damages or losses</li>
               </ul>
               <p>
-                Our total liability for any claim arising from or related to these Terms or our services shall not exceed the amount paid by you to PALANTIR CODE for the services giving rise to such claim during the twelve (12) months preceding the claim.
+                Our total liability for any claim arising from or related to these Terms or our services shall not exceed the amount paid by you to RESTRICTED OUTREACH for the services giving rise to such claim during the twelve (12) months preceding the claim.
               </p>
 
               <h2>9. Indemnification</h2>
               <p>
-                You agree to indemnify, defend, and hold harmless PALANTIR CODE, its officers, directors, employees, agents, and affiliates from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising from:
+                You agree to indemnify, defend, and hold harmless RESTRICTED OUTREACH, its officers, directors, employees, agents, and affiliates from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising from:
               </p>
               <ul>
                 <li>Your use of the Website or services</li>
@@ -156,7 +156,7 @@ export default function TermsOfService() {
 
               <h2>15. Entire Agreement</h2>
               <p>
-                These Terms, together with our Privacy Policy and Cookies Policy, constitute the entire agreement between you and PALANTIR CODE regarding the use of our Website and services.
+                These Terms, together with our Privacy Policy and Cookies Policy, constitute the entire agreement between you and RESTRICTED OUTREACH regarding the use of our Website and services.
               </p>
 
               <h2>16. Waiver</h2>
@@ -174,7 +174,7 @@ export default function TermsOfService() {
                 For any questions about these Terms of Service, please contact us at:
               </p>
               <p>
-                <strong>PALANTIR CODE</strong><br />
+                <strong>RESTRICTED OUTREACH</strong><br />
                 Email: <a href="mailto:raul.pelaez@palantircode.com">raul.pelaez@palantircode.com</a><br />
                 Address: Benet Cortada 8, Escalera F, 2º 1ª, 08174 Sant Cugat del Vallés, Barcelona, Spain
               </p>

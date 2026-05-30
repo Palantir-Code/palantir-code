@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function PrivacyPolicy() {
   return (
     <Layout>
-      <SEO title="Privacy Policy" description="PALANTIR-CODE privacy policy. Learn how we collect, use, and protect your personal data in compliance with GDPR and Spanish data protection laws." canonical="/privacy" noindex={false} />
+      <SEO title="Privacy Policy" description="RESTRICTED OUTREACH privacy policy. Learn how we collect, use, and protect your personal data in compliance with GDPR and Spanish data protection laws." canonical="/privacy" noindex={false} />
       <section className="py-20">
         <div className="container max-w-4xl">
           <motion.div
@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
               <div className="space-y-3">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                   <span className="font-medium">Data Controller</span>
-                  <span className="md:col-span-2">PALANTIR CODE</span>
+                  <span className="md:col-span-2">RESTRICTED OUTREACH</span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                   <span className="font-medium">Purpose</span>
@@ -52,13 +52,13 @@ export default function PrivacyPolicy() {
             <div className="space-y-8 text-foreground [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_ul]:text-muted-foreground [&_li]:leading-relaxed [&_a]:text-primary [&_a]:underline">
               <h2>1. Data Controller</h2>
               <p>
-                <strong>Identity:</strong> PALANTIR CODE<br />
+                <strong>Identity:</strong> RESTRICTED OUTREACH<br />
                 <strong>Address:</strong> Benet Cortada 8, Escalera F, 2º 1ª, 08174 Sant Cugat del Vallés, Barcelona, Spain<br />
                 <strong>Email:</strong> raul.pelaez@palantircode.com
               </p>
 
               <h2>2. Purpose of Data Processing</h2>
-              <p>At PALANTIR CODE, we process the information you provide to:</p>
+              <p>At RESTRICTED OUTREACH, we process the information you provide to:</p>
               <ul>
                 <li>Respond to your inquiries and requests</li>
                 <li>Provide the services you have contracted</li>
@@ -135,7 +135,7 @@ export default function PrivacyPolicy() {
                 For any questions about this Privacy Policy or our data practices, please contact us at:
               </p>
               <p>
-                <strong>PALANTIR CODE</strong><br />
+                <strong>RESTRICTED OUTREACH</strong><br />
                 Email: <a href="mailto:raul.pelaez@palantircode.com">raul.pelaez@palantircode.com</a><br />
                 Address: Benet Cortada 8, Escalera F, 2º 1ª, 08174 Sant Cugat del Vallés, Barcelona, Spain
               </p>

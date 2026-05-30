@@ -1,7 +1,7 @@
-// PALANTIR-CODE Company Information and Navigation Data
+// RESTRICTED OUTREACH Company Information and Navigation Data
 
 export const COMPANY = {
-  name: "PALANTIR-CODE",
+  name: "RESTRICTED OUTREACH",
   tagline: "Spain's First Certified Plane Partner",
   description: "We help teams ship faster with expert implementation, migration, and custom solutions for Plane's unified workspace.",
   email: "raul.pelaez@palantircode.com",
@@ -192,7 +192,7 @@ export const WHY_US = [
 ] as const;
 
 export const SOCIAL_LINKS = [
-  { name: "LinkedIn", href: "https://www.linkedin.com/company/palantir-code", icon: "Linkedin" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/restricted-outreach", icon: "Linkedin" },
   { name: "Twitter", href: "#", icon: "Twitter" },
-  { name: "GitHub", href: "https://github.com/Palantir-Code", icon: "Github" },
+  { name: "GitHub", href: "https://github.com/Restricted Outreach", icon: "Github" },
 ] as const;
