@@ -10,8 +10,8 @@
   "hero": {
     "badge": "Partner Oficial de Plane",
     "titlePart1": "Acelera tus Proyectos con ",
-    "titleHighlight": "Plane & PALANTIR-CODE",
-    "subtitle": "PALANTIR-CODE es el primer partner certificado de Plane en España. Ayudamos a los equipos a entregar más rápido con implementación experta, migración y soluciones personalizadas para el espacio de trabajo unificado de Plane.",
+    "titleHighlight": "Plane & RESTRICTED OUTREACH",
+    "subtitle": "RESTRICTED OUTREACH es el primer partner certificado de Plane en España. Ayudamos a los equipos a entregar más rápido con implementación experta, migración y soluciones personalizadas para el espacio de trabajo unificado de Plane.",
     "exploreSolutions": "Explorar Soluciones",
     "scheduleDemo": "Solicitar Demo",
     "enterpriseReady": "Preparado para Empresas",
@@ -161,7 +161,7 @@
   },
   "whyUs": {
     "title": "Por qué elegir",
-    "titleHighlight": "PALANTIR-CODE",
+    "titleHighlight": "RESTRICTED OUTREACH",
     "description": "Como primer partner certificado de Plane en España, aportamos experiencia inigualable y dedicación a cada proyecto.",
     "certifiedPartner": "Primer Partner Certificado en España",
     "certifiedPartnerDesc": "Fuimos la primera empresa en España en conseguir el estatus de partner oficial de Plane.",
@@ -194,7 +194,7 @@
     "title": "Sobre",
     "heroDesc": "Somos un equipo de expertos en gestión de proyectos dedicados a ayudar a las organizaciones a desbloquear todo el potencial de Plane. Como primer partner certificado de España, aportamos experiencia y compromiso inigualables a cada proyecto.",
     "missionTitle": "Nuestra Misión",
-    "missionP1": "En PALANTIR-CODE, nuestra misión es capacitar a las organizaciones para trabajar de manera más eficiente y efectiva a través de soluciones modernas de gestión de proyectos.",
+    "missionP1": "En RESTRICTED OUTREACH, nuestra misión es capacitar a las organizaciones para trabajar de manera más eficiente y efectiva a través de soluciones modernas de gestión de proyectos.",
     "missionP2": "Creemos que las herramientas adecuadas, correctamente implementadas, pueden transformar la forma en que los equipos colaboran y entregan valor. Por eso nos hemos asociado con Plane, una plataforma open-source potente que da a los equipos la flexibilidad y el control que necesitan.",
     "missionP3": "Nuestro equipo combina experiencia técnica profunda con una pasión genuina por ayudar a nuestros clientes a tener éxito. Ya sea que estés migrando de otra herramienta o empezando de cero, estamos aquí para guiarte en cada paso del camino.",
     "valuesTitle": "Nuestros Valores",
@@ -212,7 +212,7 @@
     "milestone2025": "Primer Partner de Plane en España",
     "milestone2025Desc": "Nos convertimos en el primer partner certificado de Plane en España, estableciendo nuestra experiencia en la plataforma.",
     "milestone2024": "Fundación de la Empresa",
-    "milestone2024Desc": "PALANTIR-CODE fue fundada con la misión de ayudar a las organizaciones a transformar su gestión de proyectos.",
+    "milestone2024Desc": "RESTRICTED OUTREACH fue fundada con la misión de ayudar a las organizaciones a transformar su gestión de proyectos.",
     "whyWorkTitle": "¿Por Qué Trabajar Con Nosotros?",
     "certifiedExpertise": "Experiencia Certificada",
     "certifiedExpertiseDesc": "Primer y único partner certificado de Plane en España.",
@@ -453,7 +453,7 @@
     "marketingDesc": "Se utilizan para mostrar anuncios relevantes."
   },
   "chatbot": {
-    "greeting": "👋 ¡Hola! Soy el asistente de PALANTIR-CODE. ¿En qué puedo ayudarte?",
+    "greeting": "👋 ¡Hola! Soy el asistente de RESTRICTED OUTREACH. ¿En qué puedo ayudarte?",
     "placeholder": "Escribe tu pregunta...",
     "suggestion1": "¿Qué es Plane?",
     "suggestion2": "¿Qué servicios ofrecéis?",
@@ -473,11 +473,11 @@
         "excerpt": "Descubre las principales ventajas de cambiar de Jira a Plane y cómo hacer la transición sin problemas.",
         "date": "2025-02-15",
         "readTime": "5 min",
-        "author": "PALANTIR-CODE",
+        "author": "RESTRICTED OUTREACH",
         "category": "Migración",
         "image": "cover-jira-migration",
         "featured": true,
-        "content": "Muchas organizaciones están replanteando sus herramientas de gestión de proyectos en 2025. Jira, aunque potente, se ha vuelto cada vez más complejo y costoso. Plane ofrece una alternativa moderna y open-source que combina simplicidad con funciones de nivel empresarial.\n\nUna de las mayores ventajas de Plane es su interfaz intuitiva. Los equipos pueden comenzar rápidamente sin la curva de aprendizaje pronunciada por la que Jira es conocido. El espacio de trabajo unificado reúne seguimiento de proyectos, documentación y colaboración en un solo lugar.\n\nPlane también ofrece opciones de despliegue flexibles: cloud, autoalojado o airgapped. Esto significa que tus datos se quedan donde quieras, cumpliendo incluso los requisitos de cumplimiento más estrictos.\n\nEn PALANTIR-CODE, hemos ayudado a docenas de equipos a hacer el cambio. Nuestro proceso de migración asegura cero pérdida de datos, mapeo completo de campos y formación integral para usuarios. ¿El resultado? Equipos más productivos desde el primer día."
+        "content": "Muchas organizaciones están replanteando sus herramientas de gestión de proyectos en 2025. Jira, aunque potente, se ha vuelto cada vez más complejo y costoso. Plane ofrece una alternativa moderna y open-source que combina simplicidad con funciones de nivel empresarial.\n\nUna de las mayores ventajas de Plane es su interfaz intuitiva. Los equipos pueden comenzar rápidamente sin la curva de aprendizaje pronunciada por la que Jira es conocido. El espacio de trabajo unificado reúne seguimiento de proyectos, documentación y colaboración en un solo lugar.\n\nPlane también ofrece opciones de despliegue flexibles: cloud, autoalojado o airgapped. Esto significa que tus datos se quedan donde quieras, cumpliendo incluso los requisitos de cumplimiento más estrictos.\n\nEn RESTRICTED OUTREACH, hemos ayudado a docenas de equipos a hacer el cambio. Nuestro proceso de migración asegura cero pérdida de datos, mapeo completo de campos y formación integral para usuarios. ¿El resultado? Equipos más productivos desde el primer día."
       },
       {
         "slug": "plane-compose-projects-as-code",
@@ -485,11 +485,11 @@
         "excerpt": "Descubre cómo Plane Compose lleva la disciplina de Git a la gestión de proyectos con configuraciones versionadas.",
         "date": "2025-01-28",
         "readTime": "7 min",
-        "author": "PALANTIR-CODE",
+        "author": "RESTRICTED OUTREACH",
         "category": "DevOps",
         "image": "cover-plane-compose",
         "featured": true,
-        "content": "Plane Compose introduce un concepto revolucionario: Proyectos-como-Código. Así como Infraestructura-como-Código transformó la gestión de servidores, Plane Compose transforma la gestión de proyectos.\n\nCon Plane Compose, la estructura de tu proyecto se convierte en un artefacto de primera clase. Los workflows, estados, etiquetas y campos personalizados se definen en YAML, se versionan en Git y se revisan mediante pull requests.\n\nEl CLI lo hace simple: 'plane init' crea un scaffold de nuevo proyecto, 'plane schema pull' sincroniza tu configuración y 'plane clone' replica estructuras entre workspaces.\n\nEste enfoque aporta consistencia entre equipos, reduce el tiempo de onboarding y permite a los equipos DevOps gestionar la infraestructura de proyectos con el mismo rigor que aplican al código. En PALANTIR-CODE, ayudamos a los equipos a adoptar Plane Compose e integrarlo en sus pipelines CI/CD existentes."
+        "content": "Plane Compose introduce un concepto revolucionario: Proyectos-como-Código. Así como Infraestructura-como-Código transformó la gestión de servidores, Plane Compose transforma la gestión de proyectos.\n\nCon Plane Compose, la estructura de tu proyecto se convierte en un artefacto de primera clase. Los workflows, estados, etiquetas y campos personalizados se definen en YAML, se versionan en Git y se revisan mediante pull requests.\n\nEl CLI lo hace simple: 'plane init' crea un scaffold de nuevo proyecto, 'plane schema pull' sincroniza tu configuración y 'plane clone' replica estructuras entre workspaces.\n\nEste enfoque aporta consistencia entre equipos, reduce el tiempo de onboarding y permite a los equipos DevOps gestionar la infraestructura de proyectos con el mismo rigor que aplican al código. En RESTRICTED OUTREACH, ayudamos a los equipos a adoptar Plane Compose e integrarlo en sus pipelines CI/CD existentes."
       },
       {
         "slug": "best-practices-project-management-2025",
@@ -497,11 +497,11 @@
         "excerpt": "Mantente al día con las últimas tendencias y mejores prácticas en gestión de proyectos para equipos de alto rendimiento.",
         "date": "2025-01-10",
         "readTime": "6 min",
-        "author": "PALANTIR-CODE",
+        "author": "RESTRICTED OUTREACH",
         "category": "Mejores Prácticas",
         "image": "cover-best-practices",
         "featured": true,
-        "content": "La gestión de proyectos está evolucionando rápidamente. En 2025, los equipos más exitosos están adoptando nuevos enfoques que priorizan la flexibilidad, la transparencia y la automatización.\n\nPrimero, las herramientas open-source están ganando tracción. Las organizaciones quieren transparencia en sus herramientas, no solo en sus procesos. Plane ejemplifica esta tendencia con su código fuente completamente abierto.\n\nSegundo, la automatización con IA se está volviendo esencial. Desde la asignación automática de tareas hasta la generación de insights de proyectos, la IA está ayudando a los equipos a centrarse en lo que más importa.\n\nTercero, los espacios de trabajo unificados están reemplazando las cadenas de herramientas fragmentadas. En lugar de cambiar entre herramientas de seguimiento, documentación y comunicación, los equipos quieren todo en un solo lugar.\n\nFinalmente, el cumplimiento y la soberanía de datos son prioridades principales. Las opciones de despliegue autoalojado y airgapped aseguran que los datos sensibles del proyecto permanezcan dentro de los límites organizacionales.\n\nEn PALANTIR-CODE, ayudamos a las organizaciones a adoptar estas mejores prácticas con Plane como base."
+        "content": "La gestión de proyectos está evolucionando rápidamente. En 2025, los equipos más exitosos están adoptando nuevos enfoques que priorizan la flexibilidad, la transparencia y la automatización.\n\nPrimero, las herramientas open-source están ganando tracción. Las organizaciones quieren transparencia en sus herramientas, no solo en sus procesos. Plane ejemplifica esta tendencia con su código fuente completamente abierto.\n\nSegundo, la automatización con IA se está volviendo esencial. Desde la asignación automática de tareas hasta la generación de insights de proyectos, la IA está ayudando a los equipos a centrarse en lo que más importa.\n\nTercero, los espacios de trabajo unificados están reemplazando las cadenas de herramientas fragmentadas. En lugar de cambiar entre herramientas de seguimiento, documentación y comunicación, los equipos quieren todo en un solo lugar.\n\nFinalmente, el cumplimiento y la soberanía de datos son prioridades principales. Las opciones de despliegue autoalojado y airgapped aseguran que los datos sensibles del proyecto permanezcan dentro de los límites organizacionales.\n\nEn RESTRICTED OUTREACH, ayudamos a las organizaciones a adoptar estas mejores prácticas con Plane como base."
       }
     ]
   },
@@ -614,7 +614,7 @@
   "jiraVsPlane": {
     "seo": {
       "title": "Jira vs Plane | Comparativa Completa y Guía de Migración",
-      "description": "Compara Jira vs Plane: velocidad, usabilidad, coste, despliegue. Descubre por qué los equipos migran a Plane con PALANTIR-CODE."
+      "description": "Compara Jira vs Plane: velocidad, usabilidad, coste, despliegue. Descubre por qué los equipos migran a Plane con RESTRICTED OUTREACH."
     },
     "hero": {
       "title": "Cambia de Jira a",
@@ -769,7 +769,7 @@
     "useCaseRevenue": "Innovación y Revenue",
     "useCaseRevenueDesc": "Acelera el ciclo de innovación y desbloquea nuevos ingresos con aplicaciones diferenciadas y sistemas agénticos.",
     "whyPalantirTitle": "¿Por qué implementar OutSystems con ",
-    "whyPalantirHighlight": "PALANTIR-CODE",
+    "whyPalantirHighlight": "RESTRICTED OUTREACH",
     "whyPalantirDesc": "Como expertos en plataformas enterprise, maximizamos el potencial de OutSystems para tu organización con implementaciones ágiles, migración y soporte continuo.",
     "whyItem1": "Implementación acelerada con metodología probada",
     "whyItem2": "Migración desde sistemas legacy sin disrupciones",
@@ -778,7 +778,7 @@
     "whyItem5": "Soporte y mantenimiento continuo post-implementación",
     "whyItem6": "Desarrollo de agentes IA personalizados",
     "innovationTitle": "Innovación a velocidad de IA",
-    "innovationDesc": "Con OutSystems y PALANTIR-CODE, tu organización puede innovar sin comprometer calidad ni control. Desde la automatización de operaciones hasta la creación de experiencias digitales diferenciadas.",
+    "innovationDesc": "Con OutSystems y RESTRICTED OUTREACH, tu organización puede innovar sin comprometer calidad ni control. Desde la automatización de operaciones hasta la creación de experiencias digitales diferenciadas.",
     "talkAboutProject": "Hablemos de tu proyecto",
     "ctaTitle": "¿Listo para transformar tu negocio?",
     "ctaDescription": "Descubre cómo OutSystems puede acelerar tu transformación digital. Agenda una demo personalizada con nuestro equipo.",
@@ -828,7 +828,7 @@
     "useCaseEnterprise": "Aplicaciones Enterprise",
     "useCaseEnterpriseDesc": "Dashboards, portales internos y herramientas corporativas con autenticación, base de datos y lógica de negocio.",
     "whyPalantirTitle": "¿Por qué elegir ",
-    "whyPalantirHighlight": "PALANTIR-CODE",
+    "whyPalantirHighlight": "RESTRICTED OUTREACH",
     "whyPalantirDesc": "No somos solo desarrolladores. Somos expertos en vibe coding que combinan visión de producto, arquitectura técnica y dominio de IA para maximizar el potencial de Lovable.",
     "whyItem1": "Dominio avanzado de prompting para resultados óptimos",
     "whyItem2": "Arquitectura profesional y código mantenible",
@@ -837,7 +837,7 @@
     "whyItem5": "Optimización SEO, rendimiento y accesibilidad",
     "whyItem6": "Soporte continuo y evolución de tu producto",
     "innovationTitle": "De la idea a producción en horas",
-    "innovationDesc": "Con Lovable y PALANTIR-CODE, tu proyecto cobra vida a velocidad sin precedentes. Combinamos la potencia de la IA con la experiencia humana para entregar resultados excepcionales.",
+    "innovationDesc": "Con Lovable y RESTRICTED OUTREACH, tu proyecto cobra vida a velocidad sin precedentes. Combinamos la potencia de la IA con la experiencia humana para entregar resultados excepcionales.",
     "talkAboutProject": "Hablemos de tu proyecto",
     "ctaTitle": "¿Listo para construir con vibe coding?",
     "ctaDescription": "Descubre cómo Lovable puede transformar tu próximo proyecto. Agenda una consultoría gratuita con nuestro equipo de expertos.",

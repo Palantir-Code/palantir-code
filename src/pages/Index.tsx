@@ -15,12 +15,12 @@ import CTASection from "@/components/home/CTASection";
 const homeJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "PALANTIR-CODE - Spain's First Certified Plane Partner",
+  "name": "RESTRICTED OUTREACH - Spain's First Certified Plane Partner",
   "description": "Expert Plane implementation, migration, and custom solutions for Plane's unified workspace.",
   "url": "https://www.palantircode.com/",
   "mainEntity": {
     "@type": "Organization",
-    "name": "PALANTIR-CODE",
+    "name": "RESTRICTED OUTREACH",
     "description": "Spain's first certified Plane partner",
   }
 };

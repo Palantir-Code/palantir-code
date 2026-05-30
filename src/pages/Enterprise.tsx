@@ -119,7 +119,7 @@ const Enterprise = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Plane Enterprise - PALANTIR-CODE",
+    "name": "Plane Enterprise - RESTRICTED OUTREACH",
     "description": t("enterprise.meta.description"),
     "url": "https://www.palantircode.com/enterprise",
   };

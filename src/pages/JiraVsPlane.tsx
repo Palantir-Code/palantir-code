@@ -58,7 +58,7 @@ const JiraVsPlane = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Jira vs Plane — Why Teams Switch | PALANTIR-CODE",
+    "name": "Jira vs Plane — Why Teams Switch | RESTRICTED OUTREACH",
     "description": t("jiraVsPlane.hero.subtitle"),
     "url": "https://www.palantircode.com/jira-vs-plane",
   };

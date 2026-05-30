@@ -105,7 +105,7 @@ const Chatbot = () => {
             <div className="flex items-center justify-between border-b border-border bg-primary/10 px-4 py-3">
               <div className="flex items-center gap-2">
                 <Bot className="h-5 w-5 text-primary" />
-                <span className="font-semibold text-foreground text-sm">PALANTIR-CODE Assistant</span>
+                <span className="font-semibold text-foreground text-sm">RESTRICTED OUTREACH Assistant</span>
               </div>
               <button onClick={() => setIsOpen(false)} className="rounded-lg p-1 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors">
                 <X className="h-4 w-4" />

@@ -35,7 +35,7 @@ const servicesJsonLd = {
   "@type": "Service",
   "name": "Enterprise Project Management Consulting Services",
   "serviceType": ["Software Implementation", "Migration Services", "Custom Development", "Managed Services"],
-  "provider": { "@type": "Organization", "name": "PALANTIR-CODE", "url": "https://www.palantircode.com" },
+  "provider": { "@type": "Organization", "name": "RESTRICTED OUTREACH", "url": "https://www.palantircode.com" },
   "areaServed": { "@type": "Country", "name": "Spain" },
   "description": "Expert implementation, migration, custom development, and 24/7 managed services for enterprise project management.",
   "url": "https://www.palantircode.com/services"
@@ -46,7 +46,7 @@ const ServicesPage = () => {
 
   return (
     <Layout>
-      <SEO title="Enterprise Consulting Services | PALANTIR-CODE" description="Expert implementation, Jira migration, custom development, and 24/7 managed support. Spain's first certified partner offers end-to-end project management solutions." canonical="/services" jsonLd={servicesJsonLd} />
+      <SEO title="Enterprise Consulting Services | RESTRICTED OUTREACH" description="Expert implementation, Jira migration, custom development, and 24/7 managed support. Spain's first certified partner offers end-to-end project management solutions." canonical="/services" jsonLd={servicesJsonLd} />
       
       {/* Hero */}
       <section className="relative bg-gradient-to-b from-primary/5 via-background to-background py-20 overflow-hidden">

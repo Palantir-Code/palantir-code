@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { Linkedin, Github, Mail, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { COMPANY } from "@/lib/constants";
-import palantirLogo from "@/assets/palantir-logo-square.png";
-import palantirBrand from "@/assets/palantir-brand.png";
+import palantirLogo from "@/assets/restricted-outreach-square.png";
+import palantirBrand from "@/assets/restricted-outreach-brand.png";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -13,9 +13,8 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12 lg:px-8 lg:py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-1">
-              <img src={palantirLogo} alt="PALANTIR-CODE Logo" className="h-10 w-10 object-contain terminal-logo-bright" />
-              <img src={palantirBrand} alt="PALANTIR-CODE" className="h-9 object-contain terminal-logo-bright" />
+            <Link to="/" className="flex items-center">
+              <img src={palantirBrand} alt="RESTRICTED OUTREACH" className="h-12 object-contain" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">{COMPANY.description}</p>
             <div className="flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary w-fit">
@@ -50,8 +49,8 @@ const Footer = () => {
               </li>
             </ul>
             <div className="mt-6 flex items-center gap-4">
-              <a href="https://www.linkedin.com/company/palantir-code" target="_blank" rel="noopener noreferrer" className="rounded-full bg-muted p-2 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="LinkedIn"><Linkedin className="h-4 w-4" /></a>
-              <a href="https://github.com/Palantir-Code" target="_blank" rel="noopener noreferrer" className="rounded-full bg-muted p-2 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="GitHub"><Github className="h-4 w-4" /></a>
+              <a href="https://www.linkedin.com/company/restricted-outreach" target="_blank" rel="noopener noreferrer" className="rounded-full bg-muted p-2 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="LinkedIn"><Linkedin className="h-4 w-4" /></a>
+              <a href="https://github.com/Restricted Outreach" target="_blank" rel="noopener noreferrer" className="rounded-full bg-muted p-2 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="GitHub"><Github className="h-4 w-4" /></a>
             </div>
           </div>
         </div>

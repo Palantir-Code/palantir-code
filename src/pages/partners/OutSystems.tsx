@@ -25,9 +25,9 @@ import {
 const outsystemsJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "OutSystems - AI-Powered Low-Code Platform | PALANTIR-CODE",
+  name: "OutSystems - AI-Powered Low-Code Platform | RESTRICTED OUTREACH",
   description:
-    "OutSystems: AI-powered low-code development platform for enterprise applications. Expert implementation by PALANTIR-CODE.",
+    "OutSystems: AI-powered low-code development platform for enterprise applications. Expert implementation by RESTRICTED OUTREACH.",
   url: "https://www.palantircode.com/experts/outsystems",
 };
 
@@ -64,7 +64,7 @@ const OutSystemsPage = () => {
     <Layout>
       <SEO
         title="OutSystems | AI-Powered Low-Code Platform"
-        description="OutSystems: AI-powered low-code development platform for enterprise applications. Expert implementation by PALANTIR-CODE."
+        description="OutSystems: AI-powered low-code development platform for enterprise applications. Expert implementation by RESTRICTED OUTREACH."
         canonical="/experts/outsystems"
         jsonLd={outsystemsJsonLd}
       />
@@ -201,7 +201,7 @@ const OutSystemsPage = () => {
         </div>
       </section>
 
-      {/* Why PALANTIR-CODE */}
+      {/* Why RESTRICTED OUTREACH */}
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
