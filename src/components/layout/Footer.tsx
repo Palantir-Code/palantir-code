@@ -13,9 +13,8 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12 lg:px-8 lg:py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-1">
-              <img src={palantirLogo} alt="RESTRICTED OUTREACH Logo" className="h-10 w-10 object-contain terminal-logo-bright" />
-              <img src={palantirBrand} alt="RESTRICTED OUTREACH" className="h-9 object-contain terminal-logo-bright" />
+            <Link to="/" className="flex items-center">
+              <img src={palantirBrand} alt="RESTRICTED OUTREACH" className="h-12 object-contain" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">{COMPANY.description}</p>
             <div className="flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary w-fit">
