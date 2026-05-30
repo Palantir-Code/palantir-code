@@ -14,8 +14,8 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import palantirLogo from "@/assets/palantir-logo-square.png";
-import palantirBrand from "@/assets/palantir-brand.png";
+import palantirLogo from "@/assets/restricted-outreach-square.png";
+import palantirBrand from "@/assets/restricted-outreach-brand.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

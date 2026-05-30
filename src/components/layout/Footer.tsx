@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { Linkedin, Github, Mail, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { COMPANY } from "@/lib/constants";
-import palantirLogo from "@/assets/palantir-logo-square.png";
-import palantirBrand from "@/assets/palantir-brand.png";
+import palantirLogo from "@/assets/restricted-outreach-square.png";
+import palantirBrand from "@/assets/restricted-outreach-brand.png";
 
 const Footer = () => {
   const { t } = useTranslation();
