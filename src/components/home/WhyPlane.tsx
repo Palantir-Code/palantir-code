@@ -1,3 +1,4 @@
+import { useMounted } from "@/hooks/use-mounted";
 import { Layout, FileText, Sparkles, Cloud, X, ZoomIn } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -32,8 +33,11 @@ const featureKeys = [
 ];
 
 const MatrixStream = ({ delay = 0, left = "50%" }: { delay?: number; left?: string }) => {
+  const mounted = useMounted();
+
   const chars = "アイウエオカキクケコ0123456789";
   const getChar = () => chars[Math.floor(Math.random() * chars.length)];
+  if (!mounted) return null;
   return (
     <motion.div className="absolute flex flex-col items-center text-primary font-mono text-[10px] z-0" style={{ left, top: 0 }}
       initial={{ y: "-20px", opacity: 0 }}

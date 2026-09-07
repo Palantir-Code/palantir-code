@@ -1,3 +1,4 @@
+import { useMounted } from "@/hooks/use-mounted";
 import { motion } from "framer-motion";
 import { Cloud } from "lucide-react";
 
@@ -7,6 +8,9 @@ interface FloatingCloudsProps {
 }
 
 const FloatingClouds = ({ count = 4, className = "" }: FloatingCloudsProps) => {
+  const mounted = useMounted();
+  if (!mounted) return null;
+
   const clouds = Array.from({ length: count }, (_, i) => ({
     id: i,
     size: 40 + Math.random() * 60,

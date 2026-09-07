@@ -1,3 +1,4 @@
+import { useMounted } from "@/hooks/use-mounted";
 import { motion } from "framer-motion";
 
 interface MatrixConnectorProps {
@@ -5,6 +6,9 @@ interface MatrixConnectorProps {
 }
 
 const MatrixConnector = ({ className = "" }: MatrixConnectorProps) => {
+  const mounted = useMounted();
+  if (!mounted) return null;
+
   // Generate random matrix characters
   const getRandomChar = () => {
     const chars = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789";
