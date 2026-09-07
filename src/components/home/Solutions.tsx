@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Megaphone, TrendingUp, Users, Settings, DollarSign, Server, HeadphonesIcon, Lightbulb, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SOLUTIONS } from "@/lib/constants";

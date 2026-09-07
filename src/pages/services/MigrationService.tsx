@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { motion } from "framer-motion";
 import { ArrowRightLeft, ArrowRight, Check, Search, Map, FileCheck, Box, MessageSquare, CheckCircle2, Layers, Shield } from "lucide-react";
 import { useTranslation } from "react-i18next";

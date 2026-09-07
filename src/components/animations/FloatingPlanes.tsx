@@ -1,3 +1,4 @@
+import { useMounted } from "@/hooks/use-mounted";
 import { motion } from "framer-motion";
 import { Plane } from "lucide-react";
 
@@ -7,6 +8,9 @@ interface FloatingPlanesProps {
 }
 
 const FloatingPlanes = ({ count = 5, className = "" }: FloatingPlanesProps) => {
+  const mounted = useMounted();
+  if (!mounted) return null;
+
   const planes = Array.from({ length: count }, (_, i) => ({
     id: i,
     size: 12 + Math.random() * 16,

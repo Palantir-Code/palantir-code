@@ -1,0 +1,16 @@
+{
+  "functions": [
+    {
+      "name": "chat",
+      "classification": "internal-only",
+      "signal": "called from src/components/Chatbot.tsx via /functions/v1/chat; returns a streamed SSE Response and depends on the Supabase-managed LOVABLE_API_KEY secret",
+      "outcome": "left"
+    },
+    {
+      "name": "send-contact-email",
+      "classification": "internal-only",
+      "signal": "called from src/pages/Contact.tsx via /functions/v1/send-contact-email; depends on Supabase-managed GMAIL_USER / GMAIL_APP_PASSWORD secrets",
+      "outcome": "left"
+    }
+  ]
+}

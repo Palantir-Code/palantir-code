@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 // Matrix rain column component
 const MatrixColumn = ({ delay, left, speed }: { delay: number; left: string; speed: number }) => {
@@ -45,6 +45,11 @@ interface MatrixRainProps {
 }
 
 const MatrixRain = ({ columnCount = 30, opacity = 0.4 }: MatrixRainProps) => {
+  // Randomised decoration: render on the client only so the server HTML and
+  // the first client render stay identical (no hydration mismatch).
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   const columns = useMemo(() => {
     return [...Array(columnCount)].map((_, i) => ({
       id: i,
@@ -53,6 +58,10 @@ const MatrixRain = ({ columnCount = 30, opacity = 0.4 }: MatrixRainProps) => {
       speed: 4 + Math.random() * 4,
     }));
   }, [columnCount]);
+
+  if (!mounted) {
+    return <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ opacity }} />;
+  }
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ opacity }}>
